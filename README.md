@@ -1,11 +1,51 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
+[index (5).html](https://github.com/user-attachments/files/28468606/index.5.html)
+<html lang="en-US"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>gallery</title>
+<meta name="generator" content="Jekyll v3.10.0">
+<meta property="og:title" content="gallery">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="https://uniy420.github.io/gallery/">
+<meta property="og:url" content="https://uniy420.github.io/gallery/">
+<meta property="og:site_name" content="gallery">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="gallery">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","headline":"gallery","name":"gallery","url":"https://uniy420.github.io/gallery/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <style class="anchorjs"></style><link rel="stylesheet" href="/gallery/assets/css/style.css?v=9134a14aa7fa79dee8606982aa75f215a2df0a1c">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/gallery/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body style="overflow: hidden;">
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://uniy420.github.io/gallery/">gallery</a></h1>
+      
+
+      <p>&lt;!DOCTYPE html&gt;</p>
+
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GALLERY — Works by Kanato</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&amp;family=DM+Sans:wght@300;400&amp;display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0d0d0d;--surface:#161616;--surface2:#1f1f1f;--text:#f0ece4;--muted:#888880;--accent:#c9a96e;--border:rgba(240,236,228,0.08);--admin-bg:#111;--admin-surface:#1a1a1a;--admin-border:rgba(255,255,255,0.1)}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -133,8 +173,8 @@ footer{border-top:1px solid var(--border);padding:2rem 3rem;display:flex;justify
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--surface2);border-radius:10px}
 </style>
-</head>
-<body>
+
+
 
 <header>
   <a href="#" class="logo">GALLERY</a>
@@ -149,38 +189,38 @@ footer{border-top:1px solid var(--border);padding:2rem 3rem;display:flex;justify
 <div class="slider-section">
   <p class="slider-label">— Recent Works</p>
   <div class="rows-wrapper">
-    <div class="slider-row" id="row1"></div>
-    <div class="slider-row row2" id="row2"></div>
+    <div class="slider-row" id="row1"><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy"><div class="slide-card-label">ダイヤの秘めた想い</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="オグリキャップ" loading="lazy"><div class="slide-card-label">オグリキャップ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="メジロマックイーン" loading="lazy"><div class="slide-card-label">メジロマックイーン</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy"><div class="slide-card-label">ダイヤの秘めた想い</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="オグリキャップ" loading="lazy"><div class="slide-card-label">オグリキャップ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="メジロマックイーン" loading="lazy"><div class="slide-card-label">メジロマックイーン</div></div></div>
+    <div class="slider-row row2" id="row2"><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy"><div class="slide-card-label">ダイヤの秘めた想い</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="オグリキャップ" loading="lazy"><div class="slide-card-label">オグリキャップ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="メジロマックイーン" loading="lazy"><div class="slide-card-label">メジロマックイーン</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy"><div class="slide-card-label">ダイヤの秘めた想い</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="オグリキャップ" loading="lazy"><div class="slide-card-label">オグリキャップ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="メジロマックイーン" loading="lazy"><div class="slide-card-label">メジロマックイーン</div></div></div>
   </div>
 </div>
 
 <div class="section-divider"><span>Featured Works</span></div>
-<div class="gallery-grid" id="galleryGrid"></div>
+<div class="gallery-grid" id="galleryGrid"><div class="gallery-item"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy"><div class="gallery-info"><div class="gallery-title">ダイヤの秘めた想い</div><div class="gallery-sub">Diamond's Secret Feelings</div><span class="gallery-badge">New</span></div></div><div class="gallery-item"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="オグリキャップ" loading="lazy"><div class="gallery-info"><div class="gallery-title">オグリキャップ</div><div class="gallery-sub">· 2025</div><span class="gallery-badge">New</span></div></div><div class="gallery-item"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="メジロマックイーン" loading="lazy"><div class="gallery-info"><div class="gallery-title">メジロマックイーン</div><div class="gallery-sub">· 2025</div><span class="gallery-badge">New</span></div></div></div>
 
 <!-- WORK MODAL -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
     <button class="modal-close" id="modalClose">✕</button>
     <div class="modal-header">
-      <h2 class="modal-title" id="modalTitle"></h2>
+      <h2 class="modal-title" id="modalTitle">ダイヤの秘めた想い</h2>
       <p class="modal-desc" id="modalDesc"></p>
     </div>
-    <div class="modal-previews" id="modalPreviews"></div>
+    <div class="modal-previews" id="modalPreviews"><div class="preview-thumb"><img src="https://pbs.twimg.com/media/HJuxK0da8AAVO9W?format=jpg&amp;name=medium" alt="p0" loading="lazy"><div class="preview-num">Page 1 / 3</div></div><div class="preview-thumb"><img src="https://pbs.twimg.com/media/HJuxK0gasAAmNgk?format=jpg&amp;name=medium" alt="p1" loading="lazy"><div class="preview-num">Page 2 / 3</div></div><div class="preview-thumb"><img src="https://pbs.twimg.com/media/HJuxK0eaUAAypgu?format=jpg&amp;name=medium" alt="p2" loading="lazy"><div class="preview-num">Page 3 / 3</div></div></div>
     <div class="modal-footer">
       <span class="modal-footer-note" id="modalNote"></span>
-      <a class="btn-view-all" id="modalLink" href="#" target="_blank">
+      <a class="btn-view-all" id="modalLink" href="https://www.patreon.com/posts/daiyanomi-i-159734941?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link" target="_blank">
         View Full Series
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
       </a>
     </div>
   </div>
 </div>
 
 <!-- ADMIN -->
-<div class="admin-overlay" id="adminOverlay"></div>
-<div class="admin-panel" id="adminPanel">
+<div class="admin-overlay open" id="adminOverlay"></div>
+<div class="admin-panel open" id="adminPanel">
   <div class="admin-header">
-    <h2>管理パネル</h2>
+    <h2 id="管理パネル">管理パネル<a class="anchorjs-link " href="#管理パネル" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
     <div class="admin-header-actions">
       <button class="btn-dl" id="btnDownload">⬇ HTMLをダウンロード</button>
       <button class="btn-close-admin" id="closeAdmin">✕</button>
@@ -188,7 +228,136 @@ footer{border-top:1px solid var(--border);padding:2rem 3rem;display:flex;justify
   </div>
   <div class="admin-body">
     <p class="admin-section-title">作品を編集</p>
-    <div id="workList"></div>
+    <div id="workList"><div class="work-card-admin" id="adminCard_11">
+    <div class="work-card-header" onclick="toggleCard(11)">
+      <div class="work-card-header-left">
+        <img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" onerror="this.style.opacity=0.2" alt="">
+        <span class="work-card-title-sm">ダイヤの秘めた想い</span>
+      </div>
+      <div style="display:flex;gap:.6rem;align-items:center">
+        <button class="btn-delete-work" onclick="event.stopPropagation();deleteWork(11)">削除</button>
+        <span class="work-card-toggle" id="toggle_11">▼</span>
+      </div>
+    </div>
+    <div class="work-card-body" id="body_11">
+      <div class="field-row" style="margin-top:.9rem">
+        <div class="field"><label>タイトル</label><input type="text" value="ダイヤの秘めた想い" oninput="updateField(11,'title',this.value)"></div>
+        <div class="field"><label>バッジ（タグ）</label><input type="text" value="New" oninput="updateField(11,'tag',this.value)"></div>
+      </div>
+      <div class="field"><label>サブテキスト（種類・年）</label><input type="text" value="Diamond's Secret Feelings" oninput="updateField(11,'sub',this.value)"></div>
+      <div class="field"><label>説明文</label><textarea oninput="updateField(11,'desc',this.value)"></textarea></div>
+      <div class="field"><label>メモ（枚数など）</label><input type="text" value="" oninput="updateField(11,'note',this.value)"></div>
+      <div class="field"><label>誘導先URL</label><input type="text" value="https://www.patreon.com/posts/daiyanomi-i-159734941?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link" placeholder="https://..." oninput="updateField(11,'url',this.value)"></div>
+      <div class="field"><label>サムネイル画像URL</label><input type="text" value="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" oninput="updateField(11,'thumb',this.value);refreshThumb(11)"></div>
+      <div class="field"><label>続き画像（プレビュー）</label>
+        <div class="preview-list" id="prevList_11">
+    <div class="preview-item" data-prev-index="0">
+      <span>1.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJuxK0da8AAVO9W?format=jpg&amp;name=medium" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJuxK0da8AAVO9W?format=jpg&amp;name=medium" placeholder="画像URL" oninput="updatePreview(11,0,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(11,0)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="1">
+      <span>2.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJuxK0gasAAmNgk?format=jpg&amp;name=medium" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJuxK0gasAAmNgk?format=jpg&amp;name=medium" placeholder="画像URL" oninput="updatePreview(11,1,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(11,1)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="2">
+      <span>3.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJuxK0eaUAAypgu?format=jpg&amp;name=medium" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJuxK0eaUAAypgu?format=jpg&amp;name=medium" placeholder="画像URL" oninput="updatePreview(11,2,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(11,2)">✕</button>
+    </div></div>
+        <button class="btn-add-preview" onclick="addPreview(11)">＋ 画像を追加</button>
+      </div>
+    </div></div><div class="work-card-admin" id="adminCard_12">
+    <div class="work-card-header" onclick="toggleCard(12)">
+      <div class="work-card-header-left">
+        <img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" onerror="this.style.opacity=0.2" alt="">
+        <span class="work-card-title-sm">オグリキャップ</span>
+      </div>
+      <div style="display:flex;gap:.6rem;align-items:center">
+        <button class="btn-delete-work" onclick="event.stopPropagation();deleteWork(12)">削除</button>
+        <span class="work-card-toggle" id="toggle_12">▼</span>
+      </div>
+    </div>
+    <div class="work-card-body" id="body_12">
+      <div class="field-row" style="margin-top:.9rem">
+        <div class="field"><label>タイトル</label><input type="text" value="オグリキャップ" oninput="updateField(12,'title',this.value)"></div>
+        <div class="field"><label>バッジ（タグ）</label><input type="text" value="New" oninput="updateField(12,'tag',this.value)"></div>
+      </div>
+      <div class="field"><label>サブテキスト（種類・年）</label><input type="text" value="· 2025" oninput="updateField(12,'sub',this.value)"></div>
+      <div class="field"><label>説明文</label><textarea oninput="updateField(12,'desc',this.value)"></textarea></div>
+      <div class="field"><label>メモ（枚数など）</label><input type="text" value="" oninput="updateField(12,'note',this.value)"></div>
+      <div class="field"><label>誘導先URL</label><input type="text" value="https://" placeholder="https://..." oninput="updateField(12,'url',this.value)"></div>
+      <div class="field"><label>サムネイル画像URL</label><input type="text" value="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" oninput="updateField(12,'thumb',this.value);refreshThumb(12)"></div>
+      <div class="field"><label>続き画像（プレビュー）</label>
+        <div class="preview-list" id="prevList_12">
+    <div class="preview-item" data-prev-index="0">
+      <span>1.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJux5y2bQAAKGo4?format=jpg&amp;name=4096x4096" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJux5y2bQAAKGo4?format=jpg&amp;name=4096x4096" placeholder="画像URL" oninput="updatePreview(12,0,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(12,0)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="1">
+      <span>2.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJux5yxbkAAe3i4?format=jpg&amp;name=4096x4096" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJux5yxbkAAe3i4?format=jpg&amp;name=4096x4096" placeholder="画像URL" oninput="updatePreview(12,1,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(12,1)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="2">
+      <span>3.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJux5y1awAA8TxL?format=jpg&amp;name=4096x4096" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJux5y1awAA8TxL?format=jpg&amp;name=4096x4096" placeholder="画像URL" oninput="updatePreview(12,2,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(12,2)">✕</button>
+    </div></div>
+        <button class="btn-add-preview" onclick="addPreview(12)">＋ 画像を追加</button>
+      </div>
+    </div></div><div class="work-card-admin" id="adminCard_13">
+    <div class="work-card-header" onclick="toggleCard(13)">
+      <div class="work-card-header-left">
+        <img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" onerror="this.style.opacity=0.2" alt="">
+        <span class="work-card-title-sm">メジロマックイーン</span>
+      </div>
+      <div style="display:flex;gap:.6rem;align-items:center">
+        <button class="btn-delete-work" onclick="event.stopPropagation();deleteWork(13)">削除</button>
+        <span class="work-card-toggle" id="toggle_13">▼</span>
+      </div>
+    </div>
+    <div class="work-card-body" id="body_13">
+      <div class="field-row" style="margin-top:.9rem">
+        <div class="field"><label>タイトル</label><input type="text" value="メジロマックイーン" oninput="updateField(13,'title',this.value)"></div>
+        <div class="field"><label>バッジ（タグ）</label><input type="text" value="New" oninput="updateField(13,'tag',this.value)"></div>
+      </div>
+      <div class="field"><label>サブテキスト（種類・年）</label><input type="text" value="· 2025" oninput="updateField(13,'sub',this.value)"></div>
+      <div class="field"><label>説明文</label><textarea oninput="updateField(13,'desc',this.value)"></textarea></div>
+      <div class="field"><label>メモ（枚数など）</label><input type="text" value="" oninput="updateField(13,'note',this.value)"></div>
+      <div class="field"><label>誘導先URL</label><input type="text" value="https://" placeholder="https://..." oninput="updateField(13,'url',this.value)"></div>
+      <div class="field"><label>サムネイル画像URL</label><input type="text" value="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" oninput="updateField(13,'thumb',this.value);refreshThumb(13)"></div>
+      <div class="field"><label>続き画像（プレビュー）</label>
+        <div class="preview-list" id="prevList_13">
+    <div class="preview-item" data-prev-index="0">
+      <span>1.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJuyRdyaoAE_kkU?format=jpg&amp;name=4096x4096" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJuyRdyaoAE_kkU?format=jpg&amp;name=4096x4096" placeholder="画像URL" oninput="updatePreview(13,0,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(13,0)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="1">
+      <span>2.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJuyVCpa0AEp01D?format=jpg&amp;name=4096x4096" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJuyVCpa0AEp01D?format=jpg&amp;name=4096x4096" placeholder="画像URL" oninput="updatePreview(13,1,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(13,1)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="2">
+      <span>3.</span>
+      <img class="prev-thumb" src="" onerror="this.style.opacity=0.2" style="opacity: 0.2;">
+      <input type="text" value="" placeholder="画像URL" oninput="updatePreview(13,2,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(13,2)">✕</button>
+    </div></div>
+        <button class="btn-add-preview" onclick="addPreview(13)">＋ 画像を追加</button>
+      </div>
+    </div></div></div>
     <button class="btn-add-work" id="btnAddWork">＋ 作品を追加</button>
   </div>
 </div>
@@ -198,14 +367,56 @@ footer{border-top:1px solid var(--border);padding:2rem 3rem;display:flex;justify
   <span>Made with care ✦</span>
 </footer>
 
-<div class="toast" id="toast"></div>
+<div class="toast" id="toast">HTMLをダウンロードしました ✓</div>
 
 <script>
 /* ======== DATA ======== */
 let WORKS = [
-  {id:1,title:"Twilight No.1",sub:"Digital Illustration · 2024",tag:"Series A",desc:"夕暮れの情景をテーマにしたシリーズ作品。光と影のコントラストを丁寧に描きました。",note:"シリーズ全8枚",url:"https://example.com/series/twilight",thumb:"https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=600&q=80",previews:["https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=400&q=80","https://images.unsplash.com/photo-1513151233558-d860c5398176?w=400&q=80","https://images.unsplash.com/photo-1501862700950-18382cd41497?w=400&q=80"]},
-  {id:2,title:"Blue Archive Fan Art",sub:"Character Illustration · 2024",tag:"Fan Art",desc:"ブルーアーカイブのキャラクターをオリジナルの構図で描いた作品集。",note:"シリーズ全5枚",url:"https://example.com/series/blue-archive",thumb:"https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=600&q=80",previews:["https://images.unsplash.com/photo-1505506874110-6a7a69069a08?w=400&q=80","https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=400&q=80","https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&q=80"]},
-  {id:3,title:"Monochrome Study",sub:"Concept Art · 2024",tag:"Series B",desc:"モノクロの世界で表現した都市と自然の対比をテーマにした実験的シリーズ。",note:"シリーズ全6枚",url:"https://example.com/series/monochrome",thumb:"https://images.unsplash.com/photo-1524055988636-436cfa46e59e?w=600&q=80",previews:["https://images.unsplash.com/photo-1536184635451-90a0cc3f7e5c?w=400&q=80","https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=400&q=80","https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"]}
+  {
+    "id": 11,
+    "title": "ダイヤの秘めた想い",
+    "sub": "Diamond's Secret Feelings",
+    "tag": "New",
+    "desc": "",
+    "note": "",
+    "url": "https://www.patreon.com/posts/daiyanomi-i-159734941?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link",
+    "thumb": "https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&name=medium",
+    "previews": [
+      "https://pbs.twimg.com/media/HJuxK0da8AAVO9W?format=jpg&name=medium",
+      "https://pbs.twimg.com/media/HJuxK0gasAAmNgk?format=jpg&name=medium",
+      "https://pbs.twimg.com/media/HJuxK0eaUAAypgu?format=jpg&name=medium"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "オグリキャップ",
+    "sub": "· 2025",
+    "tag": "New",
+    "desc": "",
+    "note": "",
+    "url": "https://",
+    "thumb": "https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&name=4096x4096",
+    "previews": [
+      "https://pbs.twimg.com/media/HJux5y2bQAAKGo4?format=jpg&name=4096x4096",
+      "https://pbs.twimg.com/media/HJux5yxbkAAe3i4?format=jpg&name=4096x4096",
+      "https://pbs.twimg.com/media/HJux5y1awAA8TxL?format=jpg&name=4096x4096"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "メジロマックイーン",
+    "sub": "· 2025",
+    "tag": "New",
+    "desc": "",
+    "note": "",
+    "url": "https://",
+    "thumb": "https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&name=4096x4096",
+    "previews": [
+      "https://pbs.twimg.com/media/HJuyRdyaoAE_kkU?format=jpg&name=4096x4096",
+      "https://pbs.twimg.com/media/HJuyVCpa0AEp01D?format=jpg&name=4096x4096",
+      ""
+    ]
+  }
 ];
 let nextId = 10;
 
@@ -432,5 +643,14 @@ function showToast(msg){
 /* ======== INIT ======== */
 renderSite();
 </script>
-</body>
-</html>
+
+
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  
+
+<deepl-input-controller translate="no"></deepl-input-controller></body></html>
