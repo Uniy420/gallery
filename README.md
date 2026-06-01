@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>gallery</title>
 <meta name="generator" content="Jekyll v3.10.0">
 <meta property="og:title" content="gallery">
 <meta property="og:locale" content="en_US">
@@ -42,7 +41,6 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GALLERY — Works by Kanato</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&amp;family=DM+Sans:wght@300;400&amp;display=swap" rel="stylesheet">
 <style>
