@@ -1,4 +1,3 @@
-[index (5).html](https://github.com/user-attachments/files/28468606/index.5.html)
 <html lang="en-US"><head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
