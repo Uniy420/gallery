@@ -1,11 +1,50 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
+<html lang="en-US" style="--bg: #0d0d0d;"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>gallery</title>
+<meta name="generator" content="Jekyll v3.10.0">
+<meta property="og:title" content="gallery">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="https://uniy420.github.io/gallery/">
+<meta property="og:url" content="https://uniy420.github.io/gallery/">
+<meta property="og:site_name" content="gallery">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="gallery">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","headline":"gallery","name":"gallery","url":"https://uniy420.github.io/gallery/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <style class="anchorjs"></style><link rel="stylesheet" href="/gallery/assets/css/style.css?v=8e31d237db9a992e2b2f386d0ad56b45f2f5734e">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/gallery/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body style="background: rgb(13, 13, 13); overflow: hidden;">
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://uniy420.github.io/gallery/">gallery</a></h1>
+      
+
+      <p>&lt;!DOCTYPE html&gt;</p>
+
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GALLERY — Works by Kanato</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&amp;family=DM+Sans:wght@300;400&amp;display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0d0d0d;--surface:#161616;--surface2:#1f1f1f;--text:#f0ece4;--muted:#888880;--accent:#c9a96e;--border:rgba(240,236,228,0.08);--admin-bg:#111;--admin-surface:#1a1a1a;--admin-border:rgba(255,255,255,0.1)}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -203,13 +242,13 @@ nav a:hover,nav a.active{color:var(--text)}
 footer{border-top:1px solid var(--border);padding:1.6rem 2rem;display:flex;justify-content:space-between;align-items:center;font-size:.7rem;color:var(--muted)}
 ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--surface2);border-radius:10px}
 </style>
-</head>
-<body>
+
+
 
 <header>
   <a href="#" class="logo" onclick="showPage('home');return false">GALLERY</a>
   <nav>
-    <a onclick="showPage('series')" id="navSeries">Series</a>
+    <a onclick="showPage('series')" id="navSeries" class="">Series</a>
     <button class="admin-btn" id="openAdmin">⚙ 管理</button>
   </nav>
 </header>
@@ -219,18 +258,18 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;display:flex;justi
   <div class="slider-section" id="sliderSection">
     <p class="slider-label" id="sliderLabel">— Recent Works</p>
     <div class="rows-wrapper" id="rowsWrapper">
-      <div class="slider-row" id="row1"></div>
-      <div class="slider-row row2" id="row2"></div>
+      <div class="slider-row" id="row1" style="animation-duration: 40s;"><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy" style="object-position:center top"><div class="slide-card-label">ダイヤの秘めた想い</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="海に遊びに来たオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">海に遊びに来たオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="寝取られマックイーン" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られマックイーン</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" alt="寝取られテイオー" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" alt="どあっぷ" loading="lazy" style="object-position:center center"><div class="slide-card-label">どあっぷ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" alt="OLテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">OLテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" alt="寝起き" loading="lazy" style="object-position:center top"><div class="slide-card-label">寝起き</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" alt="美味しそうに見つめるオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">美味しそうに見つめるオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" alt="お誘われテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">お誘われテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy" style="object-position:center top"><div class="slide-card-label">ダイヤの秘めた想い</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="海に遊びに来たオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">海に遊びに来たオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="寝取られマックイーン" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られマックイーン</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" alt="寝取られテイオー" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" alt="どあっぷ" loading="lazy" style="object-position:center center"><div class="slide-card-label">どあっぷ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" alt="OLテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">OLテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" alt="寝起き" loading="lazy" style="object-position:center top"><div class="slide-card-label">寝起き</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" alt="美味しそうに見つめるオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">美味しそうに見つめるオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" alt="お誘われテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">お誘われテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy" style="object-position:center top"><div class="slide-card-label">ダイヤの秘めた想い</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="海に遊びに来たオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">海に遊びに来たオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="寝取られマックイーン" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られマックイーン</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" alt="寝取られテイオー" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" alt="どあっぷ" loading="lazy" style="object-position:center center"><div class="slide-card-label">どあっぷ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" alt="OLテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">OLテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" alt="寝起き" loading="lazy" style="object-position:center top"><div class="slide-card-label">寝起き</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" alt="美味しそうに見つめるオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">美味しそうに見つめるオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" alt="お誘われテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">お誘われテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy" style="object-position:center top"><div class="slide-card-label">ダイヤの秘めた想い</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="海に遊びに来たオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">海に遊びに来たオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="寝取られマックイーン" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られマックイーン</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" alt="寝取られテイオー" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" alt="どあっぷ" loading="lazy" style="object-position:center center"><div class="slide-card-label">どあっぷ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" alt="OLテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">OLテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" alt="寝起き" loading="lazy" style="object-position:center top"><div class="slide-card-label">寝起き</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" alt="美味しそうに見つめるオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">美味しそうに見つめるオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" alt="お誘われテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">お誘われテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy" style="object-position:center top"><div class="slide-card-label">ダイヤの秘めた想い</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="海に遊びに来たオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">海に遊びに来たオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="寝取られマックイーン" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られマックイーン</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" alt="寝取られテイオー" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" alt="どあっぷ" loading="lazy" style="object-position:center center"><div class="slide-card-label">どあっぷ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" alt="OLテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">OLテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" alt="寝起き" loading="lazy" style="object-position:center top"><div class="slide-card-label">寝起き</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" alt="美味しそうに見つめるオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">美味しそうに見つめるオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" alt="お誘われテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">お誘われテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy" style="object-position:center top"><div class="slide-card-label">ダイヤの秘めた想い</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="海に遊びに来たオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">海に遊びに来たオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="寝取られマックイーン" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られマックイーン</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" alt="寝取られテイオー" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" alt="どあっぷ" loading="lazy" style="object-position:center center"><div class="slide-card-label">どあっぷ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" alt="OLテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">OLテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" alt="寝起き" loading="lazy" style="object-position:center top"><div class="slide-card-label">寝起き</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" alt="美味しそうに見つめるオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">美味しそうに見つめるオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" alt="お誘われテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">お誘われテイオー</div></div></div>
+      <div class="slider-row row2" id="row2" style="animation-duration: 52s;"><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" alt="OLテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">OLテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" alt="寝起き" loading="lazy" style="object-position:center top"><div class="slide-card-label">寝起き</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" alt="美味しそうに見つめるオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">美味しそうに見つめるオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" alt="お誘われテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">お誘われテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy" style="object-position:center top"><div class="slide-card-label">ダイヤの秘めた想い</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="海に遊びに来たオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">海に遊びに来たオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="寝取られマックイーン" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られマックイーン</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" alt="寝取られテイオー" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" alt="どあっぷ" loading="lazy" style="object-position:center center"><div class="slide-card-label">どあっぷ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" alt="OLテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">OLテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" alt="寝起き" loading="lazy" style="object-position:center top"><div class="slide-card-label">寝起き</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" alt="美味しそうに見つめるオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">美味しそうに見つめるオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" alt="お誘われテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">お誘われテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy" style="object-position:center top"><div class="slide-card-label">ダイヤの秘めた想い</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="海に遊びに来たオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">海に遊びに来たオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="寝取られマックイーン" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られマックイーン</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" alt="寝取られテイオー" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" alt="どあっぷ" loading="lazy" style="object-position:center center"><div class="slide-card-label">どあっぷ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" alt="OLテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">OLテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" alt="寝起き" loading="lazy" style="object-position:center top"><div class="slide-card-label">寝起き</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" alt="美味しそうに見つめるオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">美味しそうに見つめるオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" alt="お誘われテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">お誘われテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy" style="object-position:center top"><div class="slide-card-label">ダイヤの秘めた想い</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="海に遊びに来たオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">海に遊びに来たオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="寝取られマックイーン" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られマックイーン</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" alt="寝取られテイオー" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" alt="どあっぷ" loading="lazy" style="object-position:center center"><div class="slide-card-label">どあっぷ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" alt="OLテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">OLテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" alt="寝起き" loading="lazy" style="object-position:center top"><div class="slide-card-label">寝起き</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" alt="美味しそうに見つめるオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">美味しそうに見つめるオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" alt="お誘われテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">お誘われテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy" style="object-position:center top"><div class="slide-card-label">ダイヤの秘めた想い</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="海に遊びに来たオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">海に遊びに来たオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="寝取られマックイーン" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られマックイーン</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" alt="寝取られテイオー" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" alt="どあっぷ" loading="lazy" style="object-position:center center"><div class="slide-card-label">どあっぷ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" alt="OLテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">OLテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" alt="寝起き" loading="lazy" style="object-position:center top"><div class="slide-card-label">寝起き</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" alt="美味しそうに見つめるオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">美味しそうに見つめるオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" alt="お誘われテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">お誘われテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy" style="object-position:center top"><div class="slide-card-label">ダイヤの秘めた想い</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="海に遊びに来たオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">海に遊びに来たオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="寝取られマックイーン" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られマックイーン</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" alt="寝取られテイオー" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" alt="どあっぷ" loading="lazy" style="object-position:center center"><div class="slide-card-label">どあっぷ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" alt="OLテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">OLテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" alt="寝起き" loading="lazy" style="object-position:center top"><div class="slide-card-label">寝起き</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" alt="美味しそうに見つめるオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">美味しそうに見つめるオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" alt="お誘われテイオー" loading="lazy" style="object-position:center top"><div class="slide-card-label">お誘われテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy" style="object-position:center top"><div class="slide-card-label">ダイヤの秘めた想い</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="海に遊びに来たオグリ" loading="lazy" style="object-position:center top"><div class="slide-card-label">海に遊びに来たオグリ</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="寝取られマックイーン" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られマックイーン</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" alt="寝取られテイオー" loading="lazy" style="object-position:center center"><div class="slide-card-label">寝取られテイオー</div></div><div class="slide-card"><img src="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" alt="どあっぷ" loading="lazy" style="object-position:center center"><div class="slide-card-label">どあっぷ</div></div></div>
     </div>
   </div>
   <div class="section-divider" id="featuredDivider"><span>Featured Works</span></div>
-  <div class="gallery-grid" id="galleryGrid"></div>
+  <div class="gallery-grid" id="galleryGrid"><div class="gallery-item"><div class="gallery-item-img-wrap"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy" style="object-position:center top"></div><div class="gallery-info"><div class="gallery-title">ダイヤの秘めた想い</div><div class="gallery-sub">Diamond's Secret Feelings</div><div class="gallery-tags"><span class="gallery-badge">New</span><span class="gallery-badge">ウマ娘</span></div></div></div><div class="gallery-item"><div class="gallery-item-img-wrap"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="海に遊びに来たオグリ" loading="lazy" style="object-position:center top"></div><div class="gallery-info"><div class="gallery-title">海に遊びに来たオグリ</div><div class="gallery-sub">Summer Sea Oguri Cap</div><div class="gallery-tags"><span class="gallery-badge">New</span><span class="gallery-badge">ウマ娘</span></div></div></div><div class="gallery-item"><div class="gallery-item-img-wrap"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="寝取られマックイーン" loading="lazy" style="object-position:center center"></div><div class="gallery-info"><div class="gallery-title">寝取られマックイーン</div><div class="gallery-sub">Netorare Mqueen</div><div class="gallery-tags"><span class="gallery-badge">New</span><span class="gallery-badge">ウマ娘</span></div></div></div><div class="gallery-item"><div class="gallery-item-img-wrap"><img src="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" alt="寝取られテイオー" loading="lazy" style="object-position:center center"></div><div class="gallery-info"><div class="gallery-title">寝取られテイオー</div><div class="gallery-sub">Netorare Teio</div><div class="gallery-tags"><span class="gallery-badge">New</span><span class="gallery-badge">NTR</span></div></div></div><div class="gallery-item"><div class="gallery-item-img-wrap"><img src="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" alt="どあっぷ" loading="lazy" style="object-position:center center"></div><div class="gallery-info"><div class="gallery-title">どあっぷ</div><div class="gallery-sub">Face focus</div><div class="gallery-tags"><span class="gallery-badge">New</span></div></div></div><div class="gallery-item"><div class="gallery-item-img-wrap"><img src="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" alt="OLテイオー" loading="lazy" style="object-position:center top"></div><div class="gallery-info"><div class="gallery-title">OLテイオー</div><div class="gallery-sub">OL Teio</div><div class="gallery-tags"><span class="gallery-badge">New</span><span class="gallery-badge">ウマ娘</span></div></div></div><div class="gallery-item"><div class="gallery-item-img-wrap"><img src="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" alt="寝起き" loading="lazy" style="object-position:center top"></div><div class="gallery-info"><div class="gallery-title">寝起き</div><div class="gallery-sub">Good morning</div><div class="gallery-tags"><span class="gallery-badge">New</span><span class="gallery-badge">ウマ娘</span></div></div></div><div class="gallery-item"><div class="gallery-item-img-wrap"><img src="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" alt="美味しそうに見つめるオグリ" loading="lazy" style="object-position:center top"></div><div class="gallery-info"><div class="gallery-title">美味しそうに見つめるオグリ</div><div class="gallery-sub">Oguri gazing at it hungrily</div><div class="gallery-tags"><span class="gallery-badge">New</span><span class="gallery-badge">ウマ娘</span></div></div></div><div class="gallery-item"><div class="gallery-item-img-wrap"><img src="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" alt="お誘われテイオー" loading="lazy" style="object-position:center top"></div><div class="gallery-info"><div class="gallery-title">お誘われテイオー</div><div class="gallery-sub">Invited Teio</div><div class="gallery-tags"><span class="gallery-badge">NEW</span><span class="gallery-badge">ウマ娘</span></div></div></div></div>
 </div>
 
 <!-- SERIES PAGE -->
 <div id="seriesPage" class="page">
   <h1 class="series-page-title">Series</h1>
-  <div id="seriesContent"></div>
+  <div id="seriesContent"><div class="year-section"><div class="year-heading">2026</div><div class="month-group"><div class="month-label">6月</div><div class="month-grid"><div class="month-card"><div class="month-card-img-wrap"><img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="ダイヤの秘めた想い" loading="lazy" style="object-position:center top"></div><div class="month-card-info"><div class="month-card-title">ダイヤの秘めた想い</div><div class="month-card-tags"><span class="month-card-badge">New</span><span class="month-card-badge">ウマ娘</span></div></div></div><div class="month-card"><div class="month-card-img-wrap"><img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="寝取られマックイーン" loading="lazy" style="object-position:center center"></div><div class="month-card-info"><div class="month-card-title">寝取られマックイーン</div><div class="month-card-tags"><span class="month-card-badge">New</span><span class="month-card-badge">ウマ娘</span></div></div></div><div class="month-card"><div class="month-card-img-wrap"><img src="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" alt="OLテイオー" loading="lazy" style="object-position:center top"></div><div class="month-card-info"><div class="month-card-title">OLテイオー</div><div class="month-card-tags"><span class="month-card-badge">New</span><span class="month-card-badge">ウマ娘</span></div></div></div></div></div><div class="month-group"><div class="month-label">5月</div><div class="month-grid"><div class="month-card"><div class="month-card-img-wrap"><img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="海に遊びに来たオグリ" loading="lazy" style="object-position:center top"></div><div class="month-card-info"><div class="month-card-title">海に遊びに来たオグリ</div><div class="month-card-tags"><span class="month-card-badge">New</span><span class="month-card-badge">ウマ娘</span></div></div></div><div class="month-card"><div class="month-card-img-wrap"><img src="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" alt="寝取られテイオー" loading="lazy" style="object-position:center center"></div><div class="month-card-info"><div class="month-card-title">寝取られテイオー</div><div class="month-card-tags"><span class="month-card-badge">New</span><span class="month-card-badge">NTR</span></div></div></div><div class="month-card"><div class="month-card-img-wrap"><img src="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" alt="どあっぷ" loading="lazy" style="object-position:center center"></div><div class="month-card-info"><div class="month-card-title">どあっぷ</div><div class="month-card-tags"><span class="month-card-badge">New</span></div></div></div><div class="month-card"><div class="month-card-img-wrap"><img src="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" alt="寝起き" loading="lazy" style="object-position:center top"></div><div class="month-card-info"><div class="month-card-title">寝起き</div><div class="month-card-tags"><span class="month-card-badge">New</span><span class="month-card-badge">ウマ娘</span></div></div></div><div class="month-card"><div class="month-card-img-wrap"><img src="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" alt="美味しそうに見つめるオグリ" loading="lazy" style="object-position:center top"></div><div class="month-card-info"><div class="month-card-title">美味しそうに見つめるオグリ</div><div class="month-card-tags"><span class="month-card-badge">New</span><span class="month-card-badge">ウマ娘</span></div></div></div></div></div></div></div>
 </div>
 
 <!-- WORK MODAL -->
@@ -239,25 +278,25 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;display:flex;justi
     <button class="modal-close" id="modalClose">✕</button>
     <!-- 上部バー: タイトル + View Full Series -->
     <div class="modal-top-bar">
-      <div class="modal-top-title" id="modalTitleTop"></div>
-      <a class="btn-view-all" id="modalLinkTop" href="#" target="_blank">
+      <div class="modal-top-title" id="modalTitleTop">海に遊びに来たオグリ</div>
+      <a class="btn-view-all" id="modalLinkTop" href="https://www.patreon.com/posts/hai-niyou-159095264" target="_blank">
         View Full Series
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
       </a>
     </div>
     <!-- 説明・タグ -->
     <div class="modal-header" id="modalHeader">
-      <p class="modal-desc" id="modalDesc"></p>
-      <div class="modal-tags" id="modalTags"></div>
+      <p class="modal-desc" id="modalDesc">Summer Sea Oguri Cap</p>
+      <div class="modal-tags" id="modalTags"><span class="gallery-badge">New</span><span class="gallery-badge">ウマ娘</span></div>
     </div>
     <!-- プレビュー画像 -->
-    <div class="modal-previews" id="modalPreviews"></div>
+    <div class="modal-previews" id="modalPreviews"><div class="preview-thumb"><img src="https://pbs.twimg.com/media/HJux5y2bQAAKGo4?format=jpg&amp;name=4096x4096" alt="p0" loading="lazy"><div class="preview-num">1 / 3</div></div><div class="preview-thumb"><img src="https://pbs.twimg.com/media/HJux5yxbkAAe3i4?format=jpg&amp;name=4096x4096" alt="p1" loading="lazy"><div class="preview-num">2 / 3</div></div><div class="preview-thumb"><img src="https://pbs.twimg.com/media/HJux5y1awAA8TxL?format=jpg&amp;name=4096x4096" alt="p2" loading="lazy"><div class="preview-num">3 / 3</div></div></div>
     <!-- 下部: メモ + View Full Series -->
     <div class="modal-footer">
       <span class="modal-footer-note" id="modalNote"></span>
-      <a class="btn-view-all" id="modalLink" href="#" target="_blank">
+      <a class="btn-view-all" id="modalLink" href="https://www.patreon.com/posts/hai-niyou-159095264" target="_blank">
         View Full Series
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
       </a>
     </div>
   </div>
@@ -266,10 +305,10 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;display:flex;justi
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" id="lbClose">✕</button>
-  <button class="lightbox-nav lightbox-prev" id="lbPrev">&#8592;</button>
-  <img class="lightbox-img" id="lbImg" src="" alt="">
-  <button class="lightbox-nav lightbox-next" id="lbNext">&#8594;</button>
-  <div class="lightbox-counter" id="lbCounter"></div>
+  <button class="lightbox-nav lightbox-prev" id="lbPrev" style="opacity: 1;">←</button>
+  <img class="lightbox-img" id="lbImg" src="https://pbs.twimg.com/media/HJzi3SwbkAAETEd?format=jpg&amp;name=large" alt="">
+  <button class="lightbox-nav lightbox-next" id="lbNext" style="opacity: 0.25;">→</button>
+  <div class="lightbox-counter" id="lbCounter">3 / 3</div>
 </div>
 
 <!-- PASSWORD -->
@@ -278,18 +317,18 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;display:flex;justi
     <div class="pw-title">管理パネル</div>
     <div class="pw-sub">パスワードを入力してください</div>
     <input class="pw-input" type="password" id="pwInput" placeholder="••••••••••" maxlength="30">
-    <div class="pw-error" id="pwError"></div>
+    <div class="pw-error" id="pwError">パスワードが違います</div>
     <button class="pw-btn" id="pwBtn">Enter</button>
   </div>
 </div>
 
 <!-- ADMIN PANEL -->
-<div class="admin-overlay" id="adminOverlay"></div>
-<div class="admin-panel" id="adminPanel">
+<div class="admin-overlay open" id="adminOverlay"></div>
+<div class="admin-panel open" id="adminPanel">
   <div class="admin-header">
-    <h2>管理パネル</h2>
+    <h2 id="管理パネル">管理パネル<a class="anchorjs-link " href="#管理パネル" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
     <div class="admin-header-actions">
-      <button class="btn-back-admin" id="btnUndoWork" style="display:none" onclick="undoDelete()">↩ 元に戻す</button>
+      <button class="btn-back-admin" id="btnUndoWork" style="" onclick="undoDelete()">↩ 元に戻す</button>
       <button class="btn-dl" id="btnDownload">⬇ DL</button>
       <button class="btn-close-admin" id="closeAdmin">✕</button>
     </div>
@@ -300,7 +339,688 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;display:flex;justi
   </div>
   <div class="admin-tab-content active" id="tabWorks">
     <p class="admin-section-title">作品を編集</p>
-    <div id="workList"></div>
+    <div id="workList"><div class="work-card-admin" id="adminCard_11">
+    <div class="work-card-header" onclick="toggleCard(11)">
+      <div class="work-card-header-left">
+        <img src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" onerror="this.style.opacity=0.2" alt="" style="object-position:center top">
+        <span class="work-card-title-sm">ダイヤの秘めた想い</span>
+      </div>
+      <div style="display:flex;gap:.45rem;align-items:center">
+        <button class="btn-delete-work" onclick="event.stopPropagation();deleteWork(11)">削除</button>
+        <span class="work-card-toggle" id="toggle_11">▼</span>
+      </div>
+    </div>
+    <div class="work-card-body" id="body_11">
+      <div class="field-row" style="margin-top:.8rem">
+        <div class="field"><label>タイトル</label><input type="text" value="ダイヤの秘めた想い" oninput="updateField(11,'title',this.value)"></div>
+        <div class="field"><label>サブテキスト</label><input type="text" value="Diamond's Secret Feelings" oninput="updateField(11,'sub',this.value)"></div>
+      </div>
+      <div class="field">
+        <label>タグ（最大3つ）</label>
+        <div class="field-row3">
+          <input type="text" value="New" placeholder="タグ1" oninput="updateTag(11,0,this.value)">
+          <input type="text" value="ウマ娘" placeholder="タグ2" oninput="updateTag(11,1,this.value)">
+          <input type="text" value="" placeholder="タグ3" oninput="updateTag(11,2,this.value)">
+        </div>
+      </div>
+      <div class="field"><label>説明文</label><textarea oninput="updateField(11,'desc',this.value)"></textarea></div>
+      <div class="field"><label>メモ（枚数など）</label><input type="text" value="" oninput="updateField(11,'note',this.value)"></div>
+      <div class="field-row">
+        <div class="field"><label>投稿年</label><input type="number" value="2026" min="2000" max="2099" oninput="updateField(11,'year',parseInt(this.value)||2025)"></div>
+        <div class="field"><label>投稿月</label>
+          <select onchange="updateField(11,'month',parseInt(this.value))">
+            <option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5">5月</option><option value="6" selected="">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label>誘導先URL</label><input type="text" value="https://www.patreon.com/posts/daiyanomi-i-159734941?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link" placeholder="https://..." oninput="updateField(11,'url',this.value)"></div>
+      <div class="field">
+        <label>サムネイル画像URL</label>
+        <input type="text" value="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" oninput="updateField(11,'thumb',this.value);refreshThumb(11)">
+      </div>
+      <div class="field">
+        <label>サムネイル表示位置</label>
+        <select class="thumb-pos-select" id="posSelect_11" onchange="updateThumbPos(11,this.value)"><option value="center top" selected="">上（center top）</option><option value="center center">中央（center center）</option><option value="center bottom">下（center bottom）</option><option value="left top">左上（left top）</option><option value="right top">右上（right top）</option><option value="left center">左中（left center）</option><option value="right center">右中（right center）</option></select>
+        <div class="thumb-preview-wrap">
+          <img id="thumbPreview_11" src="https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&amp;name=medium" alt="" style="object-position:center top">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:.3rem .5rem;background:rgba(0,0,0,.55);font-size:.6rem;color:rgba(255,255,255,.45);letter-spacing:.06em">プレビュー（4:3 実際の表示比率）</div>
+        </div>
+      </div>
+      <div class="field"><label>続き画像（タップで拡大・← →で移動）</label>
+        <div class="preview-list" id="prevList_11">
+    <div class="preview-item" data-prev-index="0">
+      <span>1.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJuxK0da8AAVO9W?format=jpg&amp;name=medium" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJuxK0da8AAVO9W?format=jpg&amp;name=medium" placeholder="画像URL" oninput="updatePreview(11,0,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(11,0)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="1">
+      <span>2.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJuxK0gasAAmNgk?format=jpg&amp;name=medium" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJuxK0gasAAmNgk?format=jpg&amp;name=medium" placeholder="画像URL" oninput="updatePreview(11,1,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(11,1)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="2">
+      <span>3.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJuxK0eaUAAypgu?format=jpg&amp;name=medium" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJuxK0eaUAAypgu?format=jpg&amp;name=medium" placeholder="画像URL" oninput="updatePreview(11,2,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(11,2)">✕</button>
+    </div></div>
+        <button class="btn-add-preview" onclick="addPreview(11)">＋ 画像を追加</button>
+      </div>
+    </div></div><div class="work-card-admin" id="adminCard_12">
+    <div class="work-card-header" onclick="toggleCard(12)">
+      <div class="work-card-header-left">
+        <img src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" onerror="this.style.opacity=0.2" alt="" style="object-position:center top">
+        <span class="work-card-title-sm">海に遊びに来たオグリ</span>
+      </div>
+      <div style="display:flex;gap:.45rem;align-items:center">
+        <button class="btn-delete-work" onclick="event.stopPropagation();deleteWork(12)">削除</button>
+        <span class="work-card-toggle" id="toggle_12">▼</span>
+      </div>
+    </div>
+    <div class="work-card-body" id="body_12">
+      <div class="field-row" style="margin-top:.8rem">
+        <div class="field"><label>タイトル</label><input type="text" value="海に遊びに来たオグリ" oninput="updateField(12,'title',this.value)"></div>
+        <div class="field"><label>サブテキスト</label><input type="text" value="Summer Sea Oguri Cap" oninput="updateField(12,'sub',this.value)"></div>
+      </div>
+      <div class="field">
+        <label>タグ（最大3つ）</label>
+        <div class="field-row3">
+          <input type="text" value="New" placeholder="タグ1" oninput="updateTag(12,0,this.value)">
+          <input type="text" value="ウマ娘" placeholder="タグ2" oninput="updateTag(12,1,this.value)">
+          <input type="text" value="" placeholder="タグ3" oninput="updateTag(12,2,this.value)">
+        </div>
+      </div>
+      <div class="field"><label>説明文</label><textarea oninput="updateField(12,'desc',this.value)">Summer Sea Oguri Cap</textarea></div>
+      <div class="field"><label>メモ（枚数など）</label><input type="text" value="" oninput="updateField(12,'note',this.value)"></div>
+      <div class="field-row">
+        <div class="field"><label>投稿年</label><input type="number" value="2026" min="2000" max="2099" oninput="updateField(12,'year',parseInt(this.value)||2025)"></div>
+        <div class="field"><label>投稿月</label>
+          <select onchange="updateField(12,'month',parseInt(this.value))">
+            <option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5" selected="">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label>誘導先URL</label><input type="text" value="https://www.patreon.com/posts/hai-niyou-159095264" placeholder="https://..." oninput="updateField(12,'url',this.value)"></div>
+      <div class="field">
+        <label>サムネイル画像URL</label>
+        <input type="text" value="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" oninput="updateField(12,'thumb',this.value);refreshThumb(12)">
+      </div>
+      <div class="field">
+        <label>サムネイル表示位置</label>
+        <select class="thumb-pos-select" id="posSelect_12" onchange="updateThumbPos(12,this.value)"><option value="center top" selected="">上（center top）</option><option value="center center">中央（center center）</option><option value="center bottom">下（center bottom）</option><option value="left top">左上（left top）</option><option value="right top">右上（right top）</option><option value="left center">左中（left center）</option><option value="right center">右中（right center）</option></select>
+        <div class="thumb-preview-wrap">
+          <img id="thumbPreview_12" src="https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&amp;name=4096x4096" alt="" style="object-position:center top">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:.3rem .5rem;background:rgba(0,0,0,.55);font-size:.6rem;color:rgba(255,255,255,.45);letter-spacing:.06em">プレビュー（4:3 実際の表示比率）</div>
+        </div>
+      </div>
+      <div class="field"><label>続き画像（タップで拡大・← →で移動）</label>
+        <div class="preview-list" id="prevList_12">
+    <div class="preview-item" data-prev-index="0">
+      <span>1.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJux5y2bQAAKGo4?format=jpg&amp;name=4096x4096" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJux5y2bQAAKGo4?format=jpg&amp;name=4096x4096" placeholder="画像URL" oninput="updatePreview(12,0,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(12,0)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="1">
+      <span>2.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJux5yxbkAAe3i4?format=jpg&amp;name=4096x4096" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJux5yxbkAAe3i4?format=jpg&amp;name=4096x4096" placeholder="画像URL" oninput="updatePreview(12,1,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(12,1)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="2">
+      <span>3.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJux5y1awAA8TxL?format=jpg&amp;name=4096x4096" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJux5y1awAA8TxL?format=jpg&amp;name=4096x4096" placeholder="画像URL" oninput="updatePreview(12,2,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(12,2)">✕</button>
+    </div></div>
+        <button class="btn-add-preview" onclick="addPreview(12)">＋ 画像を追加</button>
+      </div>
+    </div></div><div class="work-card-admin" id="adminCard_13">
+    <div class="work-card-header" onclick="toggleCard(13)">
+      <div class="work-card-header-left">
+        <img src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" onerror="this.style.opacity=0.2" alt="" style="object-position:center center">
+        <span class="work-card-title-sm">寝取られマックイーン</span>
+      </div>
+      <div style="display:flex;gap:.45rem;align-items:center">
+        <button class="btn-delete-work" onclick="event.stopPropagation();deleteWork(13)">削除</button>
+        <span class="work-card-toggle" id="toggle_13">▼</span>
+      </div>
+    </div>
+    <div class="work-card-body" id="body_13">
+      <div class="field-row" style="margin-top:.8rem">
+        <div class="field"><label>タイトル</label><input type="text" value="寝取られマックイーン" oninput="updateField(13,'title',this.value)"></div>
+        <div class="field"><label>サブテキスト</label><input type="text" value="Netorare Mqueen" oninput="updateField(13,'sub',this.value)"></div>
+      </div>
+      <div class="field">
+        <label>タグ（最大3つ）</label>
+        <div class="field-row3">
+          <input type="text" value="New" placeholder="タグ1" oninput="updateTag(13,0,this.value)">
+          <input type="text" value="ウマ娘" placeholder="タグ2" oninput="updateTag(13,1,this.value)">
+          <input type="text" value="" placeholder="タグ3" oninput="updateTag(13,2,this.value)">
+        </div>
+      </div>
+      <div class="field"><label>説明文</label><textarea oninput="updateField(13,'desc',this.value)"></textarea></div>
+      <div class="field"><label>メモ（枚数など）</label><input type="text" value="" oninput="updateField(13,'note',this.value)"></div>
+      <div class="field-row">
+        <div class="field"><label>投稿年</label><input type="number" value="2026" min="2000" max="2099" oninput="updateField(13,'year',parseInt(this.value)||2025)"></div>
+        <div class="field"><label>投稿月</label>
+          <select onchange="updateField(13,'month',parseInt(this.value))">
+            <option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5">5月</option><option value="6" selected="">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label>誘導先URL</label><input type="text" value="https://" placeholder="https://..." oninput="updateField(13,'url',this.value)"></div>
+      <div class="field">
+        <label>サムネイル画像URL</label>
+        <input type="text" value="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" oninput="updateField(13,'thumb',this.value);refreshThumb(13)">
+      </div>
+      <div class="field">
+        <label>サムネイル表示位置</label>
+        <select class="thumb-pos-select" id="posSelect_13" onchange="updateThumbPos(13,this.value)"><option value="center top">上（center top）</option><option value="center center" selected="">中央（center center）</option><option value="center bottom">下（center bottom）</option><option value="left top">左上（left top）</option><option value="right top">右上（right top）</option><option value="left center">左中（left center）</option><option value="right center">右中（right center）</option></select>
+        <div class="thumb-preview-wrap">
+          <img id="thumbPreview_13" src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" alt="" style="object-position:center center">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:.3rem .5rem;background:rgba(0,0,0,.55);font-size:.6rem;color:rgba(255,255,255,.45);letter-spacing:.06em">プレビュー（4:3 実際の表示比率）</div>
+        </div>
+      </div>
+      <div class="field"><label>続き画像（タップで拡大・← →で移動）</label>
+        <div class="preview-list" id="prevList_13">
+    <div class="preview-item" data-prev-index="0">
+      <span>1.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&amp;name=4096x4096" placeholder="画像URL" oninput="updatePreview(13,0,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(13,0)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="1">
+      <span>2.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJuyRdyaoAE_kkU?format=jpg&amp;name=4096x4096" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJuyRdyaoAE_kkU?format=jpg&amp;name=4096x4096" placeholder="画像URL" oninput="updatePreview(13,1,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(13,1)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="2">
+      <span>3.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJuyVCpa0AEp01D?format=jpg&amp;name=4096x4096" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJuyVCpa0AEp01D?format=jpg&amp;name=4096x4096" placeholder="画像URL" oninput="updatePreview(13,2,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(13,2)">✕</button>
+    </div></div>
+        <button class="btn-add-preview" onclick="addPreview(13)">＋ 画像を追加</button>
+      </div>
+    </div></div><div class="work-card-admin" id="adminCard_24">
+    <div class="work-card-header" onclick="toggleCard(24)">
+      <div class="work-card-header-left">
+        <img src="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" onerror="this.style.opacity=0.2" alt="" style="object-position:center center">
+        <span class="work-card-title-sm">寝取られテイオー</span>
+      </div>
+      <div style="display:flex;gap:.45rem;align-items:center">
+        <button class="btn-delete-work" onclick="event.stopPropagation();deleteWork(24)">削除</button>
+        <span class="work-card-toggle" id="toggle_24">▼</span>
+      </div>
+    </div>
+    <div class="work-card-body" id="body_24">
+      <div class="field-row" style="margin-top:.8rem">
+        <div class="field"><label>タイトル</label><input type="text" value="寝取られテイオー" oninput="updateField(24,'title',this.value)"></div>
+        <div class="field"><label>サブテキスト</label><input type="text" value="Netorare Teio" oninput="updateField(24,'sub',this.value)"></div>
+      </div>
+      <div class="field">
+        <label>タグ（最大3つ）</label>
+        <div class="field-row3">
+          <input type="text" value="New" placeholder="タグ1" oninput="updateTag(24,0,this.value)">
+          <input type="text" value="NTR" placeholder="タグ2" oninput="updateTag(24,1,this.value)">
+          <input type="text" value="" placeholder="タグ3" oninput="updateTag(24,2,this.value)">
+        </div>
+      </div>
+      <div class="field"><label>説明文</label><textarea oninput="updateField(24,'desc',this.value)"></textarea></div>
+      <div class="field"><label>メモ（枚数など）</label><input type="text" value="" oninput="updateField(24,'note',this.value)"></div>
+      <div class="field-row">
+        <div class="field"><label>投稿年</label><input type="number" value="2026" min="2000" max="2099" oninput="updateField(24,'year',parseInt(this.value)||2025)"></div>
+        <div class="field"><label>投稿月</label>
+          <select onchange="updateField(24,'month',parseInt(this.value))">
+            <option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5" selected="">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label>誘導先URL</label><input type="text" value="https://www.patreon.com/posts/qin-qu-rareteio-157868184" placeholder="https://..." oninput="updateField(24,'url',this.value)"></div>
+      <div class="field">
+        <label>サムネイル画像URL</label>
+        <input type="text" value="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" oninput="updateField(24,'thumb',this.value);refreshThumb(24)">
+      </div>
+      <div class="field">
+        <label>サムネイル表示位置</label>
+        <select class="thumb-pos-select" id="posSelect_24" onchange="updateThumbPos(24,this.value)"><option value="center top">上（center top）</option><option value="center center" selected="">中央（center center）</option><option value="center bottom">下（center bottom）</option><option value="left top">左上（left top）</option><option value="right top">右上（right top）</option><option value="left center">左中（left center）</option><option value="right center">右中（right center）</option></select>
+        <div class="thumb-preview-wrap">
+          <img id="thumbPreview_24" src="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" alt="" style="object-position:center center">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:.3rem .5rem;background:rgba(0,0,0,.55);font-size:.6rem;color:rgba(255,255,255,.45);letter-spacing:.06em">プレビュー（4:3 実際の表示比率）</div>
+        </div>
+      </div>
+      <div class="field"><label>続き画像（タップで拡大・← →で移動）</label>
+        <div class="preview-list" id="prevList_24">
+    <div class="preview-item" data-prev-index="0">
+      <span>1.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(24,0,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(24,0)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="1">
+      <span>2.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzi3SvbIAAclU2?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzi3SvbIAAclU2?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(24,1,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(24,1)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="2">
+      <span>3.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzi3SwbkAAETEd?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzi3SwbkAAETEd?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(24,2,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(24,2)">✕</button>
+    </div></div>
+        <button class="btn-add-preview" onclick="addPreview(24)">＋ 画像を追加</button>
+      </div>
+    </div></div><div class="work-card-admin" id="adminCard_25">
+    <div class="work-card-header" onclick="toggleCard(25)">
+      <div class="work-card-header-left">
+        <img src="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" onerror="this.style.opacity=0.2" alt="" style="object-position:center center">
+        <span class="work-card-title-sm">どあっぷ</span>
+      </div>
+      <div style="display:flex;gap:.45rem;align-items:center">
+        <button class="btn-delete-work" onclick="event.stopPropagation();deleteWork(25)">削除</button>
+        <span class="work-card-toggle" id="toggle_25">▼</span>
+      </div>
+    </div>
+    <div class="work-card-body" id="body_25">
+      <div class="field-row" style="margin-top:.8rem">
+        <div class="field"><label>タイトル</label><input type="text" value="どあっぷ" oninput="updateField(25,'title',this.value)"></div>
+        <div class="field"><label>サブテキスト</label><input type="text" value="Face focus" oninput="updateField(25,'sub',this.value)"></div>
+      </div>
+      <div class="field">
+        <label>タグ（最大3つ）</label>
+        <div class="field-row3">
+          <input type="text" value="New" placeholder="タグ1" oninput="updateTag(25,0,this.value)">
+          <input type="text" value="" placeholder="タグ2" oninput="updateTag(25,1,this.value)">
+          <input type="text" value="" placeholder="タグ3" oninput="updateTag(25,2,this.value)">
+        </div>
+      </div>
+      <div class="field"><label>説明文</label><textarea oninput="updateField(25,'desc',this.value)"></textarea></div>
+      <div class="field"><label>メモ（枚数など）</label><input type="text" value="" oninput="updateField(25,'note',this.value)"></div>
+      <div class="field-row">
+        <div class="field"><label>投稿年</label><input type="number" value="2026" min="2000" max="2099" oninput="updateField(25,'year',parseInt(this.value)||2025)"></div>
+        <div class="field"><label>投稿月</label>
+          <select onchange="updateField(25,'month',parseInt(this.value))">
+            <option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5" selected="">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label>誘導先URL</label><input type="text" value="https://" placeholder="https://..." oninput="updateField(25,'url',this.value)"></div>
+      <div class="field">
+        <label>サムネイル画像URL</label>
+        <input type="text" value="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" oninput="updateField(25,'thumb',this.value);refreshThumb(25)">
+      </div>
+      <div class="field">
+        <label>サムネイル表示位置</label>
+        <select class="thumb-pos-select" id="posSelect_25" onchange="updateThumbPos(25,this.value)"><option value="center top">上（center top）</option><option value="center center" selected="">中央（center center）</option><option value="center bottom">下（center bottom）</option><option value="left top">左上（left top）</option><option value="right top">右上（right top）</option><option value="left center">左中（left center）</option><option value="right center">右中（right center）</option></select>
+        <div class="thumb-preview-wrap">
+          <img id="thumbPreview_25" src="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" alt="" style="object-position:center center">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:.3rem .5rem;background:rgba(0,0,0,.55);font-size:.6rem;color:rgba(255,255,255,.45);letter-spacing:.06em">プレビュー（4:3 実際の表示比率）</div>
+        </div>
+      </div>
+      <div class="field"><label>続き画像（タップで拡大・← →で移動）</label>
+        <div class="preview-list" id="prevList_25">
+    <div class="preview-item" data-prev-index="0">
+      <span>1.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&amp;name=medium" placeholder="画像URL" oninput="updatePreview(25,0,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(25,0)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="1">
+      <span>2.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzif5AaIAAPCkf?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzif5AaIAAPCkf?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(25,1,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(25,1)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="2">
+      <span>3.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJziatVbMAA0gZM?format=jpg&amp;name=medium" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJziatVbMAA0gZM?format=jpg&amp;name=medium" placeholder="画像URL" oninput="updatePreview(25,2,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(25,2)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="3">
+      <span>4.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzis-VaQAATlj7?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzis-VaQAATlj7?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(25,3,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(25,3)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="4">
+      <span>5.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJziatQbMAAtWrZ?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJziatQbMAAtWrZ?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(25,4,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(25,4)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="5">
+      <span>6.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzis-ZbsAA1C7q?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzis-ZbsAA1C7q?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(25,5,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(25,5)">✕</button>
+    </div></div>
+        <button class="btn-add-preview" onclick="addPreview(25)">＋ 画像を追加</button>
+      </div>
+    </div></div><div class="work-card-admin" id="adminCard_26">
+    <div class="work-card-header" onclick="toggleCard(26)">
+      <div class="work-card-header-left">
+        <img src="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" onerror="this.style.opacity=0.2" alt="" style="object-position:center top">
+        <span class="work-card-title-sm">OLテイオー</span>
+      </div>
+      <div style="display:flex;gap:.45rem;align-items:center">
+        <button class="btn-delete-work" onclick="event.stopPropagation();deleteWork(26)">削除</button>
+        <span class="work-card-toggle" id="toggle_26">▼</span>
+      </div>
+    </div>
+    <div class="work-card-body" id="body_26">
+      <div class="field-row" style="margin-top:.8rem">
+        <div class="field"><label>タイトル</label><input type="text" value="OLテイオー" oninput="updateField(26,'title',this.value)"></div>
+        <div class="field"><label>サブテキスト</label><input type="text" value="OL Teio" oninput="updateField(26,'sub',this.value)"></div>
+      </div>
+      <div class="field">
+        <label>タグ（最大3つ）</label>
+        <div class="field-row3">
+          <input type="text" value="New" placeholder="タグ1" oninput="updateTag(26,0,this.value)">
+          <input type="text" value="ウマ娘" placeholder="タグ2" oninput="updateTag(26,1,this.value)">
+          <input type="text" value="" placeholder="タグ3" oninput="updateTag(26,2,this.value)">
+        </div>
+      </div>
+      <div class="field"><label>説明文</label><textarea oninput="updateField(26,'desc',this.value)"></textarea></div>
+      <div class="field"><label>メモ（枚数など）</label><input type="text" value="" oninput="updateField(26,'note',this.value)"></div>
+      <div class="field-row">
+        <div class="field"><label>投稿年</label><input type="number" value="2026" min="2000" max="2099" oninput="updateField(26,'year',parseInt(this.value)||2025)"></div>
+        <div class="field"><label>投稿月</label>
+          <select onchange="updateField(26,'month',parseInt(this.value))">
+            <option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5">5月</option><option value="6" selected="">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label>誘導先URL</label><input type="text" value="https://www.patreon.com/posts/olteio-157795872" placeholder="https://..." oninput="updateField(26,'url',this.value)"></div>
+      <div class="field">
+        <label>サムネイル画像URL</label>
+        <input type="text" value="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" oninput="updateField(26,'thumb',this.value);refreshThumb(26)">
+      </div>
+      <div class="field">
+        <label>サムネイル表示位置</label>
+        <select class="thumb-pos-select" id="posSelect_26" onchange="updateThumbPos(26,this.value)"><option value="center top" selected="">上（center top）</option><option value="center center">中央（center center）</option><option value="center bottom">下（center bottom）</option><option value="left top">左上（left top）</option><option value="right top">右上（right top）</option><option value="left center">左中（left center）</option><option value="right center">右中（right center）</option></select>
+        <div class="thumb-preview-wrap">
+          <img id="thumbPreview_26" src="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" alt="" style="object-position:center top">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:.3rem .5rem;background:rgba(0,0,0,.55);font-size:.6rem;color:rgba(255,255,255,.45);letter-spacing:.06em">プレビュー（4:3 実際の表示比率）</div>
+        </div>
+      </div>
+      <div class="field"><label>続き画像（タップで拡大・← →で移動）</label>
+        <div class="preview-list" id="prevList_26">
+    <div class="preview-item" data-prev-index="0">
+      <span>1.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(26,0,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(26,0)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="1">
+      <span>2.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzi_n7aYAAtg8F?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzi_n7aYAAtg8F?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(26,1,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(26,1)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="2">
+      <span>3.</span>
+      <img class="prev-thumb" src="" onerror="this.style.opacity=0.2" style="opacity: 0.2;">
+      <input type="text" value="" placeholder="画像URL" oninput="updatePreview(26,2,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(26,2)">✕</button>
+    </div></div>
+        <button class="btn-add-preview" onclick="addPreview(26)">＋ 画像を追加</button>
+      </div>
+    </div></div><div class="work-card-admin" id="adminCard_27">
+    <div class="work-card-header" onclick="toggleCard(27)">
+      <div class="work-card-header-left">
+        <img src="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" onerror="this.style.opacity=0.2" alt="" style="object-position:center top">
+        <span class="work-card-title-sm">寝起き</span>
+      </div>
+      <div style="display:flex;gap:.45rem;align-items:center">
+        <button class="btn-delete-work" onclick="event.stopPropagation();deleteWork(27)">削除</button>
+        <span class="work-card-toggle" id="toggle_27">▼</span>
+      </div>
+    </div>
+    <div class="work-card-body" id="body_27">
+      <div class="field-row" style="margin-top:.8rem">
+        <div class="field"><label>タイトル</label><input type="text" value="寝起き" oninput="updateField(27,'title',this.value)"></div>
+        <div class="field"><label>サブテキスト</label><input type="text" value="Good morning" oninput="updateField(27,'sub',this.value)"></div>
+      </div>
+      <div class="field">
+        <label>タグ（最大3つ）</label>
+        <div class="field-row3">
+          <input type="text" value="New" placeholder="タグ1" oninput="updateTag(27,0,this.value)">
+          <input type="text" value="ウマ娘" placeholder="タグ2" oninput="updateTag(27,1,this.value)">
+          <input type="text" value="" placeholder="タグ3" oninput="updateTag(27,2,this.value)">
+        </div>
+      </div>
+      <div class="field"><label>説明文</label><textarea oninput="updateField(27,'desc',this.value)"></textarea></div>
+      <div class="field"><label>メモ（枚数など）</label><input type="text" value="" oninput="updateField(27,'note',this.value)"></div>
+      <div class="field-row">
+        <div class="field"><label>投稿年</label><input type="number" value="2026" min="2000" max="2099" oninput="updateField(27,'year',parseInt(this.value)||2025)"></div>
+        <div class="field"><label>投稿月</label>
+          <select onchange="updateField(27,'month',parseInt(this.value))">
+            <option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5" selected="">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label>誘導先URL</label><input type="text" value="https://" placeholder="https://..." oninput="updateField(27,'url',this.value)"></div>
+      <div class="field">
+        <label>サムネイル画像URL</label>
+        <input type="text" value="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" oninput="updateField(27,'thumb',this.value);refreshThumb(27)">
+      </div>
+      <div class="field">
+        <label>サムネイル表示位置</label>
+        <select class="thumb-pos-select" id="posSelect_27" onchange="updateThumbPos(27,this.value)"><option value="center top" selected="">上（center top）</option><option value="center center">中央（center center）</option><option value="center bottom">下（center bottom）</option><option value="left top">左上（left top）</option><option value="right top">右上（right top）</option><option value="left center">左中（left center）</option><option value="right center">右中（right center）</option></select>
+        <div class="thumb-preview-wrap">
+          <img id="thumbPreview_27" src="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" alt="" style="object-position:center top">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:.3rem .5rem;background:rgba(0,0,0,.55);font-size:.6rem;color:rgba(255,255,255,.45);letter-spacing:.06em">プレビュー（4:3 実際の表示比率）</div>
+        </div>
+      </div>
+      <div class="field"><label>続き画像（タップで拡大・← →で移動）</label>
+        <div class="preview-list" id="prevList_27">
+    <div class="preview-item" data-prev-index="0">
+      <span>1.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(27,0,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(27,0)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="1">
+      <span>2.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzjPEza4AE-QbY?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzjPEza4AE-QbY?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(27,1,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(27,1)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="2">
+      <span>3.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzjLrGaUAAnVRB?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzjLrGaUAAnVRB?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(27,2,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(27,2)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="3">
+      <span>4.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzjLrLbIAAWPlc?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzjLrLbIAAWPlc?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(27,3,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(27,3)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="4">
+      <span>5.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzjLrKa4AAmaRs?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzjLrKa4AAmaRs?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(27,4,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(27,4)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="5">
+      <span>6.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzjLrIbYAA3eMn?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzjLrIbYAA3eMn?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(27,5,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(27,5)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="6">
+      <span>7.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzjHciaAAAMsTx?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzjHciaAAAMsTx?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(27,6,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(27,6)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="7">
+      <span>8.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzjHccbYAACT21?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzjHccbYAACT21?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(27,7,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(27,7)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="8">
+      <span>9.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzjHcgbkAATGi3?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzjHcgbkAATGi3?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(27,8,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(27,8)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="9">
+      <span>10.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzjHcgaUAEvsWq?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzjHcgaUAEvsWq?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(27,9,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(27,9)">✕</button>
+    </div></div>
+        <button class="btn-add-preview" onclick="addPreview(27)">＋ 画像を追加</button>
+      </div>
+    </div></div><div class="work-card-admin" id="adminCard_28">
+    <div class="work-card-header" onclick="toggleCard(28)">
+      <div class="work-card-header-left">
+        <img src="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" onerror="this.style.opacity=0.2" alt="" style="object-position:center top">
+        <span class="work-card-title-sm">美味しそうに見つめるオグリ</span>
+      </div>
+      <div style="display:flex;gap:.45rem;align-items:center">
+        <button class="btn-delete-work" onclick="event.stopPropagation();deleteWork(28)">削除</button>
+        <span class="work-card-toggle" id="toggle_28">▼</span>
+      </div>
+    </div>
+    <div class="work-card-body" id="body_28">
+      <div class="field-row" style="margin-top:.8rem">
+        <div class="field"><label>タイトル</label><input type="text" value="美味しそうに見つめるオグリ" oninput="updateField(28,'title',this.value)"></div>
+        <div class="field"><label>サブテキスト</label><input type="text" value="Oguri gazing at it hungrily" oninput="updateField(28,'sub',this.value)"></div>
+      </div>
+      <div class="field">
+        <label>タグ（最大3つ）</label>
+        <div class="field-row3">
+          <input type="text" value="New" placeholder="タグ1" oninput="updateTag(28,0,this.value)">
+          <input type="text" value="ウマ娘" placeholder="タグ2" oninput="updateTag(28,1,this.value)">
+          <input type="text" value="" placeholder="タグ3" oninput="updateTag(28,2,this.value)">
+        </div>
+      </div>
+      <div class="field"><label>説明文</label><textarea oninput="updateField(28,'desc',this.value)"></textarea></div>
+      <div class="field"><label>メモ（枚数など）</label><input type="text" value="" oninput="updateField(28,'note',this.value)"></div>
+      <div class="field-row">
+        <div class="field"><label>投稿年</label><input type="number" value="2026" min="2000" max="2099" oninput="updateField(28,'year',parseInt(this.value)||2025)"></div>
+        <div class="field"><label>投稿月</label>
+          <select onchange="updateField(28,'month',parseInt(this.value))">
+            <option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5" selected="">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label>誘導先URL</label><input type="text" value="https://www.patreon.com/posts/mei-wei-158346816" placeholder="https://..." oninput="updateField(28,'url',this.value)"></div>
+      <div class="field">
+        <label>サムネイル画像URL</label>
+        <input type="text" value="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" oninput="updateField(28,'thumb',this.value);refreshThumb(28)">
+      </div>
+      <div class="field">
+        <label>サムネイル表示位置</label>
+        <select class="thumb-pos-select" id="posSelect_28" onchange="updateThumbPos(28,this.value)"><option value="center top" selected="">上（center top）</option><option value="center center">中央（center center）</option><option value="center bottom">下（center bottom）</option><option value="left top">左上（left top）</option><option value="right top">右上（right top）</option><option value="left center">左中（left center）</option><option value="right center">右中（right center）</option></select>
+        <div class="thumb-preview-wrap">
+          <img id="thumbPreview_28" src="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" alt="" style="object-position:center top">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:.3rem .5rem;background:rgba(0,0,0,.55);font-size:.6rem;color:rgba(255,255,255,.45);letter-spacing:.06em">プレビュー（4:3 実際の表示比率）</div>
+        </div>
+      </div>
+      <div class="field"><label>続き画像（タップで拡大・← →で移動）</label>
+        <div class="preview-list" id="prevList_28">
+    <div class="preview-item" data-prev-index="0">
+      <span>1.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(28,0,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(28,0)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="1">
+      <span>2.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzjZM2aMAABikh?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzjZM2aMAABikh?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(28,1,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(28,1)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="2">
+      <span>3.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzjZMyaIAA0ttw?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzjZMyaIAA0ttw?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(28,2,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(28,2)">✕</button>
+    </div></div>
+        <button class="btn-add-preview" onclick="addPreview(28)">＋ 画像を追加</button>
+      </div>
+    </div></div><div class="work-card-admin" id="adminCard_29">
+    <div class="work-card-header" onclick="toggleCard(29)">
+      <div class="work-card-header-left">
+        <img src="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" onerror="this.style.opacity=0.2" alt="" style="object-position:center top">
+        <span class="work-card-title-sm">お誘われテイオー</span>
+      </div>
+      <div style="display:flex;gap:.45rem;align-items:center">
+        <button class="btn-delete-work" onclick="event.stopPropagation();deleteWork(29)">削除</button>
+        <span class="work-card-toggle" id="toggle_29">▼</span>
+      </div>
+    </div>
+    <div class="work-card-body" id="body_29">
+      <div class="field-row" style="margin-top:.8rem">
+        <div class="field"><label>タイトル</label><input type="text" value="お誘われテイオー" oninput="updateField(29,'title',this.value)"></div>
+        <div class="field"><label>サブテキスト</label><input type="text" value="Invited Teio" oninput="updateField(29,'sub',this.value)"></div>
+      </div>
+      <div class="field">
+        <label>タグ（最大3つ）</label>
+        <div class="field-row3">
+          <input type="text" value="NEW" placeholder="タグ1" oninput="updateTag(29,0,this.value)">
+          <input type="text" value="ウマ娘" placeholder="タグ2" oninput="updateTag(29,1,this.value)">
+          <input type="text" value="" placeholder="タグ3" oninput="updateTag(29,2,this.value)">
+        </div>
+      </div>
+      <div class="field"><label>説明文</label><textarea oninput="updateField(29,'desc',this.value)"></textarea></div>
+      <div class="field"><label>メモ（枚数など）</label><input type="text" value="" oninput="updateField(29,'note',this.value)"></div>
+      <div class="field-row">
+        <div class="field"><label>投稿年</label><input type="number" value="2026" min="2000" max="2099" oninput="updateField(29,'year',parseInt(this.value)||2025)"></div>
+        <div class="field"><label>投稿月</label>
+          <select onchange="updateField(29,'month',parseInt(this.value))">
+            <option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5" selected="">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label>誘導先URL</label><input type="text" value="https://www.patreon.com/posts/oyou-wareteio-157796001" placeholder="https://..." oninput="updateField(29,'url',this.value)"></div>
+      <div class="field">
+        <label>サムネイル画像URL</label>
+        <input type="text" value="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" oninput="updateField(29,'thumb',this.value);refreshThumb(29)">
+      </div>
+      <div class="field">
+        <label>サムネイル表示位置</label>
+        <select class="thumb-pos-select" id="posSelect_29" onchange="updateThumbPos(29,this.value)"><option value="center top" selected="">上（center top）</option><option value="center center">中央（center center）</option><option value="center bottom">下（center bottom）</option><option value="left top">左上（left top）</option><option value="right top">右上（right top）</option><option value="left center">左中（left center）</option><option value="right center">右中（right center）</option></select>
+        <div class="thumb-preview-wrap">
+          <img id="thumbPreview_29" src="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" alt="" style="object-position:center top">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:.3rem .5rem;background:rgba(0,0,0,.55);font-size:.6rem;color:rgba(255,255,255,.45);letter-spacing:.06em">プレビュー（4:3 実際の表示比率）</div>
+        </div>
+      </div>
+      <div class="field"><label>続き画像（タップで拡大・← →で移動）</label>
+        <div class="preview-list" id="prevList_29">
+    <div class="preview-item" data-prev-index="0">
+      <span>1.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(29,0,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(29,0)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="1">
+      <span>2.</span>
+      <img class="prev-thumb" src="https://pbs.twimg.com/media/HJzjhYnaAAASSuz?format=jpg&amp;name=large" onerror="this.style.opacity=0.2">
+      <input type="text" value="https://pbs.twimg.com/media/HJzjhYnaAAASSuz?format=jpg&amp;name=large" placeholder="画像URL" oninput="updatePreview(29,1,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(29,1)">✕</button>
+    </div>
+    <div class="preview-item" data-prev-index="2">
+      <span>3.</span>
+      <img class="prev-thumb" src="" onerror="this.style.opacity=0.2" style="opacity: 0.2;">
+      <input type="text" value="" placeholder="画像URL" oninput="updatePreview(29,2,this.value)">
+      <button class="btn-remove-preview" onclick="removePreview(29,2)">✕</button>
+    </div></div>
+        <button class="btn-add-preview" onclick="addPreview(29)">＋ 画像を追加</button>
+      </div>
+    </div></div></div>
     <button class="btn-add-work" id="btnAddWork">＋ 作品を追加</button>
   </div>
   <div class="admin-tab-content" id="tabDisplay">
@@ -308,19 +1028,17 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;display:flex;justi
     <div class="field">
       <label>スライダー表示設定</label>
       <div class="radio-group">
-        <label class="radio-label"><input type="radio" name="sliderMode" value="both" checked> 両方（Recent + Featured）</label>
+        <label class="radio-label"><input type="radio" name="sliderMode" value="both" checked=""> 両方（Recent + Featured）</label>
         <label class="radio-label"><input type="radio" name="sliderMode" value="recent"> Recent Worksのみ</label>
         <label class="radio-label"><input type="radio" name="sliderMode" value="featured"> Featured Worksのみ</label>
         <label class="radio-label"><input type="radio" name="sliderMode" value="none"> 非表示</label>
       </div>
     </div>
     <div class="field">
-      <label>流れる速度 — <span id="sliderSpeedLabel">28秒</span></label>
+      <label>流れる速度 — <span id="sliderSpeedLabel">40秒</span></label>
       <div style="display:flex;align-items:center;gap:.75rem">
         <span style="font-size:.65rem;color:var(--muted)">速い</span>
-        <input type="range" id="sliderSpeedInput" min="5" max="80" value="28" step="1"
-          style="flex:1;accent-color:var(--accent)"
-          oninput="SETTINGS.sliderSpeed=parseInt(this.value);applySettings();">
+        <input type="range" id="sliderSpeedInput" min="5" max="80" value="28" step="1" style="flex:1;accent-color:var(--accent)" oninput="SETTINGS.sliderSpeed=parseInt(this.value);applySettings();">
         <span style="font-size:.65rem;color:var(--muted)">遅い</span>
       </div>
     </div>
@@ -339,17 +1057,222 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;display:flex;justi
 <footer>
   <span>© 2026 Aivistra — All rights reserved</span>
 </footer>
-<div class="toast" id="toast"></div>
+<div class="toast" id="toast">削除しました　↩ 元に戻す</div>
 
 <script>
 /* ======== DATA ======== */
 let WORKS = [
-  {"id":11,"title":"ダイヤの秘めた想い","sub":"Diamond's Secret Feelings","tags":["New","ウマ娘",""],"desc":"","note":"","url":"https://www.patreon.com/posts/daiyanomi-i-159734941?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link","thumb":"https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&name=medium","thumbPos":"center top","year":2025,"month":5,"previews":["https://pbs.twimg.com/media/HJuxK0da8AAVO9W?format=jpg&name=medium","https://pbs.twimg.com/media/HJuxK0gasAAmNgk?format=jpg&name=medium","https://pbs.twimg.com/media/HJuxK0eaUAAypgu?format=jpg&name=medium"]},
-  {"id":12,"title":"オグリキャップ","sub":"· 2025","tags":["New","ウマ娘",""],"desc":"","note":"","url":"https://","thumb":"https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&name=4096x4096","thumbPos":"center top","year":2025,"month":5,"previews":["https://pbs.twimg.com/media/HJux5y2bQAAKGo4?format=jpg&name=4096x4096","https://pbs.twimg.com/media/HJux5yxbkAAe3i4?format=jpg&name=4096x4096","https://pbs.twimg.com/media/HJux5y1awAA8TxL?format=jpg&name=4096x4096"]},
-  {"id":13,"title":"メジロマックイーン","sub":"· 2025","tags":["New","ウマ娘",""],"desc":"","note":"","url":"https://","thumb":"https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&name=4096x4096","thumbPos":"center top","year":2025,"month":5,"previews":["https://pbs.twimg.com/media/HJuyRdyaoAE_kkU?format=jpg&name=4096x4096","https://pbs.twimg.com/media/HJuyVCpa0AEp01D?format=jpg&name=4096x4096",""]}
+  {
+    "id": 11,
+    "title": "ダイヤの秘めた想い",
+    "sub": "Diamond's Secret Feelings",
+    "tags": [
+      "New",
+      "ウマ娘",
+      ""
+    ],
+    "desc": "",
+    "note": "",
+    "url": "https://www.patreon.com/posts/daiyanomi-i-159734941?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link",
+    "thumb": "https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&name=medium",
+    "thumbPos": "center top",
+    "year": 2026,
+    "month": 6,
+    "previews": [
+      "https://pbs.twimg.com/media/HJuxK0da8AAVO9W?format=jpg&name=medium",
+      "https://pbs.twimg.com/media/HJuxK0gasAAmNgk?format=jpg&name=medium",
+      "https://pbs.twimg.com/media/HJuxK0eaUAAypgu?format=jpg&name=medium"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "海に遊びに来たオグリ",
+    "sub": "Summer Sea Oguri Cap",
+    "tags": [
+      "New",
+      "ウマ娘",
+      ""
+    ],
+    "desc": "Summer Sea Oguri Cap",
+    "note": "",
+    "url": "https://www.patreon.com/posts/hai-niyou-159095264",
+    "thumb": "https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&name=4096x4096",
+    "thumbPos": "center top",
+    "year": 2026,
+    "month": 5,
+    "previews": [
+      "https://pbs.twimg.com/media/HJux5y2bQAAKGo4?format=jpg&name=4096x4096",
+      "https://pbs.twimg.com/media/HJux5yxbkAAe3i4?format=jpg&name=4096x4096",
+      "https://pbs.twimg.com/media/HJux5y1awAA8TxL?format=jpg&name=4096x4096"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "寝取られマックイーン",
+    "sub": "Netorare Mqueen",
+    "tags": [
+      "New",
+      "ウマ娘",
+      ""
+    ],
+    "desc": "",
+    "note": "",
+    "url": "https://",
+    "thumb": "https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&name=4096x4096",
+    "thumbPos": "center center",
+    "year": 2026,
+    "month": 6,
+    "previews": [
+      "https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&name=4096x4096",
+      "https://pbs.twimg.com/media/HJuyRdyaoAE_kkU?format=jpg&name=4096x4096",
+      "https://pbs.twimg.com/media/HJuyVCpa0AEp01D?format=jpg&name=4096x4096"
+    ]
+  },
+  {
+    "id": 24,
+    "title": "寝取られテイオー",
+    "sub": "Netorare Teio",
+    "tags": [
+      "New",
+      "NTR",
+      ""
+    ],
+    "desc": "",
+    "note": "",
+    "url": "https://www.patreon.com/posts/qin-qu-rareteio-157868184",
+    "thumb": "https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&name=large",
+    "thumbPos": "center center",
+    "year": 2026,
+    "month": 5,
+    "previews": [
+      "https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzi3SvbIAAclU2?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzi3SwbkAAETEd?format=jpg&name=large"
+    ]
+  },
+  {
+    "id": 25,
+    "title": "どあっぷ",
+    "sub": "Face focus",
+    "tags": [
+      "New",
+      "",
+      ""
+    ],
+    "desc": "",
+    "note": "",
+    "url": "https://",
+    "thumb": "https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&name=medium",
+    "thumbPos": "center center",
+    "year": 2026,
+    "month": 5,
+    "previews": [
+      "https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&name=medium",
+      "https://pbs.twimg.com/media/HJzif5AaIAAPCkf?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJziatVbMAA0gZM?format=jpg&name=medium",
+      "https://pbs.twimg.com/media/HJzis-VaQAATlj7?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJziatQbMAAtWrZ?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzis-ZbsAA1C7q?format=jpg&name=large"
+    ]
+  },
+  {
+    "id": 26,
+    "title": "OLテイオー",
+    "sub": "OL Teio",
+    "tags": [
+      "New",
+      "ウマ娘",
+      ""
+    ],
+    "desc": "",
+    "note": "",
+    "url": "https://www.patreon.com/posts/olteio-157795872",
+    "thumb": "https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&name=large",
+    "thumbPos": "center top",
+    "year": 2026,
+    "month": 6,
+    "previews": [
+      "https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzi_n7aYAAtg8F?format=jpg&name=large",
+      ""
+    ]
+  },
+  {
+    "id": 27,
+    "title": "寝起き",
+    "sub": "Good morning",
+    "tags": [
+      "New",
+      "ウマ娘",
+      ""
+    ],
+    "desc": "",
+    "note": "",
+    "url": "https://",
+    "thumb": "https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&name=large",
+    "thumbPos": "center top",
+    "year": 2026,
+    "month": 5,
+    "previews": [
+      "https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjPEza4AE-QbY?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjLrGaUAAnVRB?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjLrLbIAAWPlc?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjLrKa4AAmaRs?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjLrIbYAA3eMn?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjHciaAAAMsTx?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjHccbYAACT21?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjHcgbkAATGi3?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjHcgaUAEvsWq?format=jpg&name=large"
+    ]
+  },
+  {
+    "id": 28,
+    "title": "美味しそうに見つめるオグリ",
+    "sub": "Oguri gazing at it hungrily",
+    "tags": [
+      "New",
+      "ウマ娘",
+      ""
+    ],
+    "desc": "",
+    "note": "",
+    "url": "https://www.patreon.com/posts/mei-wei-158346816",
+    "thumb": "https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&name=large",
+    "thumbPos": "center top",
+    "year": 2026,
+    "month": 5,
+    "previews": [
+      "https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjZM2aMAABikh?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjZMyaIAA0ttw?format=jpg&name=large"
+    ]
+  },
+  {
+    "id": 29,
+    "title": "お誘われテイオー",
+    "sub": "Invited Teio",
+    "tags": [
+      "NEW",
+      "ウマ娘",
+      ""
+    ],
+    "desc": "",
+    "note": "",
+    "url": "https://www.patreon.com/posts/oyou-wareteio-157796001",
+    "thumb": "https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&name=large",
+    "thumbPos": "center top",
+    "year": 2026,
+    "month": 5,
+    "previews": [
+      "https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjhYnaAAASSuz?format=jpg&name=large",
+      ""
+    ]
+  }
 ];
 let nextId = 20;
-let SETTINGS = {"sliderMode":"both","bgColor":"#0d0d0d","sliderSpeed":28};
+let SETTINGS = {"sliderMode":"both","bgColor":"#0d0d0d","sliderSpeed":40};
 
 const THUMB_POSITIONS=[
   {label:'上（center top）',value:'center top'},
@@ -725,5 +1648,14 @@ function showToast(msg){
 /* ======== INIT ======== */
 renderSite();
 </script>
-</body>
-</html>
+
+
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  
+
+<deepl-input-controller translate="no"></deepl-input-controller></body></html>
