@@ -851,14 +851,44 @@ document.getElementById('btnAddWork').onclick=()=>{
 
 /* ── DOWNLOAD ── */
 document.getElementById('btnDownload').onclick=()=>{
-  const worksJson=JSON.stringify(WORKS,null,2);
-  const settingsJson=JSON.stringify(SETTINGS);
-  let html=document.documentElement.outerHTML;
-  html=html.replace(/let WORKS = \[[\s\S]*?\];\s*\nlet nextId/,`let WORKS = ${worksJson};\nlet nextId`);
-  html=html.replace(/let SETTINGS = \{[\s\S]*?\};/,`let SETTINGS = ${settingsJson};`);
-  const blob=new Blob([html],{type:'text/html'});
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='index.html';a.click();
-  showToast('HTMLをダウンロードしました ✓');
+  const worksJson = JSON.stringify(WORKS, null, 2);
+  const settingsJson = JSON.stringify(SETTINGS);
+
+  function buildAndSave(src) {
+    // WORKSを置換（nextIdの前まで）
+    let out = src.replace(
+      /let WORKS = \[[\s\S]*?\];(\s*let nextId)/,
+      'let WORKS = ' + worksJson + ';$1'
+    );
+    // SETTINGSを置換（値が1行に収まる形）
+    out = out.replace(
+      /let SETTINGS = \{[^]*?\};/,
+      'let SETTINGS = ' + settingsJson + ';'
+    );
+    // 管理パネル・モーダルの開いた状態をリセット
+    out = out.replace(/(<div[^>]*id="adminPanel"[^>]*class="[^"]*?)\bopen\b/g, '$1');
+    out = out.replace(/(<div[^>]*class="[^"]*?)\bopen\b([^"]*"[^>]*id="adminPanel")/g, '$1$2');
+    out = out.replace(/(<div[^>]*id="adminOverlay"[^>]*class="[^"]*?)\bopen\b/g, '$1');
+    out = out.replace(/(<div[^>]*id="tosOverlay"[^>]*class="[^"]*?)\bopen\b/g, '$1');
+    out = out.replace(/(<div[^>]*id="pwOverlay"[^>]*class="[^"]*?)\bopen\b/g, '$1');
+    // body overflow:hidden をリセット
+    out = out.replace(/(<body[^>]*style="[^"]*?)overflow:\s*hidden;?/g, '$1');
+    const blob = new Blob([out], {type:'text/html'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'index.html';
+    a.click();
+    showToast('HTMLをダウンロードしました ✓');
+  }
+
+  // GitHub Pages上ではfetchで元のHTMLを取得できる
+  fetch(location.href)
+    .then(r => r.text())
+    .then(src => buildAndSave(src))
+    .catch(() => {
+      // file://など fetchできない場合はouterHTMLを使う
+      buildAndSave('<!DOCTYPE html>\n' + document.documentElement.outerHTML);
+    });
 };
 
 function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800);}
