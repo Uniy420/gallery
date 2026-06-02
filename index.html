@@ -259,6 +259,43 @@ nav{display:flex;gap:1rem;align-items:center}
 .tos-back-btn:hover{border-color:rgba(255,255,255,.25);color:var(--text)}
 .toast{position:fixed;bottom:1.8rem;left:50%;transform:translateX(-50%) translateY(70px);background:var(--accent);color:#0d0d0d;padding:.5rem 1.2rem;border-radius:4px;font-size:.74rem;letter-spacing:.05em;z-index:999;opacity:0;transition:all .4s}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+/* ── お知らせ掲示板 ── */
+.notice-section{padding:0 2rem 5rem}
+@media(max-width:600px){.notice-section{padding:0 1rem 4rem}}
+.notice-header{display:flex;align-items:center;gap:1.5rem;padding:2.5rem 0 1.5rem}
+.notice-header span{font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.notice-header::after{content:'';flex:1;height:1px;background:var(--border)}
+.notice-list{display:flex;flex-direction:column;gap:.75rem}
+.notice-item{display:flex;gap:1.2rem;padding:1rem 1.2rem;background:var(--surface);border:1px solid var(--border);border-radius:8px;transition:border-color .3s;align-items:flex-start}
+.notice-item:hover{border-color:rgba(201,169,110,.2)}
+.notice-item.pinned{border-color:rgba(201,169,110,.3);background:rgba(201,169,110,.04)}
+.notice-badge{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:.35rem;min-width:52px}
+.notice-type{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .5rem;border-radius:10px;white-space:nowrap}
+.notice-type.info{background:rgba(100,160,255,.12);color:#7ab0ff;border:1px solid rgba(100,160,255,.25)}
+.notice-type.update{background:rgba(201,169,110,.12);color:var(--accent);border:1px solid rgba(201,169,110,.25)}
+.notice-type.important{background:rgba(255,100,100,.1);color:#ff8a8a;border:1px solid rgba(255,100,100,.2)}
+.notice-pin-icon{font-size:.65rem;color:var(--accent);opacity:.7}
+.notice-content{flex:1;min-width:0}
+.notice-title-row{display:flex;align-items:baseline;gap:.75rem;flex-wrap:wrap;margin-bottom:.3rem}
+.notice-title{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:300;color:var(--text)}
+.notice-date{font-size:.62rem;color:var(--muted);white-space:nowrap}
+.notice-body{font-size:.78rem;color:var(--muted);line-height:1.75}
+.notice-empty{text-align:center;padding:3rem 0;font-size:.78rem;color:var(--muted);letter-spacing:.06em}
+
+/* admin notice */
+.notice-card-admin{background:var(--admin-surface);border:1px solid var(--admin-border);border-radius:7px;margin-bottom:.75rem;overflow:hidden}
+.notice-card-header{display:flex;align-items:center;justify-content:space-between;padding:.65rem .85rem;cursor:pointer;transition:background .2s}
+.notice-card-header:hover{background:rgba(255,255,255,.03)}
+.notice-card-title-sm{font-size:.8rem}
+.notice-type-select{display:flex;gap:.4rem;margin-top:.4rem;flex-wrap:wrap}
+.notice-type-btn{background:none;border:1px solid var(--admin-border);color:var(--muted);padding:.22rem .65rem;border-radius:10px;font-size:.65rem;letter-spacing:.06em;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
+.notice-type-btn.active-info{background:rgba(100,160,255,.12);border-color:rgba(100,160,255,.4);color:#7ab0ff}
+.notice-type-btn.active-update{background:rgba(201,169,110,.12);border-color:rgba(201,169,110,.4);color:var(--accent)}
+.notice-type-btn.active-important{background:rgba(255,100,100,.1);border-color:rgba(255,100,100,.3);color:#ff8a8a}
+.notice-pin-check{display:flex;align-items:center;gap:.5rem;margin-top:.7rem;font-size:.72rem;color:var(--text);cursor:pointer}
+.notice-pin-check input{accent-color:var(--accent)}
+.btn-add-notice{width:100%;background:none;border:1px dashed rgba(100,160,255,.3);color:#7ab0ff;padding:.6rem;border-radius:6px;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;margin-top:.45rem;transition:all .2s;font-family:'DM Sans',sans-serif}
+.btn-add-notice:hover{background:rgba(100,160,255,.06);border-color:rgba(100,160,255,.5)}
 footer{border-top:1px solid var(--border);padding:1.6rem 2rem;font-size:.7rem;color:var(--muted)}
 ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--surface2);border-radius:10px}
 </style>
@@ -378,6 +415,7 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;font-size:.7rem;co
     <input class="pw-input" type="password" id="pwInput" placeholder="••••••••••" maxlength="30">
     <div class="pw-error" id="pwError"></div>
     <button class="pw-btn" id="pwBtn">Enter</button>
+    <button onclick="document.getElementById('pwOverlay').classList.remove('open')" style="margin-top:.6rem;width:100%;padding:.5rem;background:none;border:1px solid rgba(255,255,255,.1);color:var(--muted);border-radius:6px;font-family:'DM Sans',sans-serif;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:all .3s" onmouseover="this.style.borderColor='rgba(255,255,255,.25)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='rgba(255,255,255,.1)';this.style.color='var(--muted)'">閉じる</button>
   </div>
 </div>
 
@@ -395,6 +433,7 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;font-size:.7rem;co
   <div class="admin-tabs">
     <button class="admin-tab active" data-tab="works">作品管理</button>
     <button class="admin-tab" data-tab="display">表示設定</button>
+    <button class="admin-tab" data-tab="notice">お知らせ</button>
   </div>
   <div class="admin-tab-content active" id="tabWorks">
     <p class="admin-section-title">作品を編集</p>
@@ -448,232 +487,41 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;font-size:.7rem;co
   </div>
 </div>
 
+<!-- お知らせ掲示板 -->
+<div class="notice-section" id="noticeSection">
+  <div class="notice-header"><span>お知らせ</span></div>
+  <div class="notice-list" id="noticeList"></div>
+  <div class="admin-tab-content" id="tabNotice">
+    <p class="admin-section-title">お知らせを編集</p>
+    <div id="noticeAdminList"></div>
+    <button class="btn-add-notice" id="btnAddNotice">＋ お知らせを追加</button>
+  </div>
+</div>
+
 <footer><span>© 2026 Aivistra — All rights reserved</span></footer>
 <div class="toast" id="toast"></div>
 
 <script>
 /* ======== DATA ======== */
 let WORKS = [
-  {
-    "id": 11,
-    "title": "ダイヤの秘めた想い",
-    "sub": "Diamond's Secret Feelings",
-    "tags": [
-      "New",
-      "ウマ娘",
-      ""
-    ],
-    "desc": "",
-    "note": "",
-    "url": "https://www.patreon.com/posts/daiyanomi-i-159734941?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link",
-    "thumb": "https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&name=medium",
-    "thumbPos": "50% 0%",
-    "showInSlider": true,
-    "year": 2026,
-    "month": 6,
-    "previews": [
-      "https://pbs.twimg.com/media/HJuxK0da8AAVO9W?format=jpg&name=medium",
-      "https://pbs.twimg.com/media/HJuxK0gasAAmNgk?format=jpg&name=medium",
-      "https://pbs.twimg.com/media/HJuxK0eaUAAypgu?format=jpg&name=medium"
-    ]
-  },
-  {
-    "id": 12,
-    "title": "海に遊びに来たオグリ",
-    "sub": "Summer Sea Oguri Cap",
-    "tags": [
-      "New",
-      "ウマ娘",
-      ""
-    ],
-    "desc": "Summer Sea Oguri Cap",
-    "note": "",
-    "url": "https://www.patreon.com/posts/hai-niyou-159095264",
-    "thumb": "https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&name=4096x4096",
-    "thumbPos": "50% 0%",
-    "showInSlider": true,
-    "year": 2026,
-    "month": 5,
-    "previews": [
-      "https://pbs.twimg.com/media/HJux5y2bQAAKGo4?format=jpg&name=4096x4096",
-      "https://pbs.twimg.com/media/HJux5yxbkAAe3i4?format=jpg&name=4096x4096",
-      "https://pbs.twimg.com/media/HJux5y1awAA8TxL?format=jpg&name=4096x4096"
-    ]
-  },
-  {
-    "id": 13,
-    "title": "寝取られマックイーン",
-    "sub": "Netorare Mqueen",
-    "tags": [
-      "New",
-      "ウマ娘",
-      ""
-    ],
-    "desc": "",
-    "note": "",
-    "url": "https://",
-    "thumb": "https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&name=4096x4096",
-    "thumbPos": "50% 50%",
-    "showInSlider": true,
-    "year": 2026,
-    "month": 6,
-    "previews": [
-      "https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&name=4096x4096",
-      "https://pbs.twimg.com/media/HJuyRdyaoAE_kkU?format=jpg&name=4096x4096",
-      "https://pbs.twimg.com/media/HJuyVCpa0AEp01D?format=jpg&name=4096x4096"
-    ]
-  },
-  {
-    "id": 24,
-    "title": "寝取られテイオー",
-    "sub": "Netorare Teio",
-    "tags": [
-      "New",
-      "NTR",
-      ""
-    ],
-    "desc": "",
-    "note": "",
-    "url": "https://www.patreon.com/posts/qin-qu-rareteio-157868184",
-    "thumb": "https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&name=large",
-    "thumbPos": "50% 50%",
-    "showInSlider": true,
-    "year": 2026,
-    "month": 5,
-    "previews": [
-      "https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJzi3SvbIAAclU2?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJzi3SwbkAAETEd?format=jpg&name=large"
-    ]
-  },
-  {
-    "id": 25,
-    "title": "どあっぷ",
-    "sub": "Face focus",
-    "tags": [
-      "New",
-      "",
-      ""
-    ],
-    "desc": "",
-    "note": "",
-    "url": "https://",
-    "thumb": "https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&name=medium",
-    "thumbPos": "50% 50%",
-    "showInSlider": true,
-    "year": 2026,
-    "month": 5,
-    "previews": [
-      "https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&name=medium",
-      "https://pbs.twimg.com/media/HJzif5AaIAAPCkf?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJziatVbMAA0gZM?format=jpg&name=medium",
-      "https://pbs.twimg.com/media/HJzis-VaQAATlj7?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJziatQbMAAtWrZ?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJzis-ZbsAA1C7q?format=jpg&name=large"
-    ]
-  },
-  {
-    "id": 26,
-    "title": "OLテイオー",
-    "sub": "OL Teio",
-    "tags": [
-      "New",
-      "ウマ娘",
-      ""
-    ],
-    "desc": "",
-    "note": "",
-    "url": "https://www.patreon.com/posts/olteio-157795872",
-    "thumb": "https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&name=large",
-    "thumbPos": "50% 0%",
-    "showInSlider": true,
-    "year": 2026,
-    "month": 5,
-    "previews": [
-      "https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJzi_n7aYAAtg8F?format=jpg&name=large",
-      ""
-    ]
-  },
-  {
-    "id": 27,
-    "title": "寝起き",
-    "sub": "Good morning",
-    "tags": [
-      "New",
-      "ウマ娘",
-      ""
-    ],
-    "desc": "",
-    "note": "",
-    "url": "https://",
-    "thumb": "https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&name=large",
-    "thumbPos": "50% 0%",
-    "showInSlider": true,
-    "year": 2026,
-    "month": 5,
-    "previews": [
-      "https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJzjPEza4AE-QbY?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJzjLrGaUAAnVRB?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJzjLrLbIAAWPlc?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJzjLrKa4AAmaRs?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJzjLrIbYAA3eMn?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJzjHciaAAAMsTx?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJzjHccbYAACT21?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJzjHcgbkAATGi3?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJzjHcgaUAEvsWq?format=jpg&name=large"
-    ]
-  },
-  {
-    "id": 28,
-    "title": "美味しそうに見つめるオグリ",
-    "sub": "Oguri gazing at it hungrily",
-    "tags": [
-      "New",
-      "ウマ娘",
-      ""
-    ],
-    "desc": "",
-    "note": "",
-    "url": "https://www.patreon.com/posts/mei-wei-158346816",
-    "thumb": "https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&name=large",
-    "thumbPos": "50% 0%",
-    "showInSlider": true,
-    "year": 2026,
-    "month": 5,
-    "previews": [
-      "https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJzjZM2aMAABikh?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJzjZMyaIAA0ttw?format=jpg&name=large"
-    ]
-  },
-  {
-    "id": 29,
-    "title": "お誘われテイオー",
-    "sub": "Invited Teio",
-    "tags": [
-      "NEW",
-      "ウマ娘",
-      ""
-    ],
-    "desc": "",
-    "note": "",
-    "url": "https://www.patreon.com/posts/oyou-wareteio-157796001",
-    "thumb": "https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&name=large",
-    "thumbPos": "50% 0%",
-    "showInSlider": true,
-    "year": 2026,
-    "month": 5,
-    "previews": [
-      "https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&name=large",
-      "https://pbs.twimg.com/media/HJzjhYnaAAASSuz?format=jpg&name=large",
-      ""
-    ]
-  }
+  {"id":11,"title":"ダイヤの秘めた想い","sub":"Diamond's Secret Feelings","tags":["New","ウマ娘",""],"desc":"","note":"","url":"https://www.patreon.com/posts/daiyanomi-i-159734941?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link","thumb":"https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&name=medium","thumbPos":"50% 0%","showInSlider":true,"year":2026,"month":6,"previews":["https://pbs.twimg.com/media/HJuxK0da8AAVO9W?format=jpg&name=medium","https://pbs.twimg.com/media/HJuxK0gasAAmNgk?format=jpg&name=medium","https://pbs.twimg.com/media/HJuxK0eaUAAypgu?format=jpg&name=medium"]},
+  {"id":12,"title":"海に遊びに来たオグリ","sub":"Summer Sea Oguri Cap","tags":["New","ウマ娘",""],"desc":"Summer Sea Oguri Cap","note":"","url":"https://www.patreon.com/posts/hai-niyou-159095264","thumb":"https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&name=4096x4096","thumbPos":"50% 0%","showInSlider":true,"year":2026,"month":5,"previews":["https://pbs.twimg.com/media/HJux5y2bQAAKGo4?format=jpg&name=4096x4096","https://pbs.twimg.com/media/HJux5yxbkAAe3i4?format=jpg&name=4096x4096","https://pbs.twimg.com/media/HJux5y1awAA8TxL?format=jpg&name=4096x4096"]},
+  {"id":13,"title":"寝取られマックイーン","sub":"Netorare Mqueen","tags":["New","ウマ娘",""],"desc":"","note":"","url":"https://","thumb":"https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&name=4096x4096","thumbPos":"50% 50%","showInSlider":true,"year":2026,"month":6,"previews":["https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&name=4096x4096","https://pbs.twimg.com/media/HJuyRdyaoAE_kkU?format=jpg&name=4096x4096","https://pbs.twimg.com/media/HJuyVCpa0AEp01D?format=jpg&name=4096x4096"]},
+  {"id":24,"title":"寝取られテイオー","sub":"Netorare Teio","tags":["New","NTR",""],"desc":"","note":"","url":"https://www.patreon.com/posts/qin-qu-rareteio-157868184","thumb":"https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&name=large","thumbPos":"50% 50%","showInSlider":true,"year":2026,"month":5,"previews":["https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&name=large","https://pbs.twimg.com/media/HJzi3SvbIAAclU2?format=jpg&name=large","https://pbs.twimg.com/media/HJzi3SwbkAAETEd?format=jpg&name=large"]},
+  {"id":25,"title":"どあっぷ","sub":"Face focus","tags":["New","",""],"desc":"","note":"","url":"https://","thumb":"https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&name=medium","thumbPos":"50% 50%","showInSlider":true,"year":2026,"month":5,"previews":["https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&name=medium","https://pbs.twimg.com/media/HJzif5AaIAAPCkf?format=jpg&name=large","https://pbs.twimg.com/media/HJziatVbMAA0gZM?format=jpg&name=medium","https://pbs.twimg.com/media/HJzis-VaQAATlj7?format=jpg&name=large","https://pbs.twimg.com/media/HJziatQbMAAtWrZ?format=jpg&name=large","https://pbs.twimg.com/media/HJzis-ZbsAA1C7q?format=jpg&name=large"]},
+  {"id":26,"title":"OLテイオー","sub":"OL Teio","tags":["New","ウマ娘",""],"desc":"","note":"","url":"https://www.patreon.com/posts/olteio-157795872","thumb":"https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&name=large","thumbPos":"50% 0%","showInSlider":true,"year":2026,"month":6,"previews":["https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&name=large","https://pbs.twimg.com/media/HJzi_n7aYAAtg8F?format=jpg&name=large",""]},
+  {"id":27,"title":"寝起き","sub":"Good morning","tags":["New","ウマ娘",""],"desc":"","note":"","url":"https://","thumb":"https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&name=large","thumbPos":"50% 0%","showInSlider":true,"year":2026,"month":5,"previews":["https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&name=large","https://pbs.twimg.com/media/HJzjPEza4AE-QbY?format=jpg&name=large","https://pbs.twimg.com/media/HJzjLrGaUAAnVRB?format=jpg&name=large","https://pbs.twimg.com/media/HJzjLrLbIAAWPlc?format=jpg&name=large","https://pbs.twimg.com/media/HJzjLrKa4AAmaRs?format=jpg&name=large","https://pbs.twimg.com/media/HJzjLrIbYAA3eMn?format=jpg&name=large","https://pbs.twimg.com/media/HJzjHciaAAAMsTx?format=jpg&name=large","https://pbs.twimg.com/media/HJzjHccbYAACT21?format=jpg&name=large","https://pbs.twimg.com/media/HJzjHcgbkAATGi3?format=jpg&name=large","https://pbs.twimg.com/media/HJzjHcgaUAEvsWq?format=jpg&name=large"]},
+  {"id":28,"title":"美味しそうに見つめるオグリ","sub":"Oguri gazing at it hungrily","tags":["New","ウマ娘",""],"desc":"","note":"","url":"https://www.patreon.com/posts/mei-wei-158346816","thumb":"https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&name=large","thumbPos":"50% 0%","showInSlider":true,"year":2026,"month":5,"previews":["https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&name=large","https://pbs.twimg.com/media/HJzjZM2aMAABikh?format=jpg&name=large","https://pbs.twimg.com/media/HJzjZMyaIAA0ttw?format=jpg&name=large"]},
+  {"id":29,"title":"お誘われテイオー","sub":"Invited Teio","tags":["NEW","ウマ娘",""],"desc":"","note":"","url":"https://www.patreon.com/posts/oyou-wareteio-157796001","thumb":"https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&name=large","thumbPos":"50% 0%","showInSlider":true,"year":2026,"month":5,"previews":["https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&name=large","https://pbs.twimg.com/media/HJzjhYnaAAASSuz?format=jpg&name=large",""]}
 ];
 let nextId = 30;
 let SETTINGS = {"sliderMode":"both","bgColor":"#0d0d0d","sliderSpeed":40,"bgImageData":"","bgOpacity":18,"bgPos":"50% 50%"};
+
+let NOTICES = [
+  {"id":1,"type":"info","title":"サイトをオープンしました","body":"イラスト作品を公開しています。続きはPatreonにて公開中です。","date":"2026-06-01","pinned":true},
+  {"id":2,"type":"update","title":"新作を追加しました","body":"ダイヤの秘めた想い・OLテイオーほか新作を追加しました。続きはPatreonでご覧ください。","date":"2026-06-01","pinned":false}
+];
+let noticeNextId = 10;
 
 const MONTHS=['','1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
 const PAGE_SIZE=12;
@@ -688,7 +536,7 @@ function showPage(p){
 }
 
 /* ── RENDER ── */
-function renderSite(){applySettings();renderSlider();galleryPage=1;renderGallery();}
+function renderSite(){applySettings();renderSlider();galleryPage=1;renderGallery();renderNotices(true);}
 
 function applySettings(){
   const m=SETTINGS.sliderMode;
@@ -915,7 +763,7 @@ function openAdminPanel(){
   document.getElementById('adminOverlay').classList.add('open');
   document.getElementById('adminPanel').classList.add('open');
   document.body.style.overflow='hidden';
-  renderAdminList();applySettings();
+  renderAdminList();applySettings();renderNoticeAdmin();
 }
 function closeAdmin(){document.getElementById('adminOverlay').classList.remove('open');document.getElementById('adminPanel').classList.remove('open');document.body.style.overflow='';}
 document.getElementById('closeAdmin').onclick=closeAdmin;
@@ -1057,6 +905,124 @@ document.getElementById('btnAddWork').onclick=()=>{
   setTimeout(()=>{const c=document.getElementById(`adminCard_${w.id}`);if(c){c.scrollIntoView({behavior:'smooth',block:'center'});toggleCard(w.id);}},100);
 };
 
+/* ── お知らせ ── */
+const NOTICE_PAGE_SIZE = 5;
+let noticePage = 1;
+
+function renderNotices(reset){
+  if(reset) noticePage = 1;
+  const list=document.getElementById('noticeList');
+  if(!list)return;
+  list.innerHTML='';
+  if(!NOTICES.length){list.innerHTML='<div class="notice-empty">お知らせはありません</div>';updateNoticeLoadMore(0,0);return;}
+  const sorted=[...NOTICES].sort((a,b)=>{
+    if(a.pinned&&!b.pinned)return -1;
+    if(!a.pinned&&b.pinned)return 1;
+    return b.date.localeCompare(a.date);
+  });
+  const slice=sorted.slice(0, NOTICE_PAGE_SIZE * noticePage);
+  slice.forEach(n=>{
+    const el=document.createElement('div');
+    el.className='notice-item'+(n.pinned?' pinned':'');
+    const typeLabel={info:'INFO',update:'UPDATE',important:'重要'}[n.type]||'INFO';
+    el.innerHTML=`
+      <div class="notice-badge">
+        <span class="notice-type ${n.type}">${typeLabel}</span>
+        ${n.pinned?'<span class="notice-pin-icon">📌</span>':''}
+      </div>
+      <div class="notice-content">
+        <div class="notice-title-row">
+          <span class="notice-title">${n.title}</span>
+          <span class="notice-date">${n.date}</span>
+        </div>
+        <div class="notice-body">${n.body}</div>
+      </div>`;
+    list.appendChild(el);
+  });
+  updateNoticeLoadMore(slice.length, sorted.length);
+}
+
+function updateNoticeLoadMore(shown, total){
+  let btn = document.getElementById('noticeLoadMoreBtn');
+  if(!btn){
+    btn = document.createElement('div');
+    btn.id = 'noticeLoadMoreBtn';
+    btn.style.cssText = 'text-align:center;margin-top:1.2rem';
+    btn.innerHTML = '<button class="btn-load-more" onclick="loadMoreNotices()">続きを読み込む</button>';
+    document.getElementById('noticeSection').appendChild(btn);
+  }
+  btn.style.display = shown < total ? '' : 'none';
+}
+
+function loadMoreNotices(){
+  noticePage++;
+  renderNotices(false);
+}
+
+function renderNoticeAdmin(){
+  const list=document.getElementById('noticeAdminList');
+  if(!list)return;
+  list.innerHTML='';
+  NOTICES.forEach(n=>{
+    const c=document.createElement('div');c.className='notice-card-admin';c.id=`nCard_${n.id}`;
+    c.innerHTML=buildNoticeCard(n);list.appendChild(c);
+  });
+}
+
+function buildNoticeCard(n){
+  const typeClass={'info':'active-info','update':'active-update','important':'active-important'};
+  return `
+    <div class="notice-card-header" onclick="toggleNoticeCard(${n.id})">
+      <span class="notice-card-title-sm">${n.title||'無題'}</span>
+      <div style="display:flex;gap:.4rem;align-items:center">
+        <button class="btn-delete-work" onclick="event.stopPropagation();deleteNotice(${n.id})">削除</button>
+        <span id="ntoggle_${n.id}" style="font-size:.58rem;color:var(--muted)">▼</span>
+      </div>
+    </div>
+    <div class="work-card-body" id="nbody_${n.id}">
+      <div class="field" style="margin-top:.8rem"><label>タイトル</label>
+        <input type="text" value="${n.title.replace(/"/g,'&quot;')}" oninput="updateNotice(${n.id},'title',this.value)">
+      </div>
+      <div class="field"><label>本文</label>
+        <textarea oninput="updateNotice(${n.id},'body',this.value)">${n.body}</textarea>
+      </div>
+      <div class="field"><label>日付</label>
+        <input type="date" value="${n.date}" oninput="updateNotice(${n.id},'date',this.value)">
+      </div>
+      <div class="field"><label>種別</label>
+        <div class="notice-type-select">
+          <button class="notice-type-btn ${n.type==='info'?'active-info':''}" onclick="updateNotice(${n.id},'type','info');renderNoticeAdmin()">INFO</button>
+          <button class="notice-type-btn ${n.type==='update'?'active-update':''}" onclick="updateNotice(${n.id},'type','update');renderNoticeAdmin()">UPDATE</button>
+          <button class="notice-type-btn ${n.type==='important'?'active-important':''}" onclick="updateNotice(${n.id},'type','important');renderNoticeAdmin()">重要</button>
+        </div>
+      </div>
+      <label class="notice-pin-check">
+        <input type="checkbox" ${n.pinned?'checked':''} onchange="updateNotice(${n.id},'pinned',this.checked)">
+        📌 上部に固定表示
+      </label>
+    </div>`;
+}
+
+function toggleNoticeCard(id){
+  const b=document.getElementById(`nbody_${id}`);
+  const t=document.getElementById(`ntoggle_${id}`);
+  const o=b.classList.toggle('open');t.textContent=o?'▲':'▼';
+}
+function updateNotice(id,field,value){
+  const n=NOTICES.find(x=>x.id===id);if(!n)return;n[field]=value;
+  if(field==='title'){const el=document.querySelector(`#nCard_${id} .notice-card-title-sm`);if(el)el.textContent=value||'無題';}
+  renderNotices(true);
+}
+function deleteNotice(id){
+  if(!confirm('このお知らせを削除しますか？'))return;
+  NOTICES=NOTICES.filter(n=>n.id!==id);renderNoticeAdmin();renderNotices(true);
+}
+document.getElementById('btnAddNotice').onclick=()=>{
+  const n={id:noticeNextId++,type:'info',title:'新しいお知らせ',body:'',date:new Date().toISOString().slice(0,10),pinned:false};
+  NOTICES.push(n);renderNoticeAdmin();renderNotices();
+  setTimeout(()=>{const c=document.getElementById(`nCard_${n.id}`);if(c){c.scrollIntoView({behavior:'smooth',block:'center'});toggleNoticeCard(n.id);}},100);
+};
+
 /* ── DOWNLOAD ── */
 document.getElementById('btnDownload').onclick=()=>{
   const worksJson = JSON.stringify(WORKS, null, 2);
@@ -1072,6 +1038,12 @@ document.getElementById('btnDownload').onclick=()=>{
     out = out.replace(
       /let SETTINGS = \{[^]*?\};/,
       'let SETTINGS = ' + settingsJson + ';'
+    );
+    // NOTICESを置換
+    const noticesJson = JSON.stringify(NOTICES, null, 2);
+    out = out.replace(
+      /let NOTICES = \[[\s\S]*?\];(\s*let noticeNextId)/,
+      'let NOTICES = ' + noticesJson + ';$1'
     );
     // 管理パネル・モーダルの開いた状態をリセット
     out = out.replace(/(<div[^>]*id="adminPanel"[^>]*class="[^"]*?)\bopen\b/g, '$1');
