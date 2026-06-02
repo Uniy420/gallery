@@ -33,10 +33,6 @@
   <body style="background: rgb(13, 13, 13); overflow: hidden;">
     <div class="container-lg px-3 my-5 markdown-body">
       
-      <h1><a href="https://uniy420.github.io/gallery/">gallery</a></h1>
-      
-
-      <p>&lt;!DOCTYPE html&gt;</p>
 
 
 <meta charset="UTF-8">
