@@ -310,6 +310,16 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;display:flex;justi
         <label class="radio-label"><input type="radio" name="sliderMode" value="none"> 非表示</label>
       </div>
     </div>
+    <div class="field">
+      <label>流れる速度 — <span id="sliderSpeedLabel">28秒</span></label>
+      <div style="display:flex;align-items:center;gap:.75rem">
+        <span style="font-size:.65rem;color:var(--muted)">速い</span>
+        <input type="range" id="sliderSpeedInput" min="5" max="80" value="28" step="1"
+          style="flex:1;accent-color:var(--accent)"
+          oninput="SETTINGS.sliderSpeed=parseInt(this.value);applySettings();">
+        <span style="font-size:.65rem;color:var(--muted)">遅い</span>
+      </div>
+    </div>
     <p class="admin-section-title" style="margin-top:1.3rem">サイト背景色</p>
     <div class="field">
       <label>背景カラー</label>
@@ -323,8 +333,7 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;display:flex;justi
 </div>
 
 <footer>
-  <span>© 2025 Kanato — All rights reserved</span>
-  <span>Made with care ✦</span>
+  <span>© 2026 Aivistra — All rights reserved</span>
 </footer>
 <div class="toast" id="toast"></div>
 
@@ -336,7 +345,7 @@ let WORKS = [
   {"id":13,"title":"メジロマックイーン","sub":"· 2025","tags":["New","ウマ娘",""],"desc":"","note":"","url":"https://","thumb":"https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&name=4096x4096","thumbPos":"center top","year":2025,"month":5,"previews":["https://pbs.twimg.com/media/HJuyRdyaoAE_kkU?format=jpg&name=4096x4096","https://pbs.twimg.com/media/HJuyVCpa0AEp01D?format=jpg&name=4096x4096",""]}
 ];
 let nextId = 20;
-let SETTINGS = {"sliderMode":"both","bgColor":"#0d0d0d"};
+let SETTINGS = {"sliderMode":"both","bgColor":"#0d0d0d","sliderSpeed":28};
 
 const THUMB_POSITIONS=[
   {label:'上（center top）',value:'center top'},
@@ -373,6 +382,13 @@ function applySettings(){
   document.querySelectorAll('input[name=sliderMode]').forEach(r=>{r.checked=(r.value===m);});
   document.getElementById('bgColorPicker').value=SETTINGS.bgColor;
   document.getElementById('bgColorText').value=SETTINGS.bgColor;
+  // スライダー速度適用
+  const spd=SETTINGS.sliderSpeed||28;
+  const r1=document.getElementById('row1');const r2=document.getElementById('row2');
+  if(r1)r1.style.animationDuration=spd+'s';
+  if(r2)r2.style.animationDuration=(spd*1.3)+'s';
+  const inp=document.getElementById('sliderSpeedInput');if(inp)inp.value=spd;
+  const lbl=document.getElementById('sliderSpeedLabel');if(lbl)lbl.textContent=spd+'秒';
 }
 
 function applyBgColor(){const v=document.getElementById('bgColorText').value.trim();SETTINGS.bgColor=v;applySettings();showToast('背景色を変更しました ✓');}
@@ -384,9 +400,16 @@ function renderSlider(){
   ['row1','row2'].forEach((rowId,ri)=>{
     const el=document.getElementById(rowId);el.innerHTML='';
     if(!imgs.length)return;
-    const all=[...imgs,...imgs];
-    all.forEach((_,i)=>{
-      const item=imgs[(i+ri*2)%imgs.length];
+    // 1920pxで隙間なく埋まるよう十分な枚数を確保（カード幅220+gap12≒232px、1920/232≈9枚必要）
+    // シームレスループのため前半と後半が同じになるよう偶数倍に増やす
+    const minCards=20; // 十分な枚数
+    const repeat=Math.ceil(minCards/imgs.length);
+    const half=Array.from({length:repeat},()=>imgs).flat();
+    // row2はオフセットをずらしておしゃれに
+    const offsetHalf=half.map((_,i)=>imgs[(i+ri*Math.ceil(imgs.length/2))%imgs.length]);
+    const base=ri===0?half:offsetHalf;
+    const all=[...base,...base]; // 前半+後半（同じ）でシームレスループ
+    all.forEach((item)=>{
       const c=document.createElement('div');c.className='slide-card';
       c.innerHTML=`<img src="${item.src}" alt="${item.label}" loading="lazy" style="object-position:${item.pos}"><div class="slide-card-label">${item.label}</div>`;
       c.onclick=()=>openModal(item.id);el.appendChild(c);
