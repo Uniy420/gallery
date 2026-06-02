@@ -164,8 +164,11 @@ nav a:hover,nav a.active{color:var(--text)}
 
 /* thumb position admin */
 .thumb-pos-select{margin-top:.35rem}
-.thumb-preview-wrap{margin-top:.55rem;border:1px solid var(--admin-border);border-radius:6px;overflow:hidden;background:#0a0a0a}
-.thumb-preview-wrap img{width:100%;height:120px;object-fit:cover;display:block;transition:object-position .3s}
+.thumb-preview-wrap{margin-top:.55rem;border:1px solid var(--admin-border);border-radius:6px;overflow:hidden;background:#0a0a0a;position:relative}
+.thumb-preview-wrap::before{content:'';display:block;padding-top:75%}
+.thumb-preview-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:object-position .3s}
+.btn-back-admin{background:none;border:1px solid var(--admin-border);color:var(--muted);padding:.3rem .7rem;border-radius:4px;font-size:.68rem;font-family:'DM Sans',sans-serif;letter-spacing:.07em;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:.3rem}
+.btn-back-admin:hover{color:var(--text);border-color:rgba(240,236,228,.25)}
 
 .preview-list{display:flex;flex-direction:column;gap:.45rem;margin-top:.3rem}
 .preview-item{display:flex;align-items:center;gap:.45rem}
@@ -286,6 +289,7 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;display:flex;justi
   <div class="admin-header">
     <h2>管理パネル</h2>
     <div class="admin-header-actions">
+      <button class="btn-back-admin" id="btnUndoWork" style="display:none" onclick="undoDelete()">↩ 元に戻す</button>
       <button class="btn-dl" id="btnDownload">⬇ DL</button>
       <button class="btn-close-admin" id="closeAdmin">✕</button>
     </div>
@@ -609,7 +613,10 @@ function buildAdminCard(w){
       <div class="field">
         <label>サムネイル表示位置</label>
         <select class="thumb-pos-select" id="posSelect_${w.id}" onchange="updateThumbPos(${w.id},this.value)">${posOptions}</select>
-        <div class="thumb-preview-wrap"><img id="thumbPreview_${w.id}" src="${w.thumb||''}" alt="" style="object-position:${pos}"></div>
+        <div class="thumb-preview-wrap">
+          <img id="thumbPreview_${w.id}" src="${w.thumb||''}" alt="" style="object-position:${pos}">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:.3rem .5rem;background:rgba(0,0,0,.55);font-size:.6rem;color:rgba(255,255,255,.45);letter-spacing:.06em">プレビュー（4:3 実際の表示比率）</div>
+        </div>
       </div>
       <div class="field"><label>続き画像（タップで拡大・← →で移動）</label>
         <div class="preview-list" id="prevList_${w.id}">${prevInputs}</div>
@@ -672,10 +679,25 @@ function removePreview(id,index){
   document.getElementById(`body_${id}`).classList.add('open');
   document.getElementById(`toggle_${id}`).textContent='▲';
 }
+let _deletedWork=null,_deletedIndex=-1;
 function deleteWork(id){
   if(!confirm('この作品を削除しますか？'))return;
-  WORKS=WORKS.filter(w=>w.id!==id);renderAdminList();renderSite();
+  _deletedIndex=WORKS.findIndex(w=>w.id===id);
+  _deletedWork={...WORKS[_deletedIndex]};
+  WORKS=WORKS.filter(w=>w.id!==id);
+  renderAdminList();renderSite();
   if(document.getElementById('seriesPage').classList.contains('active'))renderSeries();
+  const btn=document.getElementById('btnUndoWork');if(btn)btn.style.display='';
+  showToast('削除しました　↩ 元に戻す');
+}
+function undoDelete(){
+  if(!_deletedWork)return;
+  WORKS.splice(_deletedIndex,0,_deletedWork);
+  _deletedWork=null;_deletedIndex=-1;
+  const btn=document.getElementById('btnUndoWork');if(btn)btn.style.display='none';
+  renderAdminList();renderSite();
+  if(document.getElementById('seriesPage').classList.contains('active'))renderSeries();
+  showToast('復元しました ✓');
 }
 document.getElementById('btnAddWork').onclick=()=>{
   const w={id:nextId++,title:'新しい作品',sub:'· 2025',tags:['','',''],desc:'',note:'',url:'https://',thumb:'',thumbPos:'center top',year:2025,month:new Date().getMonth()+1,previews:['','','']};
