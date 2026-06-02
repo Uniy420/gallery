@@ -272,13 +272,11 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;font-size:.7rem;co
     <div class="entrance-divider"></div>
     <!-- 言語切り替えボタン -->
     <div style="display:flex;justify-content:center;gap:.5rem;margin-bottom:1.4rem">
-      <button id="langJa" onclick="setLang('ja')" style="background:rgba(201,169,110,.18);border:1px solid rgba(201,169,110,.5);color:var(--accent);padding:.25rem .75rem;border-radius:12px;font-size:.68rem;letter-spacing:.08em;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s">日本語</button>
-      <button id="langEn" onclick="setLang('en')" style="background:none;border:1px solid rgba(255,255,255,.12);color:var(--muted);padding:.25rem .75rem;border-radius:12px;font-size:.68rem;letter-spacing:.08em;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s">English</button>
+      <button id="langJa" onclick="setLang('ja')" style="background: rgba(201, 169, 110, 0.18); border: 1px solid rgba(201, 169, 110, 0.5); color: var(--accent); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.68rem; letter-spacing: 0.08em; cursor: pointer; font-family: &quot;DM Sans&quot;, sans-serif; transition: 0.2s;">日本語</button>
+      <button id="langEn" onclick="setLang('en')" style="background: none; border: 1px solid rgba(255, 255, 255, 0.12); color: var(--muted); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.68rem; letter-spacing: 0.08em; cursor: pointer; font-family: &quot;DM Sans&quot;, sans-serif; transition: 0.2s;">English</button>
     </div>
     <div class="entrance-sub" id="entranceSub">支援サイトにて作品の続きを公開中<br><span style="font-size:.68rem;opacity:.7">※有料会員になると、当月の作品が見放題</span></div>
-    <a class="entrance-support-btn" href="https://www.patreon.com/15974661/join" target="_blank" id="entranceSupportBtn">
-      支援サイトはこちら
-    </a>
+    <a class="entrance-support-btn" href="https://www.patreon.com/15974661/join" target="_blank" id="entranceSupportBtn">支援サイトはこちら</a>
     <button class="entrance-enter-btn" id="entranceEnterBtn"><span id="entranceEnterLabel">このまま進む</span></button>
   </div>
 </div>
@@ -324,19 +322,19 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;font-size:.7rem;co
     <button class="modal-close" id="modalClose">✕</button>
     <div class="modal-top-bar">
       <div class="modal-top-left">
-        <div class="modal-top-title" id="modalTitleTop">お誘われテイオー</div>
-        <div class="modal-top-date" id="modalTopDate">2026年 5月</div>
+        <div class="modal-top-title" id="modalTitleTop"></div>
+        <div class="modal-top-date" id="modalTopDate"></div>
       </div>
-      <a class="btn-view-all" id="modalLinkTop" href="https://www.patreon.com/posts/oyou-wareteio-157796001" target="_blank">View Full Series <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+      <a class="btn-view-all" id="modalLinkTop" href="#" target="_blank">View Full Series <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
     </div>
     <div class="modal-header" id="modalHeader">
       <p class="modal-desc" id="modalDesc"></p>
-      <div class="modal-tags" id="modalTags"><span class="gallery-badge">NEW</span><span class="gallery-badge">ウマ娘</span></div>
+      <div class="modal-tags" id="modalTags"></div>
     </div>
-    <div class="modal-previews" id="modalPreviews"><div class="preview-thumb"><img src="https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&amp;name=large" alt="p0" loading="lazy"><div class="preview-num">1 / 2</div></div><div class="preview-thumb"><img src="https://pbs.twimg.com/media/HJzjhYnaAAASSuz?format=jpg&amp;name=large" alt="p1" loading="lazy"><div class="preview-num">2 / 2</div></div></div>
+    <div class="modal-previews" id="modalPreviews"></div>
     <div class="modal-footer">
       <span class="modal-footer-note" id="modalNote"></span>
-      <a class="btn-view-all" id="modalLink" href="https://www.patreon.com/posts/oyou-wareteio-157796001" target="_blank">View Full Series <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+      <a class="btn-view-all" id="modalLink" href="#" target="_blank">View Full Series <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
     </div>
   </div>
 </div>
