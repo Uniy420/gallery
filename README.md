@@ -11,58 +11,68 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{overflow-x:hidden}
 body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;min-height:100vh}
-.bg-overlay{position:fixed;inset:0;z-index:-1;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:.18;pointer-events:none;transition:opacity .5s}
+.bg-overlay{position:fixed;inset:0;z-index:-1;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0;pointer-events:none;transition:opacity .5s}
 
-/* HEADER */
-header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 2rem;background:linear-gradient(to bottom,rgba(13,13,13,0.97),transparent)}
-.logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;letter-spacing:.15em;color:var(--text);text-decoration:none}
-nav{display:flex;gap:1.5rem;align-items:center}
-nav a{color:var(--muted);text-decoration:none;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;transition:color .3s;cursor:pointer;background:none;border:none;font-family:'DM Sans',sans-serif}
-nav a:hover,nav a.active{color:var(--text)}
+/* ── HEADER ── */
+header{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(to bottom,rgba(13,13,13,.97),transparent)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:300;letter-spacing:.15em;color:var(--text);text-decoration:none;flex-shrink:0}
+nav{display:flex;gap:1rem;align-items:center}
+
+/* Series ボタン — 目立つデザイン */
+.nav-series-btn{display:inline-flex;align-items:center;gap:.45rem;padding:.4rem 1rem;background:rgba(201,169,110,.12);border:1px solid rgba(201,169,110,.35);color:var(--accent);border-radius:20px;font-family:'DM Sans',sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .3s;text-decoration:none;white-space:nowrap}
+.nav-series-btn:hover,.nav-series-btn.active{background:rgba(201,169,110,.22);border-color:rgba(201,169,110,.7);color:#e0c080}
+.nav-series-btn svg{width:13px;height:13px;opacity:.7}
+@media(max-width:480px){.nav-series-btn{padding:.35rem .75rem;font-size:.65rem;gap:.3rem}}
+
 .admin-btn{background:none;border:1px solid rgba(201,169,110,.4);color:var(--accent);padding:.35rem .85rem;border-radius:4px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .3s;font-family:'DM Sans',sans-serif;white-space:nowrap}
 .admin-btn:hover{background:rgba(201,169,110,.1)}
 
 .page{display:none}.page.active{display:block}
 
-/* SLIDER */
-.slider-section{padding-top:76px}
-.slider-label{padding:1.2rem 2rem .8rem;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+/* ── SLIDER ── */
+.slider-section{padding-top:64px}
+.slider-label{padding:1.2rem 2rem .8rem;font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 .rows-wrapper{display:flex;flex-direction:column;gap:.75rem;overflow:hidden;padding-bottom:.5rem;width:100%}
-.slider-row{display:flex;gap:.75rem;width:max-content;animation:slide-left 28s linear infinite;touch-action:pan-y}
-.slider-row.row2{animation-duration:36s;animation-direction:reverse}
+.slider-row{display:flex;gap:.75rem;width:max-content;animation:slide-left 40s linear infinite;touch-action:pan-y}
+.slider-row.row2{animation-duration:52s;animation-direction:reverse}
 @keyframes slide-left{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 @media(hover:hover){.rows-wrapper:hover .slider-row{animation-play-state:paused}}
 .slide-card{flex-shrink:0;width:220px;height:150px;border-radius:6px;overflow:hidden;cursor:pointer;position:relative;border:1px solid var(--border);transition:border-color .3s}
 .slide-card:hover{border-color:rgba(201,169,110,.4)}
-.slide-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;filter:brightness(.85)}
+.slide-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s;filter:brightness(.85)}
 .slide-card:hover img{transform:scale(1.05);filter:brightness(1)}
-.slide-card-label{position:absolute;bottom:0;left:0;right:0;padding:1.5rem .75rem .6rem;background:linear-gradient(to top,rgba(0,0,0,.7),transparent);font-size:.68rem;letter-spacing:.06em;opacity:0;transition:opacity .3s}
+.slide-card-label{position:absolute;bottom:0;left:0;right:0;padding:1.5rem .75rem .55rem;background:linear-gradient(to top,rgba(0,0,0,.7),transparent);font-size:.67rem;letter-spacing:.06em;opacity:0;transition:opacity .3s}
 .slide-card:hover .slide-card-label{opacity:1}
 
 .section-divider{display:flex;align-items:center;gap:1.5rem;padding:2.5rem 2rem 1.5rem}
-.section-divider span{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.section-divider span{font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
 .section-divider::after{content:'';flex:1;height:1px;background:var(--border)}
 
-/* GALLERY GRID */
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem;padding:0 2rem 5rem}
-@media(max-width:600px){.gallery-grid{grid-template-columns:repeat(2,1fr);gap:.75rem;padding:0 1rem 4rem}}
+/* ── GALLERY GRID ── */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem;padding:0 2rem 2rem}
+@media(max-width:600px){.gallery-grid{grid-template-columns:repeat(2,1fr);gap:.75rem;padding:0 1rem 1.5rem}}
 .gallery-item{cursor:pointer;border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--surface);transition:border-color .3s,transform .3s}
 .gallery-item:hover{border-color:rgba(201,169,110,.35);transform:translateY(-3px)}
 .gallery-item-img-wrap{width:100%;aspect-ratio:4/3;overflow:hidden;background:#111}
 .gallery-item-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.9);transition:filter .4s,transform .4s}
 .gallery-item:hover .gallery-item-img-wrap img{filter:brightness(1);transform:scale(1.04)}
 .gallery-info{padding:.85rem 1rem 1rem}
-.gallery-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:300;margin-bottom:.2rem}
-.gallery-sub{font-size:.7rem;color:var(--muted);letter-spacing:.06em}
-.gallery-date{font-size:.65rem;color:var(--accent);letter-spacing:.06em;margin-top:.3rem;opacity:.8}
-.gallery-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.5rem}
+.gallery-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:300;margin-bottom:.15rem}
+.gallery-sub{font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+.gallery-date{font-size:.63rem;color:var(--accent);margin-top:.25rem;opacity:.85}
+.gallery-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.45rem}
 .gallery-badge{display:inline-block;padding:.18rem .55rem;background:rgba(201,169,110,.12);border:1px solid rgba(201,169,110,.3);color:var(--accent);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;border-radius:3px}
 
-/* SERIES PAGE */
+/* 続きを読み込むボタン */
+.load-more-wrap{padding:1.5rem 2rem 4rem;text-align:center}
+.btn-load-more{background:none;border:1px solid rgba(201,169,110,.35);color:var(--accent);padding:.65rem 2rem;border-radius:20px;font-family:'DM Sans',sans-serif;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .3s}
+.btn-load-more:hover{background:rgba(201,169,110,.1);border-color:rgba(201,169,110,.6)}
+
+/* ── SERIES PAGE ── */
 #seriesPage{padding-top:90px;padding-bottom:5rem}
 .series-page-title{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;letter-spacing:.08em;padding:0 2rem 1.5rem}
 .year-section{margin-bottom:2.5rem}
-.year-heading{font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);padding:.4rem 2rem 1rem;border-bottom:1px solid var(--border);margin-bottom:1.2rem}
+.year-heading{font-size:.63rem;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);padding:.4rem 2rem 1rem;border-bottom:1px solid var(--border);margin-bottom:1.2rem}
 .month-group{margin-bottom:1.8rem;padding:0 2rem}
 .month-label{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.85rem;display:flex;align-items:center;gap:.75rem}
 .month-label::after{content:'';flex:1;height:1px;background:rgba(201,169,110,.15)}
@@ -74,12 +84,12 @@ nav a:hover,nav a.active{color:var(--text)}
 .month-card-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.85);transition:filter .4s,transform .4s}
 .month-card:hover .month-card-img-wrap img{filter:brightness(1);transform:scale(1.04)}
 .month-card-info{padding:.6rem .75rem .75rem}
-.month-card-title{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-weight:300;margin-bottom:.15rem}
-.month-card-date{font-size:.62rem;color:var(--accent);opacity:.8;margin-bottom:.2rem}
+.month-card-title{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-weight:300;margin-bottom:.12rem}
+.month-card-date{font-size:.6rem;color:var(--accent);opacity:.85;margin-bottom:.18rem}
 .month-card-tags{display:flex;flex-wrap:wrap;gap:.25rem;margin-top:.3rem}
 .month-card-badge{display:inline-block;padding:.12rem .4rem;background:rgba(201,169,110,.1);border:1px solid rgba(201,169,110,.25);color:var(--accent);font-size:.58rem;letter-spacing:.07em;text-transform:uppercase;border-radius:2px}
 
-/* WORK MODAL */
+/* ── WORK MODAL ── */
 .modal-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(5,5,5,.93);backdrop-filter:blur(8px);align-items:flex-start;justify-content:center;padding:1rem;overflow-y:auto}
 .modal-overlay.open{display:flex}
 .modal{background:var(--surface);border:1px solid rgba(240,236,228,.12);border-radius:12px;max-width:700px;width:100%;margin:auto;position:relative;animation:modal-in .3s cubic-bezier(.16,1,.3,1)}
@@ -87,11 +97,12 @@ nav a:hover,nav a.active{color:var(--text)}
 .modal-close{position:absolute;top:.85rem;right:.85rem;background:rgba(0,0,0,.6);border:1px solid var(--border);color:var(--muted);width:30px;height:30px;border-radius:50%;font-size:.9rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;z-index:10}
 .modal-close:hover{color:var(--text)}
 .modal-top-bar{padding:1rem 1.2rem .8rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.modal-top-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;flex:1;min-width:0}
-.modal-top-date{font-size:.65rem;color:var(--accent);opacity:.8;margin-top:.2rem}
+.modal-top-left{flex:1;min-width:0}
+.modal-top-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300}
+.modal-top-date{font-size:.63rem;color:var(--accent);opacity:.85;margin-top:.18rem}
 .modal-header{padding:.8rem 1.2rem;border-bottom:1px solid var(--border)}
 .modal-desc{font-size:.78rem;color:var(--muted);line-height:1.7}
-.modal-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.5rem}
+.modal-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.45rem}
 .modal-previews{display:flex;flex-direction:column;gap:.65rem;padding:1rem 1.2rem}
 .preview-thumb{border-radius:6px;overflow:hidden;border:1px solid var(--border);cursor:pointer;transition:border-color .3s;background:rgba(0,0,0,.4)}
 .preview-thumb:hover{border-color:rgba(201,169,110,.4)}
@@ -103,7 +114,7 @@ nav a:hover,nav a.active{color:var(--text)}
 .btn-view-all{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:var(--accent);color:#0d0d0d;font-family:'DM Sans',sans-serif;font-size:.73rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:4px;border:none;cursor:pointer;transition:background .3s;white-space:nowrap;flex-shrink:0}
 .btn-view-all:hover{background:#d4b57c}
 
-/* LIGHTBOX */
+/* ── LIGHTBOX ── */
 .lightbox{display:none;position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.97);align-items:center;justify-content:center}
 .lightbox.open{display:flex}
 .lightbox-img{max-width:88vw;max-height:88vh;object-fit:contain;border-radius:3px;animation:lb-in .22s ease}
@@ -115,7 +126,7 @@ nav a:hover,nav a.active{color:var(--text)}
 .lightbox-prev{left:1rem}.lightbox-next{right:1rem}
 .lightbox-counter{position:absolute;bottom:1.2rem;left:50%;transform:translateX(-50%);font-size:.68rem;color:rgba(255,255,255,.35);letter-spacing:.1em}
 
-/* PASSWORD */
+/* ── PASSWORD ── */
 .pw-overlay{display:none;position:fixed;inset:0;z-index:600;background:rgba(0,0,0,.88);backdrop-filter:blur(10px);align-items:center;justify-content:center}
 .pw-overlay.open{display:flex}
 .pw-box{background:var(--admin-bg);border:1px solid var(--admin-border);border-radius:12px;padding:2.2rem;width:min(360px,90vw);text-align:center}
@@ -127,7 +138,7 @@ nav a:hover,nav a.active{color:var(--text)}
 .pw-btn{width:100%;padding:.6rem;background:var(--accent);color:#0d0d0d;border:none;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .3s}
 .pw-btn:hover{background:#d4b57c}
 
-/* ADMIN */
+/* ── ADMIN ── */
 .admin-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.55);backdrop-filter:blur(5px)}
 .admin-overlay.open{display:block}
 .admin-panel{position:fixed;top:0;right:0;bottom:0;width:min(640px,100vw);z-index:501;background:var(--admin-bg);border-left:1px solid var(--admin-border);overflow-y:auto;transform:translateX(100%);transition:transform .35s cubic-bezier(.16,1,.3,1)}
@@ -139,15 +150,13 @@ nav a:hover,nav a.active{color:var(--text)}
 .btn-dl:hover{background:#d4b57c}
 .btn-close-admin{background:none;border:1px solid var(--admin-border);color:var(--muted);width:28px;height:28px;border-radius:50%;font-size:.85rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
 .btn-close-admin:hover{color:var(--text)}
-.btn-back-admin{background:none;border:1px solid var(--admin-border);color:var(--muted);padding:.3rem .7rem;border-radius:4px;font-size:.68rem;font-family:'DM Sans',sans-serif;letter-spacing:.07em;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:.3rem}
+.btn-back-admin{background:none;border:1px solid var(--admin-border);color:var(--muted);padding:.3rem .7rem;border-radius:4px;font-size:.68rem;font-family:'DM Sans',sans-serif;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:.3rem}
 .btn-back-admin:hover{color:var(--text);border-color:rgba(240,236,228,.25)}
-
 .admin-tabs{display:flex;border-bottom:1px solid var(--admin-border);padding:0 1.4rem}
 .admin-tab{background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:.7rem .4rem;cursor:pointer;transition:all .2s;margin-bottom:-1px}
 .admin-tab.active{color:var(--accent);border-bottom-color:var(--accent)}
 .admin-tab-content{display:none;padding:1.1rem 1.4rem 3rem}
 .admin-tab-content.active{display:block}
-
 .admin-section-title{font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:1.1rem 0 .6rem;padding-bottom:.35rem;border-bottom:1px solid var(--admin-border)}
 .field{margin-top:.8rem}
 .field label{display:block;font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.28rem}
@@ -158,16 +167,29 @@ nav a:hover,nav a.active{color:var(--text)}
 .field-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
 .field-row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.45rem}
 
-/* サムネイル位置 ドラッグ調整 */
+/* サムネイル位置ドラッグ */
 .thumb-pos-dragger{margin-top:.5rem;border:1px solid var(--admin-border);border-radius:6px;overflow:hidden;background:#0a0a0a;position:relative;aspect-ratio:4/3;cursor:crosshair;user-select:none;-webkit-user-select:none}
 .thumb-pos-dragger img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;display:block}
-.thumb-pos-crosshair{position:absolute;width:20px;height:20px;transform:translate(-50%,-50%);pointer-events:none;z-index:2}
+.thumb-pos-crosshair{position:absolute;width:24px;height:24px;transform:translate(-50%,-50%);pointer-events:none;z-index:2}
 .thumb-pos-crosshair::before,.thumb-pos-crosshair::after{content:'';position:absolute;background:rgba(201,169,110,.9)}
 .thumb-pos-crosshair::before{width:1px;height:100%;left:50%;top:0}
 .thumb-pos-crosshair::after{width:100%;height:1px;top:50%;left:0}
-.thumb-pos-hint{font-size:.62rem;color:var(--muted);margin-top:.3rem;letter-spacing:.04em}
+.thumb-pos-dot{position:absolute;width:8px;height:8px;background:var(--accent);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:3;box-shadow:0 0 0 2px rgba(0,0,0,.5)}
+.thumb-pos-hint{font-size:.62rem;color:var(--muted);margin-top:.3rem}
 .thumb-pos-coords{font-size:.65rem;color:var(--accent);margin-top:.2rem;font-family:monospace}
 
+/* 背景画像プレビュー（実際のサイトと同じ全画面比率） */
+.bg-preview-fullscreen{margin-top:.6rem;border:1px solid var(--admin-border);border-radius:6px;overflow:hidden;background:#0a0a0a;position:relative;aspect-ratio:16/9;cursor:crosshair;user-select:none;-webkit-user-select:none;display:none}
+.bg-preview-fullscreen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.bg-preview-crosshair{position:absolute;inset:0;pointer-events:none;z-index:2}
+.bg-preview-crosshair::before{content:'';position:absolute;width:1px;height:100%;left:50%;background:rgba(201,169,110,.3)}
+.bg-preview-crosshair::after{content:'';position:absolute;width:100%;height:1px;top:50%;background:rgba(201,169,110,.3)}
+.bg-preview-hint{font-size:.62rem;color:var(--muted);margin-top:.3rem}
+.bg-pos-coords{font-size:.65rem;color:var(--accent);margin-top:.15rem;font-family:monospace}
+
+.show-in-slider-row{display:flex;align-items:center;gap:.5rem;margin-top:.75rem;padding:.5rem .65rem;background:rgba(255,255,255,.03);border:1px solid var(--admin-border);border-radius:4px}
+.show-in-slider-row label{font-size:.72rem;color:var(--text);cursor:pointer;display:flex;align-items:center;gap:.4rem}
+.show-in-slider-row input[type=checkbox]{accent-color:var(--accent);width:14px;height:14px;cursor:pointer}
 .preview-list{display:flex;flex-direction:column;gap:.45rem;margin-top:.3rem}
 .preview-item{display:flex;align-items:center;gap:.45rem}
 .preview-item span{font-size:.65rem;color:var(--muted);white-space:nowrap;min-width:16px}
@@ -177,18 +199,12 @@ nav a:hover,nav a.active{color:var(--text)}
 .btn-add-preview:hover{border-color:rgba(201,169,110,.4);color:var(--accent)}
 .btn-remove-preview{background:none;border:none;color:rgba(255,100,100,.4);font-size:.82rem;cursor:pointer;padding:.08rem .22rem;transition:color .2s;flex-shrink:0}
 .btn-remove-preview:hover{color:rgba(255,100,100,.9)}
-
-/* スライダー表示チェックボックス */
-.show-in-slider-row{display:flex;align-items:center;gap:.5rem;margin-top:.75rem;padding:.5rem .65rem;background:rgba(255,255,255,.03);border:1px solid var(--admin-border);border-radius:4px}
-.show-in-slider-row label{font-size:.72rem;color:var(--text);cursor:pointer;display:flex;align-items:center;gap:.4rem}
-.show-in-slider-row input[type=checkbox]{accent-color:var(--accent);width:14px;height:14px;cursor:pointer}
-
 .work-card-admin{background:var(--admin-surface);border:1px solid var(--admin-border);border-radius:7px;margin-bottom:.8rem;overflow:hidden}
 .work-card-header{display:flex;align-items:center;justify-content:space-between;padding:.7rem .85rem;cursor:pointer;transition:background .2s}
 .work-card-header:hover{background:rgba(255,255,255,.03)}
 .work-card-header-left{display:flex;align-items:center;gap:.6rem}
 .work-card-header-left img{width:38px;height:28px;object-fit:cover;border-radius:3px;border:1px solid var(--admin-border)}
-.work-card-title-sm{font-size:.8rem;letter-spacing:.03em}
+.work-card-title-sm{font-size:.8rem}
 .work-card-toggle{font-size:.58rem;color:var(--muted)}
 .work-card-body{display:none;padding:0 .85rem .85rem;border-top:1px solid var(--admin-border)}
 .work-card-body.open{display:block}
@@ -196,50 +212,49 @@ nav a:hover,nav a.active{color:var(--text)}
 .btn-add-work:hover{background:rgba(201,169,110,.06);border-color:rgba(201,169,110,.5)}
 .btn-delete-work{background:none;border:1px solid rgba(255,80,80,.22);color:rgba(255,100,100,.55);padding:.28rem .65rem;border-radius:4px;font-size:.62rem;letter-spacing:.07em;text-transform:uppercase;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif}
 .btn-delete-work:hover{background:rgba(255,80,80,.1);color:rgba(255,100,100,.9)}
-
 .radio-group{display:flex;flex-direction:column;gap:.45rem;margin-top:.38rem}
 .radio-label{display:flex;align-items:center;gap:.55rem;font-size:.78rem;cursor:pointer;color:var(--text)}
 .radio-label input[type=radio]{accent-color:var(--accent)}
-
-/* 背景画像アップロード */
 .bg-upload-area{margin-top:.5rem;border:1px dashed var(--admin-border);border-radius:6px;padding:1rem;text-align:center;cursor:pointer;transition:border-color .2s;position:relative}
 .bg-upload-area:hover{border-color:rgba(201,169,110,.4)}
 .bg-upload-area input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
 .bg-upload-area p{font-size:.72rem;color:var(--muted);pointer-events:none}
-.bg-current-preview{margin-top:.6rem;border-radius:4px;overflow:hidden;border:1px solid var(--admin-border);display:none}
-.bg-current-preview img{width:100%;height:80px;object-fit:cover;display:block;opacity:.7}
-.bg-clear-btn{background:none;border:1px solid rgba(255,80,80,.25);color:rgba(255,100,100,.6);padding:.3rem .8rem;border-radius:4px;font-size:.68rem;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:.5rem;transition:all .2s;width:100%}
+.bg-clear-btn{background:none;border:1px solid rgba(255,80,80,.25);color:rgba(255,100,100,.6);padding:.3rem .8rem;border-radius:4px;font-size:.68rem;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:.5rem;transition:all .2s}
 .bg-clear-btn:hover{background:rgba(255,80,80,.08)}
-
 .toast{position:fixed;bottom:1.8rem;left:50%;transform:translateX(-50%) translateY(70px);background:var(--accent);color:#0d0d0d;padding:.5rem 1.2rem;border-radius:4px;font-size:.74rem;letter-spacing:.05em;z-index:999;opacity:0;transition:all .4s}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-footer{border-top:1px solid var(--border);padding:1.6rem 2rem;display:flex;justify-content:space-between;align-items:center;font-size:.7rem;color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:1.6rem 2rem;font-size:.7rem;color:var(--muted)}
 ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--surface2);border-radius:10px}
 </style>
 </head>
 <body>
 
-<!-- 背景画像レイヤー -->
 <div class="bg-overlay" id="bgOverlay"></div>
 
 <header>
   <a href="#" class="logo" onclick="showPage('home');return false">GALLERY</a>
   <nav>
-    <a onclick="showPage('series')" id="navSeries">Series</a>
+    <a class="nav-series-btn" onclick="showPage('series')" id="navSeries">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      Series
+    </a>
     <button class="admin-btn" id="openAdmin">⚙ 管理</button>
   </nav>
 </header>
 
 <div id="homePage" class="page active">
   <div class="slider-section" id="sliderSection">
-    <p class="slider-label" id="sliderLabel">— Recent Works</p>
-    <div class="rows-wrapper" id="rowsWrapper">
+    <p class="slider-label" id="sliderLabel">— Featured Works</p>
+    <div class="rows-wrapper">
       <div class="slider-row" id="row1"></div>
       <div class="slider-row row2" id="row2"></div>
     </div>
   </div>
-  <div class="section-divider" id="featuredDivider"><span>Featured Works</span></div>
+  <div class="section-divider" id="featuredDivider"><span>Recent Works</span></div>
   <div class="gallery-grid" id="galleryGrid"></div>
+  <div class="load-more-wrap" id="loadMoreWrap" style="display:none">
+    <button class="btn-load-more" id="btnLoadMore">続きを読み込む</button>
+  </div>
 </div>
 
 <div id="seriesPage" class="page">
@@ -247,12 +262,12 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;display:flex;justi
   <div id="seriesContent"></div>
 </div>
 
-<!-- WORK MODAL -->
+<!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
     <button class="modal-close" id="modalClose">✕</button>
     <div class="modal-top-bar">
-      <div>
+      <div class="modal-top-left">
         <div class="modal-top-title" id="modalTitleTop"></div>
         <div class="modal-top-date" id="modalTopDate"></div>
       </div>
@@ -290,7 +305,7 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;display:flex;justi
   </div>
 </div>
 
-<!-- ADMIN PANEL -->
+<!-- ADMIN -->
 <div class="admin-overlay" id="adminOverlay"></div>
 <div class="admin-panel" id="adminPanel">
   <div class="admin-header">
@@ -311,57 +326,53 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;display:flex;justi
     <button class="btn-add-work" id="btnAddWork">＋ 作品を追加</button>
   </div>
   <div class="admin-tab-content" id="tabDisplay">
-    <p class="admin-section-title">ホーム スライダー</p>
-    <div class="field">
-      <label>スライダー表示設定</label>
+    <p class="admin-section-title">スライダー</p>
+    <div class="field"><label>表示設定</label>
       <div class="radio-group">
-        <label class="radio-label"><input type="radio" name="sliderMode" value="both" checked> 両方（Recent + Featured）</label>
-        <label class="radio-label"><input type="radio" name="sliderMode" value="recent"> Recent Worksのみ</label>
-        <label class="radio-label"><input type="radio" name="sliderMode" value="featured"> Featured Worksのみ</label>
+        <label class="radio-label"><input type="radio" name="sliderMode" value="both" checked> 両方（Featured + Recent）</label>
+        <label class="radio-label"><input type="radio" name="sliderMode" value="recent"> Featuredのみ</label>
+        <label class="radio-label"><input type="radio" name="sliderMode" value="featured"> Recentのみ</label>
         <label class="radio-label"><input type="radio" name="sliderMode" value="none"> 非表示</label>
       </div>
     </div>
-    <div class="field">
-      <label>流れる速度 — <span id="sliderSpeedLabel">40秒</span></label>
+    <div class="field"><label>流れる速度 — <span id="sliderSpeedLabel">40秒</span></label>
       <div style="display:flex;align-items:center;gap:.75rem">
-        <span style="font-size:.65rem;color:var(--muted)">速い</span>
-        <input type="range" id="sliderSpeedInput" min="5" max="80" value="40" step="1" style="flex:1;accent-color:var(--accent)" oninput="SETTINGS.sliderSpeed=parseInt(this.value);applySettings();">
-        <span style="font-size:.65rem;color:var(--muted)">遅い</span>
+        <span style="font-size:.63rem;color:var(--muted)">速い</span>
+        <input type="range" id="sliderSpeedInput" min="5" max="80" value="40" step="1" style="flex:1;accent-color:var(--accent)" oninput="SETTINGS.sliderSpeed=parseInt(this.value);applySettings()">
+        <span style="font-size:.63rem;color:var(--muted)">遅い</span>
       </div>
     </div>
     <p class="admin-section-title" style="margin-top:1.3rem">サイト背景</p>
-    <div class="field">
-      <label>背景カラー</label>
+    <div class="field"><label>背景カラー</label>
       <div style="display:flex;align-items:center;gap:.7rem;flex-wrap:wrap">
         <input type="color" id="bgColorPicker" value="#0d0d0d" style="width:40px;height:30px;padding:2px;border-radius:4px;cursor:pointer;background:none;border:1px solid var(--admin-border)">
-        <input type="text" id="bgColorText" value="#0d0d0d" placeholder="#0d0d0d" style="max-width:110px">
+        <input type="text" id="bgColorText" value="#0d0d0d" style="max-width:110px">
         <button onclick="applyBgColor()" style="padding:.38rem .8rem;background:var(--accent);color:#0d0d0d;border:none;border-radius:4px;font-size:.7rem;cursor:pointer;font-family:'DM Sans',sans-serif">適用</button>
       </div>
     </div>
-    <div class="field">
-      <label>背景画像（画像をアップロード）</label>
-      <div class="bg-upload-area" id="bgUploadArea">
+    <div class="field"><label>背景画像（アップロード）</label>
+      <div class="bg-upload-area">
         <input type="file" accept="image/*" id="bgFileInput">
-        <p>📁 クリックまたはドロップして画像を選択</p>
+        <p>📁 クリック or ドロップして選択</p>
       </div>
-      <div class="bg-current-preview" id="bgCurrentPreview">
+      <!-- 16:9 実画面と同比率のプレビュー+位置ドラッグ -->
+      <div class="bg-preview-fullscreen" id="bgPreviewFullscreen">
         <img id="bgPreviewImg" src="" alt="">
+        <div class="bg-preview-crosshair"></div>
       </div>
-      <div style="display:flex;align-items:center;gap:.6rem;margin-top:.5rem;flex-wrap:wrap">
-        <div style="display:flex;align-items:center;gap:.4rem;font-size:.72rem;color:var(--text)">
-          <label style="font-size:.63rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">透明度</label>
-          <input type="range" id="bgOpacityInput" min="0" max="60" value="18" step="1" style="width:100px;accent-color:var(--accent)" oninput="applyBgOpacity(this.value)">
-          <span id="bgOpacityLabel" style="font-size:.65rem;color:var(--accent);min-width:30px">18%</span>
-        </div>
-        <button class="bg-clear-btn" id="bgClearBtn" style="width:auto;padding:.3rem .8rem">✕ 背景画像を削除</button>
+      <div class="bg-pos-coords" id="bgPosCoords" style="display:none"></div>
+      <div class="bg-preview-hint" id="bgPreviewHint" style="display:none">👆 ドラッグして背景の表示位置を調整</div>
+      <div style="display:flex;align-items:center;gap:.6rem;margin-top:.6rem;flex-wrap:wrap">
+        <label style="font-size:.63rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">透明度</label>
+        <input type="range" id="bgOpacityInput" min="0" max="60" value="18" step="1" style="width:110px;accent-color:var(--accent)" oninput="applyBgOpacity(this.value)">
+        <span id="bgOpacityLabel" style="font-size:.65rem;color:var(--accent);min-width:30px">18%</span>
+        <button class="bg-clear-btn" id="bgClearBtn">✕ 削除</button>
       </div>
     </div>
   </div>
 </div>
 
-<footer>
-  <span>© 2026 Aivistra — All rights reserved</span>
-</footer>
+<footer><span>© 2026 Aivistra — All rights reserved</span></footer>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -378,20 +389,22 @@ let WORKS = [
   {"id":29,"title":"お誘われテイオー","sub":"Invited Teio","tags":["NEW","ウマ娘",""],"desc":"","note":"","url":"https://www.patreon.com/posts/oyou-wareteio-157796001","thumb":"https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&name=large","thumbPos":"50% 0%","showInSlider":true,"year":2026,"month":5,"previews":["https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&name=large","https://pbs.twimg.com/media/HJzjhYnaAAASSuz?format=jpg&name=large",""]}
 ];
 let nextId = 30;
-let SETTINGS = {"sliderMode":"both","bgColor":"#0d0d0d","sliderSpeed":40,"bgImageData":"","bgOpacity":18};
+let SETTINGS = {"sliderMode":"both","bgColor":"#0d0d0d","sliderSpeed":40,"bgImageData":"","bgOpacity":18,"bgPos":"50% 50%"};
 
-const MONTHS = ['','1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+const MONTHS=['','1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+const PAGE_SIZE=12;
+let galleryPage=1;
 
-/* ======== PAGE NAV ======== */
+/* ── PAGE NAV ── */
 function showPage(p){
   document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));
-  document.querySelectorAll('nav a').forEach(el=>el.classList.remove('active'));
+  document.querySelectorAll('.nav-series-btn').forEach(el=>el.classList.remove('active'));
   if(p==='home'){document.getElementById('homePage').classList.add('active');}
   else if(p==='series'){document.getElementById('seriesPage').classList.add('active');renderSeries();document.getElementById('navSeries').classList.add('active');}
 }
 
-/* ======== RENDER ======== */
-function renderSite(){applySettings();renderSlider();renderGallery();}
+/* ── RENDER ── */
+function renderSite(){applySettings();renderSlider();galleryPage=1;renderGallery();}
 
 function applySettings(){
   const m=SETTINGS.sliderMode;
@@ -404,11 +417,12 @@ function applySettings(){
   else{sec.style.display='none';fd.style.display='none';gg.style.display='none';}
   document.body.style.background=SETTINGS.bgColor;
   document.documentElement.style.setProperty('--bg',SETTINGS.bgColor);
-  // 背景画像
   const ov=document.getElementById('bgOverlay');
-  if(SETTINGS.bgImageData){ov.style.backgroundImage=`url(${SETTINGS.bgImageData})`;ov.style.opacity=(SETTINGS.bgOpacity||18)/100;}
-  else{ov.style.backgroundImage='none';ov.style.opacity='0';}
-  // スライダー速度
+  if(SETTINGS.bgImageData){
+    ov.style.backgroundImage=`url(${SETTINGS.bgImageData})`;
+    ov.style.backgroundPosition=SETTINGS.bgPos||'50% 50%';
+    ov.style.opacity=(SETTINGS.bgOpacity||18)/100;
+  }else{ov.style.backgroundImage='none';ov.style.opacity='0';}
   const spd=SETTINGS.sliderSpeed||40;
   const r1=document.getElementById('row1');const r2=document.getElementById('row2');
   if(r1)r1.style.animationDuration=spd+'s';
@@ -421,46 +435,75 @@ function applySettings(){
   document.getElementById('bgColorText').value=SETTINGS.bgColor;
   const opi=document.getElementById('bgOpacityInput');if(opi)opi.value=SETTINGS.bgOpacity||18;
   const opl=document.getElementById('bgOpacityLabel');if(opl)opl.textContent=(SETTINGS.bgOpacity||18)+'%';
-  // 背景プレビュー
-  const prev=document.getElementById('bgCurrentPreview');
-  const pimg=document.getElementById('bgPreviewImg');
-  if(SETTINGS.bgImageData){prev.style.display='block';pimg.src=SETTINGS.bgImageData;}
-  else{prev.style.display='none';}
+  const fp=document.getElementById('bgPreviewFullscreen');
+  const pi=document.getElementById('bgPreviewImg');
+  if(SETTINGS.bgImageData){
+    fp.style.display='block';pi.src=SETTINGS.bgImageData;
+    pi.style.objectPosition=SETTINGS.bgPos||'50% 50%';
+    document.getElementById('bgPreviewHint').style.display='';
+    document.getElementById('bgPosCoords').style.display='';
+    document.getElementById('bgPosCoords').textContent='位置: '+(SETTINGS.bgPos||'50% 50%');
+  }else{fp.style.display='none';document.getElementById('bgPreviewHint').style.display='none';document.getElementById('bgPosCoords').style.display='none';}
 }
 
-function applyBgColor(){const v=document.getElementById('bgColorText').value.trim();SETTINGS.bgColor=v;applySettings();showToast('背景色を変更しました ✓');}
+function applyBgColor(){SETTINGS.bgColor=document.getElementById('bgColorText').value.trim();applySettings();showToast('背景色を変更しました ✓');}
 function applyBgOpacity(v){SETTINGS.bgOpacity=parseInt(v);document.getElementById('bgOpacityLabel').textContent=v+'%';const ov=document.getElementById('bgOverlay');if(SETTINGS.bgImageData)ov.style.opacity=v/100;}
 document.getElementById('bgColorPicker').addEventListener('input',function(){document.getElementById('bgColorText').value=this.value;SETTINGS.bgColor=this.value;applySettings();});
-document.querySelectorAll('input[name=sliderMode]').forEach(r=>{r.addEventListener('change',function(){SETTINGS.sliderMode=this.value;applySettings();});});
+document.querySelectorAll('input[name=sliderMode]').forEach(r=>r.addEventListener('change',function(){SETTINGS.sliderMode=this.value;applySettings();}));
 document.getElementById('sliderSpeedInput').addEventListener('input',function(){SETTINGS.sliderSpeed=parseInt(this.value);document.getElementById('sliderSpeedLabel').textContent=this.value+'秒';applySettings();});
 
 // 背景画像アップロード
 document.getElementById('bgFileInput').addEventListener('change',function(){
   const file=this.files[0];if(!file)return;
   const reader=new FileReader();
-  reader.onload=function(e){
-    SETTINGS.bgImageData=e.target.result;
-    applySettings();showToast('背景画像を設定しました ✓');
-  };
+  reader.onload=e=>{SETTINGS.bgImageData=e.target.result;SETTINGS.bgPos='50% 50%';applySettings();showToast('背景画像を設定しました ✓');};
   reader.readAsDataURL(file);
 });
-document.getElementById('bgClearBtn').addEventListener('click',function(){
-  SETTINGS.bgImageData='';applySettings();showToast('背景画像を削除しました');
-});
+document.getElementById('bgClearBtn').addEventListener('click',function(){SETTINGS.bgImageData='';applySettings();showToast('背景画像を削除しました');});
 
+// 背景プレビュー ドラッグで位置調整
+let _bgDragging=false,_bgDragSX=0,_bgDragSY=0,_bgPosStartX=50,_bgPosStartY=50;
+const bgFP=document.getElementById('bgPreviewFullscreen');
+bgFP.addEventListener('mousedown',e=>{
+  e.preventDefault();_bgDragging=true;
+  const p=parseBgPos(SETTINGS.bgPos||'50% 50%');
+  _bgDragSX=e.clientX;_bgDragSY=e.clientY;_bgPosStartX=p.x;_bgPosStartY=p.y;
+  document.addEventListener('mousemove',onBgDragMove);document.addEventListener('mouseup',onBgDragEnd);
+});
+bgFP.addEventListener('touchstart',e=>{
+  const t=e.touches[0];_bgDragging=true;
+  const p=parseBgPos(SETTINGS.bgPos||'50% 50%');
+  _bgDragSX=t.clientX;_bgDragSY=t.clientY;_bgPosStartX=p.x;_bgPosStartY=p.y;
+  document.addEventListener('touchmove',onBgDragMoveT,{passive:false});document.addEventListener('touchend',onBgDragEndT);
+});
+function parseBgPos(s){const a=s.split(' ');return{x:parseFloat(a[0]),y:parseFloat(a[1])};}
+function onBgDragMove(e){if(!_bgDragging)return;const r=bgFP.getBoundingClientRect();applyBgDrag(e.clientX,e.clientY,r);}
+function onBgDragMoveT(e){e.preventDefault();if(!_bgDragging)return;const t=e.touches[0],r=bgFP.getBoundingClientRect();applyBgDrag(t.clientX,t.clientY,r);}
+function applyBgDrag(cx,cy,r){
+  const dx=(_bgDragSX-cx)/r.width*100;
+  const dy=(_bgDragSY-cy)/r.height*100;
+  const nx=Math.max(0,Math.min(100,_bgPosStartX+dx));
+  const ny=Math.max(0,Math.min(100,_bgPosStartY+dy));
+  const pos=`${nx.toFixed(1)}% ${ny.toFixed(1)}%`;
+  SETTINGS.bgPos=pos;
+  document.getElementById('bgPreviewImg').style.objectPosition=pos;
+  document.getElementById('bgPosCoords').textContent='位置: '+pos;
+  document.getElementById('bgOverlay').style.backgroundPosition=pos;
+}
+function onBgDragEnd(){_bgDragging=false;document.removeEventListener('mousemove',onBgDragMove);document.removeEventListener('mouseup',onBgDragEnd);}
+function onBgDragEndT(){_bgDragging=false;document.removeEventListener('touchmove',onBgDragMoveT);document.removeEventListener('touchend',onBgDragEndT);}
+
+/* ── SLIDER ── */
 function renderSlider(){
-  // showInSlider:true の作品のみ
   const sliderWorks=WORKS.filter(w=>w.showInSlider!==false);
   const imgs=sliderWorks.map(w=>({src:w.thumb,pos:w.thumbPos||'50% 0%',label:w.title,id:w.id}));
   ['row1','row2'].forEach((rowId,ri)=>{
     const el=document.getElementById(rowId);el.innerHTML='';
     if(!imgs.length)return;
-    const minCards=20;
-    const repeat=Math.ceil(minCards/imgs.length);
+    const minCards=20;const repeat=Math.ceil(minCards/imgs.length);
     const half=Array.from({length:repeat},()=>imgs).flat();
     const offsetHalf=half.map((_,i)=>imgs[(i+ri*Math.ceil(imgs.length/2))%imgs.length]);
-    const base=ri===0?half:offsetHalf;
-    const all=[...base,...base];
+    const all=[...(ri===0?half:offsetHalf),...(ri===0?half:offsetHalf)];
     all.forEach(item=>{
       const c=document.createElement('div');c.className='slide-card';
       c.innerHTML=`<img src="${item.src}" alt="${item.label}" loading="lazy" style="object-position:${item.pos}"><div class="slide-card-label">${item.label}</div>`;
@@ -469,19 +512,34 @@ function renderSlider(){
   });
 }
 
-function renderGallery(){
-  const grid=document.getElementById('galleryGrid');grid.innerHTML='';
-  WORKS.forEach(w=>{
-    const d=document.createElement('div');d.className='gallery-item';
-    const tagsHtml=(w.tags||[]).filter(t=>t).map(t=>`<span class="gallery-badge">${t}</span>`).join('');
-    const pos=w.thumbPos||'50% 0%';
-    const dateStr=`${w.year||2025}年 ${MONTHS[w.month||1]}`;
-    d.innerHTML=`<div class="gallery-item-img-wrap"><img src="${w.thumb}" alt="${w.title}" loading="lazy" style="object-position:${pos}"></div><div class="gallery-info"><div class="gallery-title">${w.title}</div><div class="gallery-sub">${w.sub||''}</div><div class="gallery-date">${dateStr}</div><div class="gallery-tags">${tagsHtml}</div></div>`;
-    d.onclick=()=>openModal(w.id);grid.appendChild(d);
+/* ── GALLERY（新しい順 + ページング） ── */
+function getSortedWorks(){
+  return [...WORKS].sort((a,b)=>{
+    const ay=(a.year||2025)*100+(a.month||1);
+    const by=(b.year||2025)*100+(b.month||1);
+    return by-ay;
   });
 }
 
-/* ======== SERIES ======== */
+function renderGallery(){
+  const sorted=getSortedWorks();
+  const grid=document.getElementById('galleryGrid');
+  grid.innerHTML='';
+  const slice=sorted.slice(0,PAGE_SIZE*galleryPage);
+  slice.forEach(w=>{
+    const d=document.createElement('div');d.className='gallery-item';
+    const tagsHtml=(w.tags||[]).filter(t=>t).map(t=>`<span class="gallery-badge">${t}</span>`).join('');
+    const dateStr=`${w.year||2025}年 ${MONTHS[w.month||1]}`;
+    d.innerHTML=`<div class="gallery-item-img-wrap"><img src="${w.thumb}" alt="${w.title}" loading="lazy" style="object-position:${w.thumbPos||'50% 0%'}"></div><div class="gallery-info"><div class="gallery-title">${w.title}</div><div class="gallery-sub">${w.sub||''}</div><div class="gallery-date">${dateStr}</div><div class="gallery-tags">${tagsHtml}</div></div>`;
+    d.onclick=()=>openModal(w.id);grid.appendChild(d);
+  });
+  const wrap=document.getElementById('loadMoreWrap');
+  wrap.style.display=slice.length<sorted.length?'':'none';
+}
+
+document.getElementById('btnLoadMore').onclick=()=>{galleryPage++;renderGallery();};
+
+/* ── SERIES ── */
 function renderSeries(){
   const cont=document.getElementById('seriesContent');cont.innerHTML='';
   const byYear={};
@@ -496,9 +554,7 @@ function renderSeries(){
       byYear[y][mo].forEach(w=>{
         const c=document.createElement('div');c.className='month-card';
         const tagsHtml=(w.tags||[]).filter(t=>t).map(t=>`<span class="month-card-badge">${t}</span>`).join('');
-        const pos=w.thumbPos||'50% 0%';
-        const dateStr=`${w.year||2025}年 ${MONTHS[w.month||1]}`;
-        c.innerHTML=`<div class="month-card-img-wrap"><img src="${w.thumb}" alt="${w.title}" loading="lazy" style="object-position:${pos}"></div><div class="month-card-info"><div class="month-card-title">${w.title}</div><div class="month-card-date">${dateStr}</div><div class="month-card-tags">${tagsHtml}</div></div>`;
+        c.innerHTML=`<div class="month-card-img-wrap"><img src="${w.thumb}" alt="${w.title}" loading="lazy" style="object-position:${w.thumbPos||'50% 0%'}"></div><div class="month-card-info"><div class="month-card-title">${w.title}</div><div class="month-card-date">${w.year}年 ${MONTHS[w.month||1]}</div><div class="month-card-tags">${tagsHtml}</div></div>`;
         c.onclick=()=>openModal(w.id);mg.appendChild(c);
       });
       grp.appendChild(mg);ySec.appendChild(grp);
@@ -507,13 +563,12 @@ function renderSeries(){
   });
 }
 
-/* ======== MODAL ======== */
+/* ── MODAL ── */
 function openModal(id){
   const w=WORKS.find(x=>x.id===id);if(!w)return;
   const url=w.url||'#';
-  const dateStr=`${w.year||2025}年 ${MONTHS[w.month||1]}`;
   document.getElementById('modalTitleTop').textContent=w.title;
-  document.getElementById('modalTopDate').textContent=dateStr;
+  document.getElementById('modalTopDate').textContent=`${w.year||2025}年 ${MONTHS[w.month||1]}`;
   document.getElementById('modalLinkTop').href=url;
   document.getElementById('modalDesc').textContent=w.desc||'';
   document.getElementById('modalNote').textContent=w.note||'';
@@ -526,8 +581,7 @@ function openModal(id){
   vp.forEach((src,i)=>{
     const t=document.createElement('div');t.className='preview-thumb';
     t.innerHTML=`<img src="${src}" alt="p${i}" loading="lazy"><div class="preview-num">${i+1} / ${vp.length}</div>`;
-    t.querySelector('img').onclick=()=>openLightbox(vp,i);
-    p.appendChild(t);
+    t.querySelector('img').onclick=()=>openLightbox(vp,i);p.appendChild(t);
   });
   document.getElementById('modalOverlay').classList.add('open');
   document.getElementById('modalOverlay').scrollTop=0;
@@ -537,7 +591,7 @@ document.getElementById('modalClose').onclick=closeModal;
 document.getElementById('modalOverlay').onclick=e=>{if(e.target===e.currentTarget)closeModal();};
 function closeModal(){document.getElementById('modalOverlay').classList.remove('open');document.body.style.overflow='';}
 
-/* ======== LIGHTBOX ======== */
+/* ── LIGHTBOX ── */
 let lbImages=[],lbIndex=0;
 function openLightbox(imgs,idx){lbImages=imgs;lbIndex=idx;updateLightbox();document.getElementById('lightbox').classList.add('open');}
 function updateLightbox(){
@@ -559,33 +613,27 @@ document.addEventListener('keydown',e=>{
   }else if(e.key==='Escape')closeModal();
 });
 
-/* ======== PASSWORD ======== */
-const ADMIN_PW='BENz196619';
-let adminUnlocked=false;
+/* ── PASSWORD ── */
+const ADMIN_PW='BENz196619';let adminUnlocked=false;
 document.getElementById('openAdmin').onclick=()=>{
-  if(adminUnlocked){openAdminPanel();}
+  if(adminUnlocked)openAdminPanel();
   else{document.getElementById('pwOverlay').classList.add('open');document.getElementById('pwInput').value='';document.getElementById('pwError').textContent='';}
 };
 document.getElementById('pwBtn').onclick=checkPw;
 document.getElementById('pwInput').addEventListener('keydown',e=>{if(e.key==='Enter')checkPw();});
 function checkPw(){
-  if(document.getElementById('pwInput').value===ADMIN_PW){
-    adminUnlocked=true;document.getElementById('pwOverlay').classList.remove('open');openAdminPanel();
-  }else{document.getElementById('pwError').textContent='パスワードが違います';document.getElementById('pwInput').value='';}
+  if(document.getElementById('pwInput').value===ADMIN_PW){adminUnlocked=true;document.getElementById('pwOverlay').classList.remove('open');openAdminPanel();}
+  else{document.getElementById('pwError').textContent='パスワードが違います';document.getElementById('pwInput').value='';}
 }
 
-/* ======== ADMIN ======== */
+/* ── ADMIN ── */
 function openAdminPanel(){
   document.getElementById('adminOverlay').classList.add('open');
   document.getElementById('adminPanel').classList.add('open');
   document.body.style.overflow='hidden';
   renderAdminList();applySettings();
 }
-function closeAdmin(){
-  document.getElementById('adminOverlay').classList.remove('open');
-  document.getElementById('adminPanel').classList.remove('open');
-  document.body.style.overflow='';
-}
+function closeAdmin(){document.getElementById('adminOverlay').classList.remove('open');document.getElementById('adminPanel').classList.remove('open');document.body.style.overflow='';}
 document.getElementById('closeAdmin').onclick=closeAdmin;
 document.getElementById('adminOverlay').onclick=closeAdmin;
 document.querySelectorAll('.admin-tab').forEach(tab=>{
@@ -599,7 +647,7 @@ document.querySelectorAll('.admin-tab').forEach(tab=>{
 
 function renderAdminList(){
   const list=document.getElementById('workList');list.innerHTML='';
-  WORKS.forEach(w=>{const card=document.createElement('div');card.className='work-card-admin';card.id=`adminCard_${w.id}`;card.innerHTML=buildAdminCard(w);list.appendChild(card);});
+  WORKS.forEach(w=>{const c=document.createElement('div');c.className='work-card-admin';c.id=`adminCard_${w.id}`;c.innerHTML=buildAdminCard(w);list.appendChild(c);});
 }
 
 function buildAdminCard(w){
@@ -614,6 +662,7 @@ function buildAdminCard(w){
       <button class="btn-remove-preview" onclick="removePreview(${w.id},${i})">✕</button>
     </div>`).join('');
   const mo=w.month||1,yr=w.year||2025;
+  const px=parseFloat(pos.split(' ')[0]),py=parseFloat(pos.split(' ')[1]);
   return `
     <div class="work-card-header" onclick="toggleCard(${w.id})">
       <div class="work-card-header-left">
@@ -633,8 +682,7 @@ function buildAdminCard(w){
         <div class="field"><label>タイトル</label><input type="text" value="${w.title.replace(/"/g,'&quot;')}" oninput="updateField(${w.id},'title',this.value)"></div>
         <div class="field"><label>サブテキスト</label><input type="text" value="${(w.sub||'').replace(/"/g,'&quot;')}" oninput="updateField(${w.id},'sub',this.value)"></div>
       </div>
-      <div class="field">
-        <label>タグ（最大3つ）</label>
+      <div class="field"><label>タグ（最大3つ）</label>
         <div class="field-row3">
           <input type="text" value="${(tags[0]||'').replace(/"/g,'&quot;')}" placeholder="タグ1" oninput="updateTag(${w.id},0,this.value)">
           <input type="text" value="${(tags[1]||'').replace(/"/g,'&quot;')}" placeholder="タグ2" oninput="updateTag(${w.id},1,this.value)">
@@ -642,7 +690,7 @@ function buildAdminCard(w){
         </div>
       </div>
       <div class="field"><label>説明文</label><textarea oninput="updateField(${w.id},'desc',this.value)">${w.desc||''}</textarea></div>
-      <div class="field"><label>メモ（枚数など）</label><input type="text" value="${(w.note||'').replace(/"/g,'&quot;')}" oninput="updateField(${w.id},'note',this.value)"></div>
+      <div class="field"><label>メモ</label><input type="text" value="${(w.note||'').replace(/"/g,'&quot;')}" oninput="updateField(${w.id},'note',this.value)"></div>
       <div class="field-row">
         <div class="field"><label>投稿年</label><input type="number" value="${yr}" min="2000" max="2099" oninput="updateField(${w.id},'year',parseInt(this.value)||2025)"></div>
         <div class="field"><label>投稿月</label>
@@ -652,145 +700,72 @@ function buildAdminCard(w){
         </div>
       </div>
       <div class="field"><label>誘導先URL</label><input type="text" value="${(w.url||'').replace(/"/g,'&quot;')}" placeholder="https://..." oninput="updateField(${w.id},'url',this.value)"></div>
-      <div class="field">
-        <label>サムネイル画像URL</label>
-        <input type="text" id="thumbUrlInput_${w.id}" value="${(w.thumb||'').replace(/"/g,'&quot;')}" oninput="updateField(${w.id},'thumb',this.value)">
-      </div>
-      <div class="field">
-        <label>サムネイル表示位置（画像をドラッグして調整）</label>
+      <div class="field"><label>サムネイル画像URL</label><input type="text" value="${(w.thumb||'').replace(/"/g,'&quot;')}" oninput="updateField(${w.id},'thumb',this.value)"></div>
+      <div class="field"><label>サムネイル表示位置（ドラッグで調整）</label>
         <div class="thumb-pos-dragger" id="dragger_${w.id}" onmousedown="startDrag(event,${w.id})" ontouchstart="startDragTouch(event,${w.id})">
           <img id="draggerImg_${w.id}" src="${w.thumb||''}" alt="" style="object-position:${pos}">
-          <div class="thumb-pos-crosshair" id="crosshair_${w.id}" style="left:${pos.split(' ')[0]};top:${pos.split(' ')[1]}"></div>
+          <div class="thumb-pos-crosshair" id="crosshair_${w.id}" style="left:${px}%;top:${py}%"></div>
+          <div class="thumb-pos-dot" style="left:${px}%;top:${py}%"></div>
         </div>
-        <div class="thumb-pos-hint">👆 画像をドラッグして表示したい部分を中央に合わせてください</div>
+        <div class="thumb-pos-hint">👆 ドラッグで表示したい部分を中央に合わせてください</div>
         <div class="thumb-pos-coords" id="posCoords_${w.id}">位置: ${pos}</div>
       </div>
-      <div class="field"><label>続き画像（タップで拡大・← →で移動）</label>
+      <div class="field"><label>続き画像</label>
         <div class="preview-list" id="prevList_${w.id}">${prevInputs}</div>
         <button class="btn-add-preview" onclick="addPreview(${w.id})">＋ 画像を追加</button>
       </div>
     </div>`;
 }
 
-/* ======== THUMB POSITION DRAGGER ======== */
-let _dragId=null,_dragStartX=0,_dragStartY=0,_dragStartPosX=50,_dragStartPosY=0;
-
-function parsePosPercent(pos){
-  // "50% 0%" → {x:50, y:0}
-  const parts=(pos||'50% 0%').split(' ');
-  return {x:parseFloat(parts[0])||50, y:parseFloat(parts[1])||0};
-}
-
-function startDrag(e,id){
-  e.preventDefault();
-  _dragId=id;
-  const w=WORKS.find(x=>x.id===id);
-  const p=parsePosPercent(w.thumbPos);
-  _dragStartX=e.clientX;_dragStartY=e.clientY;
-  _dragStartPosX=p.x;_dragStartPosY=p.y;
-  document.addEventListener('mousemove',onDragMove);
-  document.addEventListener('mouseup',onDragEnd);
-}
-function startDragTouch(e,id){
-  const t=e.touches[0];
-  _dragId=id;
-  const w=WORKS.find(x=>x.id===id);
-  const p=parsePosPercent(w.thumbPos);
-  _dragStartX=t.clientX;_dragStartY=t.clientY;
-  _dragStartPosX=p.x;_dragStartPosY=p.y;
-  document.addEventListener('touchmove',onDragMoveTouch,{passive:false});
-  document.addEventListener('touchend',onDragEndTouch);
-}
-function onDragMove(e){if(_dragId===null)return;applyDrag(e.clientX,e.clientY);}
-function onDragMoveTouch(e){e.preventDefault();if(_dragId===null)return;const t=e.touches[0];applyDrag(t.clientX,t.clientY);}
-function applyDrag(cx,cy){
-  const dragger=document.getElementById(`dragger_${_dragId}`);
-  if(!dragger)return;
-  const rect=dragger.getBoundingClientRect();
-  // ドラッグ量をピクセル→パーセントに変換（逆方向：右に動かすと左寄りになる）
-  const dx=(_dragStartX-cx)/rect.width*100;
-  const dy=(_dragStartY-cy)/rect.height*100;
-  const nx=Math.max(0,Math.min(100,_dragStartPosX+dx));
-  const ny=Math.max(0,Math.min(100,_dragStartPosY+dy));
-  const posStr=`${nx.toFixed(1)}% ${ny.toFixed(1)}%`;
-  const w=WORKS.find(x=>x.id===_dragId);if(w)w.thumbPos=posStr;
-  // 即時反映
-  const img=document.getElementById(`draggerImg_${_dragId}`);
-  if(img)img.style.objectPosition=posStr;
-  const ch=document.getElementById(`crosshair_${_dragId}`);
-  if(ch){ch.style.left=`${nx.toFixed(1)}%`;ch.style.top=`${ny.toFixed(1)}%`;}
-  const coords=document.getElementById(`posCoords_${_dragId}`);
-  if(coords)coords.textContent=`位置: ${posStr}`;
-  const himg=document.querySelector(`#adminCard_${_dragId} .work-card-header-left img`);
-  if(himg)himg.style.objectPosition=posStr;
+/* ── THUMB DRAG ── */
+let _dragId=null,_dragSX=0,_dragSY=0,_dragPX=50,_dragPY=0;
+function parsePosP(pos){const a=(pos||'50% 0%').split(' ');return{x:parseFloat(a[0])||50,y:parseFloat(a[1])||0};}
+function startDrag(e,id){e.preventDefault();_dragId=id;const p=parsePosP(WORKS.find(x=>x.id===id)?.thumbPos);_dragSX=e.clientX;_dragSY=e.clientY;_dragPX=p.x;_dragPY=p.y;document.addEventListener('mousemove',onDM);document.addEventListener('mouseup',onDU);}
+function startDragTouch(e,id){const t=e.touches[0];_dragId=id;const p=parsePosP(WORKS.find(x=>x.id===id)?.thumbPos);_dragSX=t.clientX;_dragSY=t.clientY;_dragPX=p.x;_dragPY=p.y;document.addEventListener('touchmove',onDMT,{passive:false});document.addEventListener('touchend',onDUT);}
+function onDM(e){if(_dragId===null)return;applyThumbDrag(e.clientX,e.clientY);}
+function onDMT(e){e.preventDefault();if(_dragId===null)return;const t=e.touches[0];applyThumbDrag(t.clientX,t.clientY);}
+function applyThumbDrag(cx,cy){
+  const dr=document.getElementById(`dragger_${_dragId}`);if(!dr)return;
+  const r=dr.getBoundingClientRect();
+  const nx=Math.max(0,Math.min(100,_dragPX+(_dragSX-cx)/r.width*100));
+  const ny=Math.max(0,Math.min(100,_dragPY+(_dragSY-cy)/r.height*100));
+  const ps=`${nx.toFixed(1)}% ${ny.toFixed(1)}%`;
+  const w=WORKS.find(x=>x.id===_dragId);if(w)w.thumbPos=ps;
+  const img=document.getElementById(`draggerImg_${_dragId}`);if(img)img.style.objectPosition=ps;
+  const ch=document.getElementById(`crosshair_${_dragId}`);if(ch){ch.style.left=`${nx.toFixed(1)}%`;ch.style.top=`${ny.toFixed(1)}%`;}
+  const dots=document.querySelectorAll(`#dragger_${_dragId} .thumb-pos-dot`);dots.forEach(d=>{d.style.left=`${nx.toFixed(1)}%`;d.style.top=`${ny.toFixed(1)}%`;});
+  const co=document.getElementById(`posCoords_${_dragId}`);if(co)co.textContent='位置: '+ps;
+  const hi=document.querySelector(`#adminCard_${_dragId} .work-card-header-left img`);if(hi)hi.style.objectPosition=ps;
   renderSite();if(document.getElementById('seriesPage').classList.contains('active'))renderSeries();
 }
-function onDragEnd(){_dragId=null;document.removeEventListener('mousemove',onDragMove);document.removeEventListener('mouseup',onDragEnd);}
-function onDragEndTouch(){_dragId=null;document.removeEventListener('touchmove',onDragMoveTouch);document.removeEventListener('touchend',onDragEndTouch);}
+function onDU(){_dragId=null;document.removeEventListener('mousemove',onDM);document.removeEventListener('mouseup',onDU);}
+function onDUT(){_dragId=null;document.removeEventListener('touchmove',onDMT);document.removeEventListener('touchend',onDUT);}
 
-/* ======== ADMIN HELPERS ======== */
-function toggleCard(id){
-  const body=document.getElementById(`body_${id}`);
-  const tog=document.getElementById(`toggle_${id}`);
-  const open=body.classList.toggle('open');
-  tog.textContent=open?'▲':'▼';
-}
+/* ── ADMIN HELPERS ── */
+function toggleCard(id){const b=document.getElementById(`body_${id}`);const t=document.getElementById(`toggle_${id}`);const o=b.classList.toggle('open');t.textContent=o?'▲':'▼';}
 function updateField(id,field,value){
-  const w=WORKS.find(x=>x.id===id);if(!w)return;
-  w[field]=value;
+  const w=WORKS.find(x=>x.id===id);if(!w)return;w[field]=value;
   if(field==='title'){const el=document.querySelector(`#adminCard_${id} .work-card-title-sm`);if(el)el.textContent=value||'無題';}
-  if(field==='thumb'){
-    const himg=document.querySelector(`#adminCard_${id} .work-card-header-left img`);if(himg)himg.src=value;
-    const di=document.getElementById(`draggerImg_${id}`);if(di)di.src=value;
-  }
+  if(field==='thumb'){const hi=document.querySelector(`#adminCard_${id} .work-card-header-left img`);if(hi)hi.src=value;const di=document.getElementById(`draggerImg_${id}`);if(di)di.src=value;}
   renderSite();if(document.getElementById('seriesPage').classList.contains('active'))renderSeries();
 }
-function updateTag(id,idx,value){
-  const w=WORKS.find(x=>x.id===id);if(!w)return;
-  if(!w.tags)w.tags=['','',''];
-  w.tags[idx]=value;renderSite();if(document.getElementById('seriesPage').classList.contains('active'))renderSeries();
-}
-function updatePreview(id,index,value){
-  const w=WORKS.find(x=>x.id===id);if(!w)return;
-  w.previews[index]=value;
-  const pItem=document.querySelector(`#prevList_${id} [data-prev-index="${index}"] .prev-thumb`);
-  if(pItem)pItem.src=value;
-}
-function addPreview(id){
-  const w=WORKS.find(x=>x.id===id);if(!w)return;
-  w.previews.push('');
-  const card=document.getElementById(`adminCard_${id}`);
-  const wasOpen=document.getElementById(`body_${id}`).classList.contains('open');
-  card.innerHTML=buildAdminCard(w);
-  if(wasOpen){document.getElementById(`body_${id}`).classList.add('open');document.getElementById(`toggle_${id}`).textContent='▲';}
-}
-function removePreview(id,index){
-  const w=WORKS.find(x=>x.id===id);if(!w)return;
-  w.previews.splice(index,1);
-  const card=document.getElementById(`adminCard_${id}`);
-  card.innerHTML=buildAdminCard(w);
-  document.getElementById(`body_${id}`).classList.add('open');
-  document.getElementById(`toggle_${id}`).textContent='▲';
-}
+function updateTag(id,idx,value){const w=WORKS.find(x=>x.id===id);if(!w)return;if(!w.tags)w.tags=['','',''];w.tags[idx]=value;renderSite();if(document.getElementById('seriesPage').classList.contains('active'))renderSeries();}
+function updatePreview(id,index,value){const w=WORKS.find(x=>x.id===id);if(!w)return;w.previews[index]=value;const pi=document.querySelector(`#prevList_${id} [data-prev-index="${index}"] .prev-thumb`);if(pi)pi.src=value;}
+function addPreview(id){const w=WORKS.find(x=>x.id===id);if(!w)return;w.previews.push('');const c=document.getElementById(`adminCard_${id}`);const wo=document.getElementById(`body_${id}`).classList.contains('open');c.innerHTML=buildAdminCard(w);if(wo){document.getElementById(`body_${id}`).classList.add('open');document.getElementById(`toggle_${id}`).textContent='▲';}}
+function removePreview(id,index){const w=WORKS.find(x=>x.id===id);if(!w)return;w.previews.splice(index,1);const c=document.getElementById(`adminCard_${id}`);c.innerHTML=buildAdminCard(w);document.getElementById(`body_${id}`).classList.add('open');document.getElementById(`toggle_${id}`).textContent='▲';}
 let _deletedWork=null,_deletedIndex=-1;
 function deleteWork(id){
   if(!confirm('この作品を削除しますか？'))return;
   _deletedIndex=WORKS.findIndex(w=>w.id===id);
   _deletedWork={...WORKS[_deletedIndex],previews:[...WORKS[_deletedIndex].previews],tags:[...WORKS[_deletedIndex].tags]};
-  WORKS=WORKS.filter(w=>w.id!==id);
-  renderAdminList();renderSite();
+  WORKS=WORKS.filter(w=>w.id!==id);renderAdminList();renderSite();
   if(document.getElementById('seriesPage').classList.contains('active'))renderSeries();
-  const btn=document.getElementById('btnUndoWork');if(btn)btn.style.display='';
-  showToast('削除しました　↩ 元に戻す');
+  document.getElementById('btnUndoWork').style.display='';showToast('削除しました　↩ 元に戻す');
 }
 function undoDelete(){
-  if(!_deletedWork)return;
-  WORKS.splice(_deletedIndex,0,_deletedWork);
-  _deletedWork=null;_deletedIndex=-1;
-  const btn=document.getElementById('btnUndoWork');if(btn)btn.style.display='none';
-  renderAdminList();renderSite();
-  if(document.getElementById('seriesPage').classList.contains('active'))renderSeries();
-  showToast('復元しました ✓');
+  if(!_deletedWork)return;WORKS.splice(_deletedIndex,0,_deletedWork);_deletedWork=null;_deletedIndex=-1;
+  document.getElementById('btnUndoWork').style.display='none';renderAdminList();renderSite();
+  if(document.getElementById('seriesPage').classList.contains('active'))renderSeries();showToast('復元しました ✓');
 }
 document.getElementById('btnAddWork').onclick=()=>{
   const w={id:nextId++,title:'新しい作品',sub:'',tags:['','',''],desc:'',note:'',url:'https://',thumb:'',thumbPos:'50% 0%',showInSlider:true,year:new Date().getFullYear(),month:new Date().getMonth()+1,previews:['','','']};
@@ -798,7 +773,7 @@ document.getElementById('btnAddWork').onclick=()=>{
   setTimeout(()=>{const c=document.getElementById(`adminCard_${w.id}`);if(c){c.scrollIntoView({behavior:'smooth',block:'center'});toggleCard(w.id);}},100);
 };
 
-/* ======== DOWNLOAD ======== */
+/* ── DOWNLOAD ── */
 document.getElementById('btnDownload').onclick=()=>{
   const worksJson=JSON.stringify(WORKS,null,2);
   const settingsJson=JSON.stringify(SETTINGS);
@@ -810,12 +785,8 @@ document.getElementById('btnDownload').onclick=()=>{
   showToast('HTMLをダウンロードしました ✓');
 };
 
-function showToast(msg){
-  const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),2800);
-}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800);}
 
-/* ======== INIT ======== */
 renderSite();
 </script>
 </body>
