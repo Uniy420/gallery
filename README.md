@@ -14,7 +14,6 @@
 <meta name="twitter:card" content="summary">
 <meta property="twitter:title" content="gallery">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","headline":"gallery","name":"gallery","url":"https://uniy420.github.io/gallery/"}</script>
 <!-- End Jekyll SEO tag -->
 
     <style class="anchorjs"></style><link rel="stylesheet" href="/gallery/assets/css/style.css?v=8e31d237db9a992e2b2f386d0ad56b45f2f5734e">
