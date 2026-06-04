@@ -504,22 +504,245 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;font-size:.7rem;co
 <script>
 /* ======== DATA ======== */
 let WORKS = [
-  {"id":11,"title":"ダイヤの秘めた想い","sub":"Diamond's Secret Feelings","tags":["New","ウマ娘",""],"desc":"","note":"","url":"https://www.patreon.com/posts/daiyanomi-i-159734941?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link","thumb":"https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&name=medium","thumbPos":"50% 0%","showInSlider":true,"year":2026,"month":6,"previews":["https://pbs.twimg.com/media/HJuxK0da8AAVO9W?format=jpg&name=medium","https://pbs.twimg.com/media/HJuxK0gasAAmNgk?format=jpg&name=medium","https://pbs.twimg.com/media/HJuxK0eaUAAypgu?format=jpg&name=medium"]},
-  {"id":12,"title":"海に遊びに来たオグリ","sub":"Summer Sea Oguri Cap","tags":["New","ウマ娘",""],"desc":"Summer Sea Oguri Cap","note":"","url":"https://www.patreon.com/posts/hai-niyou-159095264","thumb":"https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&name=4096x4096","thumbPos":"50% 0%","showInSlider":true,"year":2026,"month":5,"previews":["https://pbs.twimg.com/media/HJux5y2bQAAKGo4?format=jpg&name=4096x4096","https://pbs.twimg.com/media/HJux5yxbkAAe3i4?format=jpg&name=4096x4096","https://pbs.twimg.com/media/HJux5y1awAA8TxL?format=jpg&name=4096x4096"]},
-  {"id":13,"title":"寝取られマックイーン","sub":"Netorare Mqueen","tags":["New","ウマ娘",""],"desc":"","note":"","url":"https://","thumb":"https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&name=4096x4096","thumbPos":"50% 50%","showInSlider":true,"year":2026,"month":6,"previews":["https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&name=4096x4096","https://pbs.twimg.com/media/HJuyRdyaoAE_kkU?format=jpg&name=4096x4096","https://pbs.twimg.com/media/HJuyVCpa0AEp01D?format=jpg&name=4096x4096"]},
-  {"id":24,"title":"寝取られテイオー","sub":"Netorare Teio","tags":["New","NTR",""],"desc":"","note":"","url":"https://www.patreon.com/posts/qin-qu-rareteio-157868184","thumb":"https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&name=large","thumbPos":"50% 50%","showInSlider":true,"year":2026,"month":5,"previews":["https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&name=large","https://pbs.twimg.com/media/HJzi3SvbIAAclU2?format=jpg&name=large","https://pbs.twimg.com/media/HJzi3SwbkAAETEd?format=jpg&name=large"]},
-  {"id":25,"title":"どあっぷ","sub":"Face focus","tags":["New","",""],"desc":"","note":"","url":"https://","thumb":"https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&name=medium","thumbPos":"50% 50%","showInSlider":true,"year":2026,"month":5,"previews":["https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&name=medium","https://pbs.twimg.com/media/HJzif5AaIAAPCkf?format=jpg&name=large","https://pbs.twimg.com/media/HJziatVbMAA0gZM?format=jpg&name=medium","https://pbs.twimg.com/media/HJzis-VaQAATlj7?format=jpg&name=large","https://pbs.twimg.com/media/HJziatQbMAAtWrZ?format=jpg&name=large","https://pbs.twimg.com/media/HJzis-ZbsAA1C7q?format=jpg&name=large"]},
-  {"id":26,"title":"OLテイオー","sub":"OL Teio","tags":["New","ウマ娘",""],"desc":"","note":"","url":"https://www.patreon.com/posts/olteio-157795872","thumb":"https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&name=large","thumbPos":"50% 0%","showInSlider":true,"year":2026,"month":6,"previews":["https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&name=large","https://pbs.twimg.com/media/HJzi_n7aYAAtg8F?format=jpg&name=large",""]},
-  {"id":27,"title":"寝起き","sub":"Good morning","tags":["New","ウマ娘",""],"desc":"","note":"","url":"https://","thumb":"https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&name=large","thumbPos":"50% 0%","showInSlider":true,"year":2026,"month":5,"previews":["https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&name=large","https://pbs.twimg.com/media/HJzjPEza4AE-QbY?format=jpg&name=large","https://pbs.twimg.com/media/HJzjLrGaUAAnVRB?format=jpg&name=large","https://pbs.twimg.com/media/HJzjLrLbIAAWPlc?format=jpg&name=large","https://pbs.twimg.com/media/HJzjLrKa4AAmaRs?format=jpg&name=large","https://pbs.twimg.com/media/HJzjLrIbYAA3eMn?format=jpg&name=large","https://pbs.twimg.com/media/HJzjHciaAAAMsTx?format=jpg&name=large","https://pbs.twimg.com/media/HJzjHccbYAACT21?format=jpg&name=large","https://pbs.twimg.com/media/HJzjHcgbkAATGi3?format=jpg&name=large","https://pbs.twimg.com/media/HJzjHcgaUAEvsWq?format=jpg&name=large"]},
-  {"id":28,"title":"美味しそうに見つめるオグリ","sub":"Oguri gazing at it hungrily","tags":["New","ウマ娘",""],"desc":"","note":"","url":"https://www.patreon.com/posts/mei-wei-158346816","thumb":"https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&name=large","thumbPos":"50% 0%","showInSlider":true,"year":2026,"month":5,"previews":["https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&name=large","https://pbs.twimg.com/media/HJzjZM2aMAABikh?format=jpg&name=large","https://pbs.twimg.com/media/HJzjZMyaIAA0ttw?format=jpg&name=large"]},
-  {"id":29,"title":"お誘われテイオー","sub":"Invited Teio","tags":["NEW","ウマ娘",""],"desc":"","note":"","url":"https://www.patreon.com/posts/oyou-wareteio-157796001","thumb":"https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&name=large","thumbPos":"50% 0%","showInSlider":true,"year":2026,"month":5,"previews":["https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&name=large","https://pbs.twimg.com/media/HJzjhYnaAAASSuz?format=jpg&name=large",""]}
+  {
+    "id": 11,
+    "title": "ダイヤの秘めた想い",
+    "sub": "Diamond's Secret Feelings",
+    "tags": [
+      "New",
+      "ウマ娘",
+      ""
+    ],
+    "desc": "",
+    "note": "",
+    "url": "https://www.patreon.com/posts/daiyanomi-i-159734941?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link",
+    "thumb": "https://pbs.twimg.com/media/HJuxK0ZaAAAAsyA?format=jpg&name=medium",
+    "thumbPos": "50% 0%",
+    "showInSlider": true,
+    "year": 2026,
+    "month": 6,
+    "previews": [
+      "https://pbs.twimg.com/media/HJuxK0da8AAVO9W?format=jpg&name=medium",
+      "https://pbs.twimg.com/media/HJuxK0gasAAmNgk?format=jpg&name=medium",
+      "https://pbs.twimg.com/media/HJuxK0eaUAAypgu?format=jpg&name=medium"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "海に遊びに来たオグリ",
+    "sub": "Summer Sea Oguri Cap",
+    "tags": [
+      "New",
+      "ウマ娘",
+      ""
+    ],
+    "desc": "Summer Sea Oguri Cap",
+    "note": "",
+    "url": "https://www.patreon.com/posts/hai-niyou-159095264",
+    "thumb": "https://pbs.twimg.com/media/HJux5y7aEAAYANY?format=jpg&name=4096x4096",
+    "thumbPos": "50% 0%",
+    "showInSlider": true,
+    "year": 2026,
+    "month": 5,
+    "previews": [
+      "https://pbs.twimg.com/media/HJux5y2bQAAKGo4?format=jpg&name=4096x4096",
+      "https://pbs.twimg.com/media/HJux5yxbkAAe3i4?format=jpg&name=4096x4096",
+      "https://pbs.twimg.com/media/HJux5y1awAA8TxL?format=jpg&name=4096x4096"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "寝取られマックイーン",
+    "sub": "Netorare Mqueen",
+    "tags": [
+      "New",
+      "ウマ娘",
+      "NTR"
+    ],
+    "desc": "",
+    "note": "",
+    "url": "https://www.patreon.com/posts/qin-qu-160153049?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link",
+    "thumb": "https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&name=4096x4096",
+    "thumbPos": "50% 50%",
+    "showInSlider": true,
+    "year": 2026,
+    "month": 6,
+    "previews": [
+      "https://pbs.twimg.com/media/HJuyRpUaUAAufcg?format=jpg&name=4096x4096",
+      "https://pbs.twimg.com/media/HJuyRdyaoAE_kkU?format=jpg&name=4096x4096",
+      "https://pbs.twimg.com/media/HJuyVCpa0AEp01D?format=jpg&name=4096x4096",
+      "https://pbs.twimg.com/media/HJ--JL3aIAEhjij?format=jpg&name=4096x4096"
+    ]
+  },
+  {
+    "id": 24,
+    "title": "寝取られテイオー",
+    "sub": "Netorare Teio",
+    "tags": [
+      "New",
+      "NTR",
+      ""
+    ],
+    "desc": "",
+    "note": "",
+    "url": "https://www.patreon.com/posts/qin-qu-rareteio-157868184",
+    "thumb": "https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&name=large",
+    "thumbPos": "50% 50%",
+    "showInSlider": true,
+    "year": 2026,
+    "month": 5,
+    "previews": [
+      "https://pbs.twimg.com/media/HJzi3SxbwAIixZ8?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzi3SvbIAAclU2?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzi3SwbkAAETEd?format=jpg&name=large"
+    ]
+  },
+  {
+    "id": 25,
+    "title": "どあっぷ",
+    "sub": "Face focus",
+    "tags": [
+      "New",
+      "",
+      ""
+    ],
+    "desc": "",
+    "note": "",
+    "url": "https://",
+    "thumb": "https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&name=medium",
+    "thumbPos": "50% 50%",
+    "showInSlider": true,
+    "year": 2026,
+    "month": 5,
+    "previews": [
+      "https://pbs.twimg.com/media/HJziatQawAAUvqN?format=jpg&name=medium",
+      "https://pbs.twimg.com/media/HJzif5AaIAAPCkf?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJziatVbMAA0gZM?format=jpg&name=medium",
+      "https://pbs.twimg.com/media/HJzis-VaQAATlj7?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJziatQbMAAtWrZ?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzis-ZbsAA1C7q?format=jpg&name=large"
+    ]
+  },
+  {
+    "id": 26,
+    "title": "OLテイオー",
+    "sub": "OL Teio",
+    "tags": [
+      "New",
+      "ウマ娘",
+      ""
+    ],
+    "desc": "",
+    "note": "",
+    "url": "https://www.patreon.com/posts/olteio-157795872",
+    "thumb": "https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&name=large",
+    "thumbPos": "50% 0%",
+    "showInSlider": true,
+    "year": 2026,
+    "month": 6,
+    "previews": [
+      "https://pbs.twimg.com/media/HJzi_n9bIAAxce6?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzi_n7aYAAtg8F?format=jpg&name=large",
+      ""
+    ]
+  },
+  {
+    "id": 27,
+    "title": "寝起き",
+    "sub": "Good morning",
+    "tags": [
+      "New",
+      "ウマ娘",
+      ""
+    ],
+    "desc": "",
+    "note": "",
+    "url": "https://",
+    "thumb": "https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&name=large",
+    "thumbPos": "50% 0%",
+    "showInSlider": true,
+    "year": 2026,
+    "month": 5,
+    "previews": [
+      "https://pbs.twimg.com/media/HJzjPEwasAAQQnd?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjPEza4AE-QbY?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjLrGaUAAnVRB?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjLrLbIAAWPlc?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjLrKa4AAmaRs?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjLrIbYAA3eMn?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjHciaAAAMsTx?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjHccbYAACT21?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjHcgbkAATGi3?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjHcgaUAEvsWq?format=jpg&name=large"
+    ]
+  },
+  {
+    "id": 28,
+    "title": "美味しそうに見つめるオグリ",
+    "sub": "Oguri gazing at it hungrily",
+    "tags": [
+      "New",
+      "ウマ娘",
+      ""
+    ],
+    "desc": "",
+    "note": "",
+    "url": "https://www.patreon.com/posts/mei-wei-158346816",
+    "thumb": "https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&name=large",
+    "thumbPos": "50% 0%",
+    "showInSlider": true,
+    "year": 2026,
+    "month": 5,
+    "previews": [
+      "https://pbs.twimg.com/media/HJzjZM0aYAE0AKr?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjZM2aMAABikh?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjZMyaIAA0ttw?format=jpg&name=large"
+    ]
+  },
+  {
+    "id": 29,
+    "title": "お誘われテイオー",
+    "sub": "Invited Teio",
+    "tags": [
+      "NEW",
+      "ウマ娘",
+      ""
+    ],
+    "desc": "",
+    "note": "",
+    "url": "https://www.patreon.com/posts/oyou-wareteio-157796001",
+    "thumb": "https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&name=large",
+    "thumbPos": "50% 0%",
+    "showInSlider": true,
+    "year": 2026,
+    "month": 5,
+    "previews": [
+      "https://pbs.twimg.com/media/HJzjhYia4AAU_s2?format=jpg&name=large",
+      "https://pbs.twimg.com/media/HJzjhYnaAAASSuz?format=jpg&name=large",
+      ""
+    ]
+  }
 ];
 let nextId = 30;
 let SETTINGS = {"sliderMode":"both","bgColor":"#0d0d0d","sliderSpeed":40,"bgImageData":"","bgOpacity":18,"bgPos":"50% 50%"};
 
 let NOTICES = [
-  {"id":1,"type":"info","title":"サイトをオープンしました","body":"イラスト作品を公開しています。続きはPatreonにて公開中です。","date":"2026-06-01","pinned":true},
-  {"id":2,"type":"update","title":"新作を追加しました","body":"ダイヤの秘めた想いを追加しました。続きはPatreonでご覧ください。","date":"2026-06-01","pinned":false}
+  {
+    "id": 1,
+    "type": "info",
+    "title": "サイトをオープンしました",
+    "body": "イラスト作品を公開しています。続きはPatreonにて公開中です。",
+    "date": "2026-06-01",
+    "pinned": true
+  },
+  {
+    "id": 2,
+    "type": "update",
+    "title": "新作を追加しました",
+    "body": "ダイヤの秘めた想いを追加しました。続きはPatreonでご覧ください。",
+    "date": "2026-06-01",
+    "pinned": false
+  }
 ];
 let noticeNextId = 10;
 
