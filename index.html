@@ -177,6 +177,23 @@ nav{display:flex;gap:1rem;align-items:center}
 .thumb-pos-dot{position:absolute;width:8px;height:8px;background:var(--accent);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:3;box-shadow:0 0 0 2px rgba(0,0,0,.5)}
 .thumb-pos-hint{font-size:.62rem;color:var(--muted);margin-top:.3rem}
 .thumb-pos-coords{font-size:.65rem;color:var(--accent);margin-top:.2rem;font-family:monospace}
+/* ズーム＋プレビューコントロール */
+.thumb-zoom-controls{display:flex;align-items:center;gap:.5rem;margin-top:.45rem;flex-wrap:wrap}
+.thumb-zoom-controls label{font-size:.62rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.thumb-zoom-controls input[type=range]{accent-color:var(--accent);width:90px}
+.thumb-zoom-label{font-size:.65rem;color:var(--accent);font-family:monospace;min-width:36px}
+.btn-thumb-preview{background:none;border:1px solid rgba(201,169,110,.35);color:var(--accent);padding:.28rem .75rem;border-radius:4px;font-size:.65rem;letter-spacing:.06em;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap}
+.btn-thumb-preview:hover{background:rgba(201,169,110,.1);border-color:rgba(201,169,110,.6)}
+/* サムネイルプレビューモーダル */
+.thumb-preview-modal{display:none;position:fixed;inset:0;z-index:600;background:rgba(0,0,0,.93);backdrop-filter:blur(8px);align-items:center;justify-content:center;flex-direction:column;gap:1rem}
+.thumb-preview-modal.open{display:flex}
+.thumb-preview-modal img{max-width:min(700px,88vw);max-height:70vh;object-fit:contain;border-radius:6px;border:1px solid rgba(255,255,255,.12)}
+.thumb-preview-modal-inner{position:relative;background:var(--surface);border:1px solid rgba(240,236,228,.12);border-radius:10px;overflow:hidden;max-width:min(700px,88vw)}
+.thumb-preview-card{width:100%;aspect-ratio:4/3;overflow:hidden;position:relative;background:#111}
+.thumb-preview-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.thumb-preview-close{position:absolute;top:.6rem;right:.6rem;background:rgba(0,0,0,.7);border:1px solid var(--border);color:var(--muted);width:28px;height:28px;border-radius:50%;font-size:.85rem;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:all .2s}
+.thumb-preview-close:hover{color:var(--text)}
+.thumb-preview-label{padding:.6rem .85rem;font-size:.72rem;color:var(--muted);background:var(--surface)}
 
 /* 背景画像プレビュー（実際のサイトと同じ全画面比率） */
 .bg-preview-fullscreen{margin-top:.6rem;border:1px solid var(--admin-border);border-radius:6px;overflow:hidden;background:#0a0a0a;position:relative;aspect-ratio:16/9;cursor:crosshair;user-select:none;-webkit-user-select:none;display:none}
@@ -199,9 +216,14 @@ nav{display:flex;gap:1rem;align-items:center}
 .btn-add-preview:hover{border-color:rgba(201,169,110,.4);color:var(--accent)}
 .btn-remove-preview{background:none;border:none;color:rgba(255,100,100,.4);font-size:.82rem;cursor:pointer;padding:.08rem .22rem;transition:color .2s;flex-shrink:0}
 .btn-remove-preview:hover{color:rgba(255,100,100,.9)}
-.work-card-admin{background:var(--admin-surface);border:1px solid var(--admin-border);border-radius:7px;margin-bottom:.8rem;overflow:hidden}
+.work-card-admin{background:var(--admin-surface);border:1px solid var(--admin-border);border-radius:7px;margin-bottom:.8rem;overflow:hidden;transition:opacity .2s,transform .2s}
+.work-card-admin.dragging{opacity:.4;transform:scale(.98)}
+.work-card-admin.drag-over{border-color:rgba(201,169,110,.7);box-shadow:0 0 0 2px rgba(201,169,110,.3)}
 .work-card-header{display:flex;align-items:center;justify-content:space-between;padding:.7rem .85rem;cursor:pointer;transition:background .2s}
 .work-card-header:hover{background:rgba(255,255,255,.03)}
+.drag-handle{cursor:grab;color:var(--muted);font-size:.9rem;padding:.1rem .3rem;margin-right:.3rem;user-select:none;flex-shrink:0}
+.drag-handle:hover{color:var(--accent)}
+.drag-handle:active{cursor:grabbing}
 .work-card-header-left{display:flex;align-items:center;gap:.6rem}
 .work-card-header-left img{width:38px;height:28px;object-fit:cover;border-radius:3px;border:1px solid var(--admin-border)}
 .work-card-title-sm{font-size:.8rem}
@@ -395,6 +417,17 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;font-size:.7rem;co
       <button class="tos-agree-btn" id="tosAgreeBtn">同意して入場する</button>
       <button class="tos-back-btn" id="tosBackBtn">戻る</button>
     </div>
+  </div>
+</div>
+
+<!-- サムネイルプレビューモーダル -->
+<div class="thumb-preview-modal" id="thumbPreviewModal">
+  <div class="thumb-preview-modal-inner">
+    <button class="thumb-preview-close" onclick="closeThumbPreview()">✕</button>
+    <div class="thumb-preview-card">
+      <img id="thumbPreviewImg" src="" alt="" style="object-position:50% 50%">
+    </div>
+    <div class="thumb-preview-label" id="thumbPreviewLabel">サムネイルプレビュー</div>
   </div>
 </div>
 
@@ -768,9 +801,32 @@ let WORKS = [
       "https://pbs.twimg.com/media/HKdf-FGaIAAE3St?format=jpg&name=4096x4096",
       ""
     ]
+  },
+  {
+    "id": 31,
+    "title": "もっと見てほしいスカーレット",
+    "sub": "Scarlet Wants More Attention",
+    "tags": [
+      "NEW",
+      "ツンデレ",
+      ""
+    ],
+    "desc": "",
+    "note": "",
+    "url": "https://",
+    "thumb": "https://pbs.twimg.com/media/HKrP_R-bYAI827z?format=jpg&name=4096x4096",
+    "thumbPos": "49.8% 21.4%",
+    "showInSlider": true,
+    "year": 2026,
+    "month": 6,
+    "previews": [
+      "https://pbs.twimg.com/media/HKrP_R-bYAI827z?format=jpg&name=4096x4096",
+      "https://pbs.twimg.com/media/HKrQEN2bkAAs2bK?format=jpg&name=4096x4096",
+      "https://pbs.twimg.com/media/HKrQEN4aMAAnqnm?format=jpg&name=4096x4096"
+    ]
   }
 ];
-let nextId = 30;
+let nextId = Math.max(...WORKS.map(w=>w.id), 0) + 1;
 let SETTINGS = {"sliderMode":"both","bgColor":"#0d0d0d","sliderSpeed":40,"bgImageData":"","bgOpacity":18,"bgPos":"50% 50%"};
 
 let NOTICES = [
@@ -783,7 +839,7 @@ let NOTICES = [
     "pinned": true
   }
 ];
-let noticeNextId = 10;
+let noticeNextId = Math.max(...NOTICES.map(n=>n.id), 0) + 1;
 
 const MONTHS=['','1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
 const PAGE_SIZE=12;
@@ -908,11 +964,8 @@ function renderSlider(){
 
 /* ── GALLERY（新しい順 + ページング） ── */
 function getSortedWorks(){
-  return [...WORKS].sort((a,b)=>{
-    const ay=(a.year||2025)*100+(a.month||1);
-    const by=(b.year||2025)*100+(b.month||1);
-    return by-ay;
-  });
+  // 管理パネルの並び順（WORKS配列の順序）をそのまま使用
+  return [...WORKS];
 }
 
 function renderGallery(){
@@ -1041,7 +1094,53 @@ document.querySelectorAll('.admin-tab').forEach(tab=>{
 
 function renderAdminList(){
   const list=document.getElementById('workList');list.innerHTML='';
-  WORKS.forEach(w=>{const c=document.createElement('div');c.className='work-card-admin';c.id=`adminCard_${w.id}`;c.innerHTML=buildAdminCard(w);list.appendChild(c);});
+  WORKS.forEach(w=>{
+    const c=document.createElement('div');c.className='work-card-admin';c.id=`adminCard_${w.id}`;
+    c.innerHTML=buildAdminCard(w);
+    // ① ドラッグ並び替え設定
+    c.setAttribute('draggable','true');
+    c.addEventListener('dragstart',onWorkDragStart);
+    c.addEventListener('dragover',onWorkDragOver);
+    c.addEventListener('dragleave',onWorkDragLeave);
+    c.addEventListener('drop',onWorkDrop);
+    c.addEventListener('dragend',onWorkDragEnd);
+    list.appendChild(c);
+  });
+}
+
+/* ── ① 作品並び替え（ドラッグ&ドロップ） ── */
+let _wDragSrc=null;
+function onWorkDragStart(e){
+  // ドラッグハンドルからのみ許可（入力フィールド上でのドラッグは無効）
+  if(e.target.closest('input,textarea,select,button,.thumb-pos-dragger,.bg-preview-fullscreen'))return e.preventDefault();
+  _wDragSrc=this;this.classList.add('dragging');
+  e.dataTransfer.effectAllowed='move';
+  e.dataTransfer.setData('text/plain',this.id);
+}
+function onWorkDragOver(e){
+  if(!_wDragSrc||this===_wDragSrc)return;
+  e.preventDefault();e.dataTransfer.dropEffect='move';
+  this.classList.add('drag-over');
+}
+function onWorkDragLeave(){this.classList.remove('drag-over');}
+function onWorkDrop(e){
+  e.preventDefault();
+  if(!_wDragSrc||this===_wDragSrc)return;
+  this.classList.remove('drag-over');
+  const srcId=parseInt(_wDragSrc.id.replace('adminCard_',''));
+  const dstId=parseInt(this.id.replace('adminCard_',''));
+  const si=WORKS.findIndex(w=>w.id===srcId);
+  const di=WORKS.findIndex(w=>w.id===dstId);
+  if(si===-1||di===-1)return;
+  const [moved]=WORKS.splice(si,1);WORKS.splice(di,0,moved);
+  renderAdminList();renderSite();
+  if(document.getElementById('seriesPage').classList.contains('active'))renderSeries();
+  showToast('並び順を変更しました ✓');
+}
+function onWorkDragEnd(){
+  if(_wDragSrc)_wDragSrc.classList.remove('dragging');
+  document.querySelectorAll('.work-card-admin').forEach(c=>c.classList.remove('drag-over'));
+  _wDragSrc=null;
 }
 
 function buildAdminCard(w){
@@ -1060,6 +1159,7 @@ function buildAdminCard(w){
   return `
     <div class="work-card-header" onclick="toggleCard(${w.id})">
       <div class="work-card-header-left">
+        <span class="drag-handle" title="ドラッグして並び替え" onmousedown="event.stopPropagation()" onclick="event.stopPropagation()">⠿</span>
         <img src="${w.thumb||''}" onerror="this.style.opacity=0.2" alt="" style="object-position:${pos}">
         <span class="work-card-title-sm">${w.title||'無題'}</span>
       </div>
@@ -1101,6 +1201,16 @@ function buildAdminCard(w){
           <div class="thumb-pos-crosshair" id="crosshair_${w.id}" style="left:${px}%;top:${py}%"></div>
           <div class="thumb-pos-dot" style="left:${px}%;top:${py}%"></div>
         </div>
+        <div class="thumb-zoom-controls">
+          <label>ズーム</label>
+          <span style="font-size:.62rem;color:var(--muted)">−</span>
+          <input type="range" min="1" max="3" step="0.1" value="1" id="zoomSlider_${w.id}"
+            oninput="applyThumbZoom(${w.id},parseFloat(this.value))"
+            onmousedown="event.stopPropagation()" ontouchstart="event.stopPropagation()">
+          <span style="font-size:.62rem;color:var(--muted)">＋</span>
+          <span class="thumb-zoom-label" id="zoomLabel_${w.id}">×1.0</span>
+          <button class="btn-thumb-preview" onclick="event.stopPropagation();openThumbPreview(${w.id})">👁 プレビュー</button>
+        </div>
         <div class="thumb-pos-hint">👆 ドラッグで表示したい部分を中央に合わせてください</div>
         <div class="thumb-pos-coords" id="posCoords_${w.id}">位置: ${pos}</div>
       </div>
@@ -1134,6 +1244,41 @@ function applyThumbDrag(cx,cy){
 }
 function onDU(){_dragId=null;document.removeEventListener('mousemove',onDM);document.removeEventListener('mouseup',onDU);}
 function onDUT(){_dragId=null;document.removeEventListener('touchmove',onDMT);document.removeEventListener('touchend',onDUT);}
+
+/* ── ③ ズーム機能 ── */
+const _thumbZoom={};
+function applyThumbZoom(id,zoom){
+  _thumbZoom[id]=zoom;
+  // 枠(dragger)は固定のまま、内側のimgだけをスケール
+  const img=document.getElementById(`draggerImg_${id}`);
+  if(img){
+    img.style.transform=`scale(${zoom})`;
+    img.style.transformOrigin='center';
+    img.style.transition='transform .2s';
+  }
+  const lbl=document.getElementById(`zoomLabel_${id}`);
+  if(lbl)lbl.textContent=`×${zoom.toFixed(1)}`;
+}
+
+/* ── ③ プレビューモーダル ── */
+function openThumbPreview(id){
+  const w=WORKS.find(x=>x.id===id);if(!w)return;
+  const modal=document.getElementById('thumbPreviewModal');
+  const img=document.getElementById('thumbPreviewImg');
+  const lbl=document.getElementById('thumbPreviewLabel');
+  img.src=w.thumb||'';
+  img.style.objectPosition=w.thumbPos||'50% 0%';
+  lbl.textContent=w.title||'サムネイルプレビュー';
+  modal.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeThumbPreview(){
+  document.getElementById('thumbPreviewModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.getElementById('thumbPreviewModal').addEventListener('click',function(e){
+  if(e.target===this)closeThumbPreview();
+});
 
 /* ── ADMIN HELPERS ── */
 function toggleCard(id){const b=document.getElementById(`body_${id}`);const t=document.getElementById(`toggle_${id}`);const o=b.classList.toggle('open');t.textContent=o?'▲':'▼';}
@@ -1293,8 +1438,8 @@ document.getElementById('btnDownload').onclick=()=>{
   function buildAndSave(src) {
     // WORKSを置換（nextIdの前まで）
     let out = src.replace(
-      /let WORKS = \[[\s\S]*?\];(\s*let nextId)/,
-      'let WORKS = ' + worksJson + ';$1'
+      /let WORKS = \[[\s\S]*?\];[\s\S]*?(?=let SETTINGS)/,
+      'let WORKS = ' + worksJson + ';\nlet nextId = Math.max(...(' + worksJson + ').map(w=>w.id), 0) + 1;\n'
     );
     // SETTINGSを置換（値が1行に収まる形）
     out = out.replace(
