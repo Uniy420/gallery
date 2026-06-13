@@ -946,7 +946,7 @@ function onBgDragEndT(){_bgDragging=false;document.removeEventListener('touchmov
 /* ── SLIDER ── */
 function renderSlider(){
   const sliderWorks=WORKS.filter(w=>w.showInSlider!==false);
-  const imgs=sliderWorks.map(w=>({src:w.thumb,pos:w.thumbPos||'50% 0%',label:w.title,id:w.id}));
+  const imgs=sliderWorks.map(w=>({src:w.thumb,pos:w.thumbPos||'50% 0%',zoom:w.thumbZoom||1,label:w.title,id:w.id}));
   ['row1','row2'].forEach((rowId,ri)=>{
     const el=document.getElementById(rowId);el.innerHTML='';
     if(!imgs.length)return;
@@ -956,7 +956,8 @@ function renderSlider(){
     const all=[...(ri===0?half:offsetHalf),...(ri===0?half:offsetHalf)];
     all.forEach(item=>{
       const c=document.createElement('div');c.className='slide-card';
-      c.innerHTML=`<img src="${item.src}" alt="${item.label}" loading="lazy" style="object-position:${item.pos}"><div class="slide-card-label">${item.label}</div>`;
+      const sz=item.zoom>1?`scale(${item.zoom})`:'';
+      c.innerHTML=`<img src="${item.src}" alt="${item.label}" loading="lazy" style="object-position:${item.pos};transform:${sz};transform-origin:center"><div class="slide-card-label">${item.label}</div>`;
       c.onclick=()=>openModal(item.id);el.appendChild(c);
     });
   });
@@ -964,8 +965,8 @@ function renderSlider(){
 
 /* ── GALLERY（新しい順 + ページング） ── */
 function getSortedWorks(){
-  // 管理パネルの並び順（WORKS配列の順序）をそのまま使用
-  return [...WORKS];
+  // 配列の末尾（最後に追加・管理パネルで一番下）が先頭に来るよう逆順
+  return [...WORKS].reverse();
 }
 
 function renderGallery(){
@@ -977,7 +978,8 @@ function renderGallery(){
     const d=document.createElement('div');d.className='gallery-item';
     const tagsHtml=(w.tags||[]).filter(t=>t).map(t=>`<span class="gallery-badge">${t}</span>`).join('');
     const dateStr=`${w.year||2025}年 ${MONTHS[w.month||1]}`;
-    d.innerHTML=`<div class="gallery-item-img-wrap"><img src="${w.thumb}" alt="${w.title}" loading="lazy" style="object-position:${w.thumbPos||'50% 0%'}"></div><div class="gallery-info"><div class="gallery-title">${w.title}</div><div class="gallery-sub">${w.sub||''}</div><div class="gallery-date">${dateStr}</div><div class="gallery-tags">${tagsHtml}</div></div>`;
+    const zScale=w.thumbZoom&&w.thumbZoom>1?`scale(${w.thumbZoom})`:'';
+    d.innerHTML=`<div class="gallery-item-img-wrap"><img src="${w.thumb}" alt="${w.title}" loading="lazy" style="object-position:${w.thumbPos||'50% 0%'};transform:${zScale};transform-origin:center;transition:none"></div><div class="gallery-info"><div class="gallery-title">${w.title}</div><div class="gallery-sub">${w.sub||''}</div><div class="gallery-date">${dateStr}</div><div class="gallery-tags">${tagsHtml}</div></div>`;
     d.onclick=()=>openModal(w.id);grid.appendChild(d);
   });
   const wrap=document.getElementById('loadMoreWrap');
@@ -1001,7 +1003,8 @@ function renderSeries(){
       byYear[y][mo].forEach(w=>{
         const c=document.createElement('div');c.className='month-card';
         const tagsHtml=(w.tags||[]).filter(t=>t).map(t=>`<span class="month-card-badge">${t}</span>`).join('');
-        c.innerHTML=`<div class="month-card-img-wrap"><img src="${w.thumb}" alt="${w.title}" loading="lazy" style="object-position:${w.thumbPos||'50% 0%'}"></div><div class="month-card-info"><div class="month-card-title">${w.title}</div><div class="month-card-date">${w.year}年 ${MONTHS[w.month||1]}</div><div class="month-card-tags">${tagsHtml}</div></div>`;
+        const mz=w.thumbZoom&&w.thumbZoom>1?`scale(${w.thumbZoom})`:'';
+        c.innerHTML=`<div class="month-card-img-wrap"><img src="${w.thumb}" alt="${w.title}" loading="lazy" style="object-position:${w.thumbPos||'50% 0%'};transform:${mz};transform-origin:center"></div><div class="month-card-info"><div class="month-card-title">${w.title}</div><div class="month-card-date">${w.year}年 ${MONTHS[w.month||1]}</div><div class="month-card-tags">${tagsHtml}</div></div>`;
         c.onclick=()=>openModal(w.id);mg.appendChild(c);
       });
       grp.appendChild(mg);ySec.appendChild(grp);
@@ -1204,11 +1207,11 @@ function buildAdminCard(w){
         <div class="thumb-zoom-controls">
           <label>ズーム</label>
           <span style="font-size:.62rem;color:var(--muted)">−</span>
-          <input type="range" min="1" max="3" step="0.1" value="1" id="zoomSlider_${w.id}"
+          <input type="range" min="1" max="3" step="0.1" value="${w.thumbZoom||1}" id="zoomSlider_${w.id}"
             oninput="applyThumbZoom(${w.id},parseFloat(this.value))"
             onmousedown="event.stopPropagation()" ontouchstart="event.stopPropagation()">
           <span style="font-size:.62rem;color:var(--muted)">＋</span>
-          <span class="thumb-zoom-label" id="zoomLabel_${w.id}">×1.0</span>
+          <span class="thumb-zoom-label" id="zoomLabel_${w.id}">×${(w.thumbZoom||1).toFixed(1)}</span>
           <button class="btn-thumb-preview" onclick="event.stopPropagation();openThumbPreview(${w.id})">👁 プレビュー</button>
         </div>
         <div class="thumb-pos-hint">👆 ドラッグで表示したい部分を中央に合わせてください</div>
@@ -1249,7 +1252,10 @@ function onDUT(){_dragId=null;document.removeEventListener('touchmove',onDMT);do
 const _thumbZoom={};
 function applyThumbZoom(id,zoom){
   _thumbZoom[id]=zoom;
-  // 枠(dragger)は固定のまま、内側のimgだけをスケール
+  // WORKSデータに保存（renderSite時にギャラリー・スライダーへ反映）
+  const w=WORKS.find(x=>x.id===id);
+  if(w) w.thumbZoom=zoom;
+  // 管理パネル内のドラッガー画像もリアルタイム更新
   const img=document.getElementById(`draggerImg_${id}`);
   if(img){
     img.style.transform=`scale(${zoom})`;
@@ -1258,6 +1264,9 @@ function applyThumbZoom(id,zoom){
   }
   const lbl=document.getElementById(`zoomLabel_${id}`);
   if(lbl)lbl.textContent=`×${zoom.toFixed(1)}`;
+  // ギャラリー・スライダーへ即時反映
+  renderSite();
+  if(document.getElementById('seriesPage').classList.contains('active'))renderSeries();
 }
 
 /* ── ③ プレビューモーダル ── */
