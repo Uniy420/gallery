@@ -319,6 +319,30 @@ nav{display:flex;gap:1rem;align-items:center}
 .btn-add-notice{width:100%;background:none;border:1px dashed rgba(100,160,255,.3);color:#7ab0ff;padding:.6rem;border-radius:6px;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;margin-top:.45rem;transition:all .2s;font-family:'DM Sans',sans-serif}
 .btn-add-notice:hover{background:rgba(100,160,255,.06);border-color:rgba(100,160,255,.5)}
 footer{border-top:1px solid var(--border);padding:1.6rem 2rem;font-size:.7rem;color:var(--muted)}
+
+/* ── X (Twitter) ボタン ── */
+.x-btn{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;overflow:hidden;border:1px solid rgba(255,255,255,.15);background:rgba(0,0,0,.4);transition:all .3s;text-decoration:none;flex-shrink:0}
+.x-btn:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.1);transform:translateY(-1px)}
+.x-btn img{width:18px;height:18px;object-fit:contain}
+
+/* ── スマホ用ハンバーガーメニュー（縦画面のみ表示） ── */
+.mobile-menu-wrap{position:relative;display:none}
+@media(max-width:600px) and (orientation:portrait){
+  .mobile-menu-wrap{display:block}
+  /* スマホ縦画面ではSeries・支援サイトボタンを非表示 */
+  .nav-series-btn,.support-btn{display:none !important}
+}
+.mobile-menu-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.38rem .75rem;background:rgba(201,169,110,.1);border:1px solid rgba(201,169,110,.35);color:var(--accent);border-radius:16px;font-family:'DM Sans',sans-serif;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:all .3s}
+.mobile-menu-btn:hover{background:rgba(201,169,110,.2)}
+.mobile-menu-btn span{font-size:.85rem}
+.mobile-dropdown{position:absolute;top:calc(100% + .5rem);right:0;background:rgba(18,18,18,.97);border:1px solid rgba(201,169,110,.25);border-radius:10px;padding:.5rem;min-width:160px;z-index:200;display:none;flex-direction:column;gap:.3rem;backdrop-filter:blur(12px);animation:dropdown-in .18s ease}
+@keyframes dropdown-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.mobile-dropdown.open{display:flex}
+.mobile-dd-item{display:flex;align-items:center;gap:.6rem;padding:.6rem .85rem;border-radius:7px;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:.75rem;letter-spacing:.06em;color:var(--text);transition:background .2s;white-space:nowrap;cursor:pointer;border:none;background:none;width:100%;text-align:left}
+.mobile-dd-item:hover{background:rgba(201,169,110,.12);color:var(--accent)}
+.mobile-dd-item svg{width:14px;height:14px;flex-shrink:0;opacity:.7}
+.mobile-dd-item img.dd-x-icon{width:14px;height:14px;object-fit:contain;flex-shrink:0;opacity:.85}
+.mobile-dd-divider{height:1px;background:rgba(255,255,255,.08);margin:.15rem 0}
 ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--surface2);border-radius:10px}
 </style>
 </head>
@@ -355,6 +379,31 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;font-size:.7rem;co
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       <span class="support-label">支援サイトへ</span>
     </a>
+    <a class="x-btn" id="xLink" href="https://x.com/aivistra_offcia" target="_blank" title="X (Twitter)">
+      <img src="data:image/png;base64,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" alt="X">
+    </a>
+    <!-- スマホ縦画面用ハンバーガーメニュー -->
+    <div class="mobile-menu-wrap" id="mobileMenuWrap">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">
+        <span>☰</span> メニュー
+      </button>
+      <div class="mobile-dropdown" id="mobileDropdown">
+        <a class="mobile-dd-item" href="https://www.patreon.com/15974661/join" target="_blank" id="ddSupportLink">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          支援サイトへ
+        </a>
+        <div class="mobile-dd-divider"></div>
+        <button class="mobile-dd-item" onclick="showPage('series');toggleMobileMenu()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          SERIES
+        </button>
+        <div class="mobile-dd-divider"></div>
+        <a class="mobile-dd-item" id="ddXLink" href="https://x.com/aivistra_offcia" target="_blank">
+          <img class="dd-x-icon" src="data:image/png;base64,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" alt="X">
+          X (Twitter)
+        </a>
+      </div>
+    </div>
     <button class="admin-btn" id="openAdmin">⚙ 管理</button>
   </nav>
 </header>
@@ -516,6 +565,16 @@ footer{border-top:1px solid var(--border);padding:1.6rem 2rem;font-size:.7rem;co
         <span id="bgOpacityLabel" style="font-size:.65rem;color:var(--accent);min-width:30px">18%</span>
         <button class="bg-clear-btn" id="bgClearBtn">✕ 削除</button>
       </div>
+    </div>
+    <p class="admin-section-title" style="margin-top:1.3rem">リンク設定</p>
+    <div class="field"><label>支援サイトURL（Patreon等）</label>
+      <input type="url" id="adminSupportUrl" value="https://www.patreon.com/15974661/join" oninput="updateLinkSettings()">
+    </div>
+    <div class="field"><label>X (Twitter) アカウントURL</label>
+      <input type="url" id="adminXUrl" value="https://x.com/aivistra_offcia" oninput="updateLinkSettings()">
+    </div>
+    <div style="margin-top:.6rem">
+      <button onclick="applyLinkSettings()" style="padding:.4rem 1.1rem;background:var(--accent);color:#0d0d0d;border:none;border-radius:4px;font-size:.7rem;cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:.07em;text-transform:uppercase">✓ 適用</button>
     </div>
   </div>
 </div>
@@ -1268,7 +1327,7 @@ let nextId = Math.max(...([
     ]
   }
 ]).map(w=>w.id), 0) + 1;
-let SETTINGS = {"sliderMode":"both","bgColor":"#0d0d0d","sliderSpeed":40,"bgImageData":"","bgOpacity":18,"bgPos":"50% 50%"};
+let SETTINGS = {"sliderMode":"both","bgColor":"#0d0d0d","sliderSpeed":40,"bgImageData":"","bgOpacity":18,"bgPos":"50% 50%","supportUrl":"https://www.patreon.com/15974661/join","xUrl":"https://x.com/aivistra_offcia"};
 
 let NOTICES = [
   {
@@ -1326,6 +1385,9 @@ function applySettings(){
   document.getElementById('bgColorText').value=SETTINGS.bgColor;
   const opi=document.getElementById('bgOpacityInput');if(opi)opi.value=SETTINGS.bgOpacity||18;
   const opl=document.getElementById('bgOpacityLabel');if(opl)opl.textContent=(SETTINGS.bgOpacity||18)+'%';
+  // リンク設定を同期
+  const su=document.getElementById('adminSupportUrl');if(su)su.value=SETTINGS.supportUrl||'https://www.patreon.com/15974661/join';
+  const xu=document.getElementById('adminXUrl');if(xu)xu.value=SETTINGS.xUrl||'https://x.com/aivistra_offcia';
   const fp=document.getElementById('bgPreviewFullscreen');
   const pi=document.getElementById('bgPreviewImg');
   if(SETTINGS.bgImageData){
@@ -1577,7 +1639,38 @@ function onWorkDrop(e){
   const di=WORKS.findIndex(w=>w.id===dstId);
   if(si===-1||di===-1)return;
   const [moved]=WORKS.splice(si,1);WORKS.splice(di,0,moved);
-  renderAdminList();renderSite();
+  renderAdminList();/* ── モバイルメニュー ── */
+function toggleMobileMenu(){
+  const dd=document.getElementById('mobileDropdown');
+  dd.classList.toggle('open');
+}
+// メニュー外タップで閉じる
+document.addEventListener('click',function(e){
+  const wrap=document.getElementById('mobileMenuWrap');
+  if(wrap&&!wrap.contains(e.target)){
+    const dd=document.getElementById('mobileDropdown');
+    if(dd)dd.classList.remove('open');
+  }
+});
+
+/* ── リンク設定 ── */
+function applyLinkSettings(){
+  const su=document.getElementById('adminSupportUrl').value.trim();
+  const xu=document.getElementById('adminXUrl').value.trim();
+  if(su)SETTINGS.supportUrl=su;
+  if(xu)SETTINGS.xUrl=xu;
+  // 全ての支援サイトリンクを更新
+  document.querySelectorAll('a.support-btn').forEach(el=>el.href=su||'#');
+  document.getElementById('entranceSupportBtn').href=su||'#';
+  const ddSup=document.getElementById('ddSupportLink');if(ddSup)ddSup.href=su||'#';
+  // Xリンクを更新
+  const xLink=document.getElementById('xLink');if(xLink)xLink.href=xu||'#';
+  const ddX=document.getElementById('ddXLink');if(ddX)ddX.href=xu||'#';
+  showToast('リンクを更新しました ✓');
+}
+function updateLinkSettings(){}  // リアルタイム更新は不要、適用ボタンで一括
+
+renderSite();
   if(document.getElementById('seriesPage').classList.contains('active'))renderSeries();
   showToast('並び順を変更しました ✓');
 }
