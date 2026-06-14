@@ -1639,38 +1639,7 @@ function onWorkDrop(e){
   const di=WORKS.findIndex(w=>w.id===dstId);
   if(si===-1||di===-1)return;
   const [moved]=WORKS.splice(si,1);WORKS.splice(di,0,moved);
-  renderAdminList();/* ── モバイルメニュー ── */
-function toggleMobileMenu(){
-  const dd=document.getElementById('mobileDropdown');
-  dd.classList.toggle('open');
-}
-// メニュー外タップで閉じる
-document.addEventListener('click',function(e){
-  const wrap=document.getElementById('mobileMenuWrap');
-  if(wrap&&!wrap.contains(e.target)){
-    const dd=document.getElementById('mobileDropdown');
-    if(dd)dd.classList.remove('open');
-  }
-});
-
-/* ── リンク設定 ── */
-function applyLinkSettings(){
-  const su=document.getElementById('adminSupportUrl').value.trim();
-  const xu=document.getElementById('adminXUrl').value.trim();
-  if(su)SETTINGS.supportUrl=su;
-  if(xu)SETTINGS.xUrl=xu;
-  // 全ての支援サイトリンクを更新
-  document.querySelectorAll('a.support-btn').forEach(el=>el.href=su||'#');
-  document.getElementById('entranceSupportBtn').href=su||'#';
-  const ddSup=document.getElementById('ddSupportLink');if(ddSup)ddSup.href=su||'#';
-  // Xリンクを更新
-  const xLink=document.getElementById('xLink');if(xLink)xLink.href=xu||'#';
-  const ddX=document.getElementById('ddXLink');if(ddX)ddX.href=xu||'#';
-  showToast('リンクを更新しました ✓');
-}
-function updateLinkSettings(){}  // リアルタイム更新は不要、適用ボタンで一括
-
-renderSite();
+  renderAdminList();
   if(document.getElementById('seriesPage').classList.contains('active'))renderSeries();
   showToast('並び順を変更しました ✓');
 }
@@ -1777,7 +1746,9 @@ function applyThumbDrag(cx,cy){
   const dots=document.querySelectorAll(`#dragger_${_dragId} .thumb-pos-dot`);dots.forEach(d=>{d.style.left=`${nx.toFixed(1)}%`;d.style.top=`${ny.toFixed(1)}%`;});
   const co=document.getElementById(`posCoords_${_dragId}`);if(co)co.textContent='位置: '+ps;
   const hi=document.querySelector(`#adminCard_${_dragId} .work-card-header-left img`);if(hi)hi.style.objectPosition=ps;
-  renderSite();if(document.getElementById('seriesPage').classList.contains('active'))renderSeries();
+
+
+renderSite();if(document.getElementById('seriesPage').classList.contains('active'))renderSeries();
 }
 function onDU(){_dragId=null;document.removeEventListener('mousemove',onDM);document.removeEventListener('mouseup',onDU);}
 function onDUT(){_dragId=null;document.removeEventListener('touchmove',onDMT);document.removeEventListener('touchend',onDUT);}
@@ -2022,6 +1993,34 @@ document.getElementById('btnDownload').onclick=()=>{
 };
 
 function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800);}
+
+/* ── モバイルメニュー ── */
+function toggleMobileMenu(){
+  const dd=document.getElementById('mobileDropdown');
+  dd.classList.toggle('open');
+}
+document.addEventListener('click',function(e){
+  const wrap=document.getElementById('mobileMenuWrap');
+  if(wrap&&!wrap.contains(e.target)){
+    const dd=document.getElementById('mobileDropdown');
+    if(dd)dd.classList.remove('open');
+  }
+});
+
+/* ── リンク設定 ── */
+function applyLinkSettings(){
+  const su=document.getElementById('adminSupportUrl').value.trim();
+  const xu=document.getElementById('adminXUrl').value.trim();
+  if(su)SETTINGS.supportUrl=su;
+  if(xu)SETTINGS.xUrl=xu;
+  document.querySelectorAll('a.support-btn').forEach(el=>el.href=su||'#');
+  document.getElementById('entranceSupportBtn').href=su||'#';
+  const ddSup=document.getElementById('ddSupportLink');if(ddSup)ddSup.href=su||'#';
+  const xLink=document.getElementById('xLink');if(xLink)xLink.href=xu||'#';
+  const ddX=document.getElementById('ddXLink');if(ddX)ddX.href=xu||'#';
+  showToast('リンクを更新しました ✓');
+}
+function updateLinkSettings(){}
 
 renderSite();
 
